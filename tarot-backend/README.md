@@ -1,138 +1,54 @@
-# Tarot Backend
+# Tarot Backend (FastAPI)
 
-塔罗牌应用后端服务 - 支持匿名用户、LLM解读、支付功能和管理后台
+FastAPI service powering anonymous tarot users, dual-phase AI readings, payments, and the admin portal.
 
-## 📖 项目简介
+## 1. 项目简介 | Description
+`tarot-backend` 采用单体 FastAPI + SQLite 架构，提供 `/api/v1/*` 客户端接口、管理员 API、静态资源与 LLM 网关。它支持匿名安装 ID + JWT 认证、GLM-4 / OpenAI 双引擎解读、Google Play / 兑换码充值，未来扩展 Stripe Checkout。后端同样为 Next.js 管理后台提供用户、兑换码、订单、仪表盘等数据。
 
-基于 FastAPI 的塔罗牌应用后端，采用单体架构设计，提供：
-- 匿名用户系统和JWT认证
-- 智谱AI/OpenAI LLM解读服务
-- 支付系统（兑换码 + Google Play）
-- 完整的管理后台Portal
+## 2. 功能特性 | Features
+- 🔐 Anonymous auth: `/api/v1/users/register` 返回稳定 `installation_id`，JWT 保护后续请求。
+- 🤖 Two-step readings: `/readings/analyze` 推荐维度，`/readings/generate` 产出多语言 LLM 结果。
+- 💳 Payments & credits: 兑换码、Google Play 校验端点 (`/payments/google/verify`)，Stripe Checkout 预留。
+- 🧑‍💻 Admin APIs: 用户、积分、兑换码、订单、仪表盘、系统监控等 REST 端点。
+- 🗂️ Static assets & DB: `static/` 下卡牌图片，SQLite `backend_tarot.db` 通过 Docker volume 持久化。
 
-## 🏗️ 服务架构
+## 3. 技术栈 | Tech Stack
+- **Language**: Python 3.10+
+- **Framework**: FastAPI 0.104, Uvicorn, SQLAlchemy ORM, Pydantic
+- **Database**: SQLite (可替换 Postgres)，Alembic migrations
+- **AI**: Custom LLM router for GLM-4, OpenAI, future providers
+- **Others**: JWT (PyJWT), Stripe/Google Play SDKs, Docker Compose, Nginx reverse proxy
 
-**单端口架构 (端口 8000)**:
-```
-FastAPI应用
-├── /api/v1/*          # 前端App API接口
-├── /admin/*           # 管理后台Web界面
-├── /static/*          # 静态资源文件
-└── /docs              # API文档 (Swagger UI)
-```
+## 4. 安装与运行 | Installation & Usage
+### 环境要求 | Requirements
+- Python >= 3.10
+- SQLite3 CLI (可选)
+- `tarot-backend/.env` with JWT/LLM/payment secrets
+- Docker (可选，用于一键部署)
 
-## 🔧 环境要求
-
-- Python 3.9+
-- FastAPI 0.104+
-- SQLite数据库
-- 智谱AI或OpenAI API密钥
-
-## 🚀 快速启动
-
-### 1. 安装依赖
+### 安装步骤 | Setup
 ```bash
+# 1. Install deps
+cd tarot-backend
+python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+
+# 2. Configure env
+cp .env.example .env  # 填写 ADMIN_PASSWORD, JWT_SECRET_KEY, LLM keys
+
+# 3. Run migrations / init DB
+alembic upgrade head  # 若使用 Alembic；或保持 SQLite 预置文件
+
+# 4. Start server
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+# 5. Docs & health
+open http://localhost:8000/docs
+curl http://localhost:8000/health
 ```
 
-### 2. 环境配置
-```bash
-# 复制环境变量模板
-cp .env.example .env
+- Docker: 在仓库根目录执行 `docker compose up -d backend`，静态资源挂载到容器 `/app/static`，数据库保存在卷 `backend_data:/data/backend_tarot.db`。
+- 管理后台（Next.js）通过 Nginx `/api/` 路由访问本服务的 `/api/v1/*`。
+- Google Play 校验端点需携带 `installation_id`，可选 `email` 用于绑定。
 
-# 编辑.env文件，配置API密钥和管理员账户
-```
-
-### 3. 启动服务
-```bash
-# 启动开发服务器
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8001
-
-# 或使用Python直接启动
-python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8001
-```
-
-### 4. 访问服务
-
-**用户API接口**:
-- API文档: http://localhost:8000/docs
-- 健康检查: http://localhost:8000/health
-- 匿名注册: http://localhost:8000/api/v1/auth/anon
-
-**管理后台** (默认账户: admin / admin123):
-- 登录页面: http://localhost:8000/admin/login
-- 仪表板: http://localhost:8000/admin/dashboard
-- 用户管理: http://localhost:8000/admin/users
-- 订单管理: http://localhost:8000/admin/orders
-- 兑换码管理: http://localhost:8000/admin/redeem-codes
-- 财务报表: http://localhost:8000/admin/reports
-- 系统监控: http://localhost:8000/admin/monitor
-
-## ⚙️ 配置说明
-
-主要环境变量配置：
-```env
-# 数据库
-DATABASE_URL=sqlite:///./backend_tarot.db
-
-# LLM服务配置
-API_PROVIDER=zhipu
-ZHIPUAI_API_KEY=your_zhipu_api_key
-MODEL_NAME=glm-4-Flash
-
-# 管理员账户
-ADMIN_USERNAME=admin
-ADMIN_PASSWORD=admin123
-ADMIN_SESSION_EXPIRE_HOURS=24
-```
-
-## 🧪 测试
-
-```bash
-# 运行测试
-pytest
-
-# Claude Code环境测试
-PYTHONIOENCODING=utf-8 python test_analyze_user_description.py
-```
-
-## 📚 功能特性
-
-### 用户API
-- 匿名用户注册和JWT认证
-- 塔罗牌抽取和解读
-- 基础解读 + AI付费解读
-- 用户余额和交易记录
-
-### 管理后台
-- 现代化Bootstrap界面
-- 用户管理和积分调整
-- 订单管理和退款处理
-- 兑换码批量生成和管理
-- 财务报表和数据分析
-- 系统监控和错误日志
-
-### 支付系统
-- 兑换码兑换系统
-- Google Play内购验证
-- 积分系统和消费记录
-- 多平台支付支持
-
-## 📋 项目状态
-
-✅ **已完成**:
-- FastAPI后端架构
-- 数据库模型和迁移
-- 用户认证系统
-- LLM解读服务
-- 管理后台模板
-- 基础支付API
-
-🔄 **进行中**:
-- 管理后台API实现
-- Google Play集成
-- 系统监控功能
-
-## 📖 详细文档
-
-完整的开发指南和架构说明请参考 `CLAUDE.md`。
+更多架构细节请查阅 `CLAUDE.md`。

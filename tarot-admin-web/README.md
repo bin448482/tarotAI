@@ -1,42 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tarot Admin Web (Next.js)
 
-## Getting Started
+Next.js App Router dashboard for operating TarotAI: manage users, vouchers, orders, and download latest client builds.
 
-First, run the development server:
+## 1. 项目简介 | Description
+`tarot-admin-web` 基于 Next.js 15 (App Router) + Ant Design 6，提供现代化后台体验。它消费 FastAPI `/admin/*`、`/api/v1/admin-api/*` 接口，展示仪表盘、列表筛选、订单来源，以及 `/client-portal` 页面供团队下载最新移动端构建。
 
+## 2. 功能特性 | Features
+- 📊 Dashboard cards & charts via `@ant-design/charts`，实时展示活跃度、订单、兑换码使用。
+- 👥 User & credit ops：列表、积分调整、邮箱/安装 ID 检索。
+- 🔑 Auth & session：基于 JWT 的管理登录页，SWR hooks 自动刷新。
+- 🎫 Voucher + order flows：批量生成兑换码、查看订单来源（Stripe/Play/兑换码）。
+- 📱 Client portal：`/client-portal` 托管最新 APK / AAB 下载说明。
+- 🧱 Tailwind + Ant Design theme：黑金塔罗风格，可扩展多主题。
+
+## 3. 技术栈 | Tech Stack
+- **Language**: TypeScript 5.x
+- **Framework**: Next.js 15 App Router, React 19, Ant Design 6
+- **State/Data**: Zustand store, SWR data fetching, Zod schema validation
+- **Styling**: Tailwind CSS, CSS Modules, Ant Design tokens
+- **Others**: ESLint, Prettier, Vercel-ready build scripts, Docker support via root compose
+
+## 4. 安装与运行 | Installation & Usage
+### 环境要求 | Requirements
+- Node.js >= 18.18
+- npm / pnpm / yarn (示例以 npm)
+- Backend URL (`NEXT_PUBLIC_BACKEND_URL`) 指向 FastAPI 反向代理
+
+### 安装步骤 | Setup
 ```bash
+# 1. Install deps
+cd tarot-admin-web
+npm ci
+
+# 2. Set env
+cp .env.example .env.local
+# 填写 NEXT_PUBLIC_BACKEND_URL=/api, ADMIN_API_BASE 等
+
+# 3. Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 浏览器访问 http://localhost:3000
+
+# 4. Build & start prod preview
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Client portal 访问：`http://localhost:3000/client-portal`；线上环境请替换域名。
+- When running via Docker Compose, admin listens on port 3000 and is proxied by Nginx (`/` → admin, `/api/*` → backend).
+- Deploy to Vercel or any Node hosting; ensure environment variables mirror production backend routes.
 
-## Client APK Portal
-
-- Latest Android build downloads live at the admin domain under `/client-portal`.
-- In local development the portal URL is `http://localhost:3000/client-portal`.
-- In production replace the hostname with your deployed admin domain, for example `https://admin.example.com/client-portal`.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+中文说明可参考根目录 `README_CN.md`。
