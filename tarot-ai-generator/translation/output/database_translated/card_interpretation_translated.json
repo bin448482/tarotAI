@@ -1,0 +1,793 @@
+{
+  "table_name": "card_interpretation",
+  "source_locale": "zh-CN",
+  "target_locale": "en",
+  "original_count": 156,
+  "translated_count": 156,
+  "translation_rate": 100.0,
+  "translated_at": "2025-10-13T18:32:14Z",
+  "model_used": "gpt-3.5-turbo",
+  "description": "Translation of 卡牌解读信息，包括每张牌的正位和逆位解读",
+  "data": [
+    {
+      "summary_en": "New beginnings, innocence.",
+      "detail_en": "Symbolizes the starting point of a journey and open possibilities, encouraging adventure and trusting your inner self.",
+      "id": 1
+    },
+    {
+      "summary_en": "Willpower and creativity.",
+      "detail_en": "Represents the ability to turn ideas into reality, emphasizing resource integration and execution.",
+      "id": 2
+    },
+    {
+      "summary_en": "Intuition and inner wisdom.",
+      "detail_en": "Suggests listening to the subconscious and hidden messages, suitable for meditation and introspection.",
+      "id": 3
+    },
+    {
+      "summary_en": "Nurturing and abundance.",
+      "detail_en": "Symbolizes care, creativity, and emotional support, bringing growth and abundance.",
+      "id": 4
+    },
+    {
+      "summary_en": "Structure and stability.",
+      "detail_en": "Represents order and authority, suitable for planning, establishing rules, and long-term arrangements.",
+      "id": 5
+    },
+    {
+      "summary_en": "Tradition and guidance.",
+      "detail_en": "Emphasizes support for beliefs and systems, suitable for seeking mentors or frameworks.",
+      "id": 6
+    },
+    {
+      "summary_en": "Relationships and choices.",
+      "detail_en": "Involves important decisions and intimate connections, emphasizing shared values.",
+      "id": 7
+    },
+    {
+      "summary_en": "Determination and progress.",
+      "detail_en": "Symbolizes overcoming obstacles and steady advancement, suitable for grasping direction and will.",
+      "id": 8
+    },
+    {
+      "summary_en": "Courage and compassion.",
+      "detail_en": "Overcoming challenges with gentleness and resilience, emphasizing self-control and empathy.",
+      "id": 9
+    },
+    {
+      "summary_en": "Introspection and seeking truth.",
+      "detail_en": "Suggests withdrawing for reflection to seek deeper insights and wisdom.",
+      "id": 10
+    },
+    {
+      "summary_en": "Change and opportunity.",
+      "detail_en": "Represents cyclical changes and a turning point in fortune, suggesting to seize the opportunity.",
+      "id": 11
+    },
+    {
+      "summary_en": "Fairness and consequences.",
+      "detail_en": "Emphasizes justice and taking responsibility, dealing with matters in a rational and principled manner.",
+      "id": 12
+    },
+    {
+      "summary_en": "New perspective and pause.",
+      "detail_en": "Gain a new perspective through letting go or pausing, suitable for acceptance and transformation.",
+      "id": 13
+    },
+    {
+      "summary_en": "Endings and transformation.",
+      "detail_en": "Symbolizes the end of a phase and rebirth, suggesting letting go of the old to welcome the new.",
+      "id": 14
+    },
+    {
+      "summary_en": "Balance and integration.",
+      "detail_en": "Remind to harmonize opposites, restore Temperance, beneficial for healing and stability.",
+      "id": 15
+    },
+    {
+      "summary_en": "Temptation and bondage.",
+      "detail_en": "Revealing areas where one is bound by desires or habits, and the need to identify and seek liberation.",
+      "id": 16
+    },
+    {
+      "summary_en": "Sudden change and awakening.",
+      "detail_en": "Bringing shock and revelation, although painful, it leads to rebuilding.",
+      "id": 17
+    },
+    {
+      "summary_en": "Hope and healing.",
+      "detail_en": "Symbolizes the restoration of faith and guidance, bringing healing and enlightenment.",
+      "id": 18
+    },
+    {
+      "summary_en": "Subconscious and illusions.",
+      "detail_en": "Involves emotions and intuition, suggesting the recognition of illusions and listening to the inner self.",
+      "id": 19
+    },
+    {
+      "summary_en": "Achievement and joy.",
+      "detail_en": "Represents clarity and vitality, bringing success and positive energy.",
+      "id": 20
+    },
+    {
+      "summary_en": "Awakening and reflection.",
+      "detail_en": "Indicates reflection and renewal, may enter a new phase or be called upon.",
+      "id": 21
+    },
+    {
+      "summary_en": "Completion and fulfillment.",
+      "detail_en": "Symbolizes the completion and integration of a cycle, suitable for celebration and closure.",
+      "id": 22
+    },
+    {
+      "summary_en": "Inspiration and beginning.",
+      "detail_en": "Brings creative opportunities and the beginning of action, encouraging experimentation.",
+      "id": 23
+    },
+    {
+      "summary_en": "Planning and vision.",
+      "detail_en": "Emphasizes strategic planning and long-term vision, focusing on potential collaborations.",
+      "id": 24
+    },
+    {
+      "summary_en": "Expansion and foresight.",
+      "detail_en": "Early efforts manifesting opportunities, suitable for expansion and seeking partners.",
+      "id": 25
+    },
+    {
+      "summary_en": "Stability and celebration.",
+      "detail_en": "Symbolizes stable foundations and group support, suitable for celebrating achievements.",
+      "id": 26
+    },
+    {
+      "summary_en": "Competition and testing.",
+      "detail_en": "Common challenges or conflicts, it is a moment to test abilities.",
+      "id": 27
+    },
+    {
+      "summary_en": "Victory and recognition.",
+      "detail_en": "Represents efforts being recognized, suitable for showcasing achievements and receiving praise.",
+      "id": 28
+    },
+    {
+      "summary_en": "Defense and persistence.",
+      "detail_en": "It is necessary to defend your position and maintain resilience under pressure.",
+      "id": 29
+    },
+    {
+      "summary_en": "Rapid progress and flow of information.",
+      "detail_en": "Symbolizes accelerated action or information, suitable for seizing opportunities and reacting quickly.",
+      "id": 30
+    },
+    {
+      "summary_en": "Persistence and vigilance.",
+      "detail_en": "Indicates the need to continue efforts and defense until completion.",
+      "id": 31
+    },
+    {
+      "summary_en": "Burden and responsibility.",
+      "detail_en": "Shows heavy responsibility, suggesting sharing or adjusting to take care of oneself.",
+      "id": 32
+    },
+    {
+      "summary_en": "Message and curiosity.",
+      "detail_en": "Brings initial motivation or message, suitable for exploration and starting out.",
+      "id": 33
+    },
+    {
+      "summary_en": "Enthusiasm and adventure.",
+      "detail_en": "Represents quick action and passion, pay attention to direction and avoid impulsiveness like Temperance.",
+      "id": 34
+    },
+    {
+      "summary_en": "Passion and support.",
+      "detail_en": "Drive creativity and nurture others or projects with passion and intuition.",
+      "id": 35
+    },
+    {
+      "summary_en": "Leadership and decisiveness.",
+      "detail_en": "Symbolizes mature leadership and decisiveness, suitable for guiding the way.",
+      "id": 36
+    },
+    {
+      "summary_en": "Emotional new beginnings and nourishment.",
+      "detail_en": "Represents a new start in emotions or relationships, bringing resonance and healing.",
+      "id": 37
+    },
+    {
+      "summary_en": "Partnership and connection.",
+      "detail_en": "Symbolizes intimate connection and mutual support, suitable for building relationships.",
+      "id": 38
+    },
+    {
+      "summary_en": "Celebration and friendship.",
+      "detail_en": "Represents community and emotional sharing, suitable for celebrating and connecting.",
+      "id": 39
+    },
+    {
+      "summary_en": "Reflection and dissatisfaction.",
+      "detail_en": "Indicates indifference to the current situation, suggesting introspection to seek new opportunities.",
+      "id": 40
+    },
+    {
+      "summary_en": "Loss and sorrow.",
+      "detail_en": "Represents emotional loss, which needs to be faced and gradually healed.",
+      "id": 41
+    },
+    {
+      "summary_en": "Memories and healing.",
+      "detail_en": "Brings opportunities for warm memories and healing, suitable for connecting with the past.",
+      "id": 42
+    },
+    {
+      "summary_en": "Fantasy and choices.",
+      "detail_en": "There are multiple possibilities, requiring discernment between reality and illusion, and making choices.",
+      "id": 43
+    },
+    {
+      "summary_en": "Leaving to seek meaning.",
+      "detail_en": "Suggests leaving the familiar to seek deeper emotional or spiritual goals.",
+      "id": 44
+    },
+    {
+      "summary_en": "Satisfaction and wishes coming true.",
+      "detail_en": "Symbolizes emotional satisfaction and wishes coming true, reminding to be grateful and enjoy.",
+      "id": 45
+    },
+    {
+      "summary_en": "Fulfillment and harmony in the family.",
+      "detail_en": "Represents emotional stability and harmony in the family.",
+      "id": 46
+    },
+    {
+      "summary_en": "Gentle messages and inspiration.",
+      "detail_en": "Bringing gentle emotional messages or inspiration, encouraging openness and acceptance.",
+      "id": 47
+    },
+    {
+      "summary_en": "Romance and pursuit.",
+      "detail_en": "Represents a person who takes emotional actions, suitable for expressing and pursuing emotions.",
+      "id": 48
+    },
+    {
+      "summary_en": "Empathy and nurturing.",
+      "detail_en": "Represents emotional maturity and care, suitable for providing support and comfort.",
+      "id": 49
+    },
+    {
+      "summary_en": "Stability and experience in emotions.",
+      "detail_en": "Represents emotional stability and experienced guidance, suitable for guiding others.",
+      "id": 50
+    },
+    {
+      "summary_en": "Truth and clarity.",
+      "detail_en": "Represents a breakthrough in cognition or information, suitable for rational analysis and judgment.",
+      "id": 51
+    },
+    {
+      "summary_en": "Decision and balance.",
+      "detail_en": "Involves finding balance between information or positions and making decisions.",
+      "id": 52
+    },
+    {
+      "summary_en": "Heartache and awakening.",
+      "detail_en": "Represents emotional pain and awareness, it is a signal of healing and growth.",
+      "id": 53
+    },
+    {
+      "summary_en": "Rest and recovery.",
+      "detail_en": "It is suggested to take a break temporarily to recharge and re-plan.",
+      "id": 54
+    },
+    {
+      "summary_en": "Conflict and strategy.",
+      "detail_en": "Indicates competitive or costly victory, requiring examination of consequences and adjustment of strategy.",
+      "id": 55
+    },
+    {
+      "summary_en": "Transition and leaving difficulties.",
+      "detail_en": "Symbolizes moving from difficulties to a calmer state, suitable for healing.",
+      "id": 56
+    },
+    {
+      "summary_en": "Strategy and covert actions.",
+      "detail_en": "Indicates the need for caution and strategy to safeguard resources or interests.",
+      "id": 57
+    },
+    {
+      "summary_en": "Limitation and restriction.",
+      "detail_en": "Represents a restricted mindset or situation, and the need to find ways to break free.",
+      "id": 58
+    },
+    {
+      "summary_en": "Anxiety and nightmares.",
+      "detail_en": "Indicates excessive worry, and suggests seeking support and rational relief.",
+      "id": 59
+    },
+    {
+      "summary_en": "End and collapse.",
+      "detail_en": "Signifies a drastic ending, but also provides an opportunity for rebuilding and rebirth.",
+      "id": 60
+    },
+    {
+      "summary_en": "Beginning of information and learning.",
+      "detail_en": "Represents the start of messages or learning, suitable for exploration and preparation.",
+      "id": 61
+    },
+    {
+      "summary_en": "Swift action and sharp words.",
+      "detail_en": "Acting quickly and directly, be mindful of communication and conflict risks.",
+      "id": 62
+    },
+    {
+      "summary_en": "Calmness and insight.",
+      "detail_en": "Represents clear judgment and rational analysis, suitable for complex issues.",
+      "id": 63
+    },
+    {
+      "summary_en": "Strategy and authority.",
+      "detail_en": "Represents using rationality and strategy to control the situation and guide decision making.",
+      "id": 64
+    },
+    {
+      "summary_en": "Material opportunities and practicality.",
+      "detail_en": "Symbolizes practical opportunities and a career starting point, encouraging steady planning.",
+      "id": 65
+    },
+    {
+      "summary_en": "Multitasking and resource balance.",
+      "detail_en": "It suggests maintaining flexibility and balance in multiple tasks.",
+      "id": 66
+    },
+    {
+      "summary_en": "Cooperation and craftsmanship.",
+      "detail_en": "Represents teamwork and recognition of skills, emphasizing quality and execution.",
+      "id": 67
+    },
+    {
+      "summary_en": "Guardianship and conservatism.",
+      "detail_en": "Shows protection of resources and stability, but beware of excessive conservatism.",
+      "id": 68
+    },
+    {
+      "summary_en": "Scarcity and seeking help.",
+      "detail_en": "Symbolizes material or health difficulties, and suggests seeking support and practical solutions.",
+      "id": 69
+    },
+    {
+      "summary_en": "Giving and receiving.",
+      "detail_en": "Represents the flow of resources and mutual assistance, encouraging a balanced giving and receiving.",
+      "id": 70
+    },
+    {
+      "summary_en": "Hard work and waiting for rewards.",
+      "detail_en": "Indicates the need for patience in hard work and long-term planning, evaluating progress and perseverance.",
+      "id": 71
+    },
+    {
+      "summary_en": "Diligence and progress.",
+      "detail_en": "By focusing and practicing to improve skills, suitable for advancing and artisan spiritual.",
+      "id": 72
+    },
+    {
+      "summary_en": "Independence, wealth, and achievement.",
+      "detail_en": "Symbolizes independence and comfort achieved through hard work, reminding to enjoy the fruits of labor.",
+      "id": 73
+    },
+    {
+      "summary_en": "Inheritance and stability.",
+      "detail_en": "Represents long-term stability and inheritance in family or career, suitable for long-term planning.",
+      "id": 74
+    },
+    {
+      "summary_en": "Starting point of learning and practical messages.",
+      "detail_en": "Bringing practical learning or reliable messages, suitable for starting from the basics.",
+      "id": 75
+    },
+    {
+      "summary_en": "Steady execution and pragmatism.",
+      "detail_en": "Symbolizes consistent and reliable actions, suitable for the implementation of long-term plans.",
+      "id": 76
+    },
+    {
+      "summary_en": "Practical care and resource management.",
+      "detail_en": "Manage resources practically and gently while taking care of both family and career.",
+      "id": 77
+    },
+    {
+      "summary_en": "Material control and responsibility.",
+      "detail_en": "Represents steady material management and reliable leadership.",
+      "id": 78
+    },
+    {
+      "summary_en": "Hesitation and lack of preparation.",
+      "detail_en": "May lack preparation or act recklessly, it is advisable to carefully assess and plan.",
+      "id": 79
+    },
+    {
+      "summary_en": "Abuse of skills and deception.",
+      "detail_en": "Resources or skills are not being used in a positive way, requiring a review of methods and intentions.",
+      "id": 80
+    },
+    {
+      "summary_en": "Intuition blocked or hidden information.",
+      "detail_en": "Inner voice suppressed or information concealed, suitable for introspection.",
+      "id": 81
+    },
+    {
+      "summary_en": "Excessive giving and depletion.",
+      "detail_en": "Feeling exhausted due to giving too much, need to establish boundaries and practice self-care.",
+      "id": 82
+    },
+    {
+      "summary_en": "Excessive control and rigidity.",
+      "detail_en": "Imbalance of power or rules, suggested to let go of coercion and restore flexibility.",
+      "id": 83
+    },
+    {
+      "summary_en": "Dogma or beliefs are being questioned.",
+      "detail_en": "You may be facing conflicts in beliefs or imbalance with a mentor, requiring a reassessment of values.",
+      "id": 84
+    },
+    {
+      "summary_en": "Imbalance in relationship or hesitation.",
+      "detail_en": "Conflicting values or undecided choices in the relationship, it is recommended to communicate and clarify.",
+      "id": 85
+    },
+    {
+      "summary_en": "Lost direction or impulsiveness.",
+      "detail_en": "Obstacles in momentum or unclear direction, requiring adjustment of plans and maintaining a steady pace.",
+      "id": 86
+    },
+    {
+      "summary_en": "Self-confidence being frustrated or suppressed anger.",
+      "detail_en": "May be overly self-doubting or expressing emotions in a negative way, need self-acceptance.",
+      "id": 87
+    },
+    {
+      "summary_en": "Isolation or refusal of introspection.",
+      "detail_en": "Excessive withdrawal or refusal to seek help, it is advised to open up moderately and seek support.",
+      "id": 88
+    },
+    {
+      "summary_en": "Stagnation or resistance to change.",
+      "detail_en": "The cycle is delayed or change is resisted, adaptation is needed to find a new path.",
+      "id": 89
+    },
+    {
+      "summary_en": "Bias or avoiding responsibility.",
+      "detail_en": "Unfair decision-making or shifting responsibility, correction and consequences need to be faced.",
+      "id": 90
+    },
+    {
+      "summary_en": "Resistance or stagnation.",
+      "detail_en": "Unwilling to let go or feeling restricted, suggest trying to change perspective.",
+      "id": 91
+    },
+    {
+      "summary_en": "Resistance to change or inability to let go.",
+      "detail_en": "Difficult to accept endings, need to gradually release old structures.",
+      "id": 92
+    },
+    {
+      "summary_en": "Imbalance or extremes.",
+      "detail_en": "Losing moderation or excessive compromise, it is recommended to restore boundaries and Temperance.",
+      "id": 93
+    },
+    {
+      "summary_en": "Awareness of bondage and beginning to break free.",
+      "detail_en": "Identify and begin to confront the influence of desires or addictions, suitable for seeking change.",
+      "id": 94
+    },
+    {
+      "summary_en": "Avoid collapse or delayed awakening.",
+      "detail_en": "Blocking transformation or delaying the revelation of truth, one needs to honestly face the issues.",
+      "id": 95
+    },
+    {
+      "summary_en": "Hope is frustrated or confidence is lost.",
+      "detail_en": "Feeling disappointed or confused, it is suggested to take small steps to restore faith and heal.",
+      "id": 96
+    },
+    {
+      "summary_en": "Confusion clarified or fears revealed.",
+      "detail_en": "Illusions are beginning to be unveiled, facing fears and seeking the truth.",
+      "id": 97
+    },
+    {
+      "summary_en": "Diminished self-confidence or superficial brightness.",
+      "detail_en": "Success hindered or false appearance, suggest returning to truth and self-recovery.",
+      "id": 98
+    },
+    {
+      "summary_en": "Resistance to awakening or self-denial.",
+      "detail_en": "Difficult to accept the call or overly critical judgment, suitable for forgiveness and acceptance.",
+      "id": 99
+    },
+    {
+      "summary_en": "Incomplete or missed integration.",
+      "detail_en": "Experiencing incomplete cycles or difficulties in integrating experiences, it is recommended to review omissions and wrap up.",
+      "id": 100
+    },
+    {
+      "summary_en": "Blocked inspiration or wasted opportunities.",
+      "detail_en": "Passion or opportunities not materializing, need to get back to practical execution and focus.",
+      "id": 101
+    },
+    {
+      "summary_en": "Plans hindered or hesitations.",
+      "detail_en": "Uncertainty in the future or delays in action, it is advised to adjust strategies and start with small steps.",
+      "id": 102
+    },
+    {
+      "summary_en": "Development stagnation or cooperation issues.",
+      "detail_en": "Expansion is hindered or partnership issues arise, requiring adjustment of expectations.",
+      "id": 103
+    },
+    {
+      "summary_en": "Instability or celebration hindered.",
+      "detail_en": "The foundation is shaky or conflicts disrupt the atmosphere, requiring repair of relationships and structures.",
+      "id": 104
+    },
+    {
+      "summary_en": "Escalation of conflict or hesitation.",
+      "detail_en": "Conflicts are difficult to resolve constructively, it is recommended to seek mediation or change attitudes.",
+      "id": 105
+    },
+    {
+      "summary_en": "Pride or lack of recognition.",
+      "detail_en": "Sense of achievement is damaged or arrogance leads to alienation, humility and rebuilding trust are needed.",
+      "id": 106
+    },
+    {
+      "summary_en": "Strength is weakened or defense is abandoned.",
+      "detail_en": "It is difficult to maintain a position or resources are depleted. It is recommended to regroup and seek support.",
+      "id": 107
+    },
+    {
+      "summary_en": "Delay or communication blockage.",
+      "detail_en": "Actions or communications are delayed, requiring patience and obstacle clearing.",
+      "id": 108
+    },
+    {
+      "summary_en": "Exhaustion and defense collapse.",
+      "detail_en": "Continual pressure leads to vulnerability, suggesting a pause for recovery and replenishment.",
+      "id": 109
+    },
+    {
+      "summary_en": "Unable to bear heavy burdens or avoiding responsibilities.",
+      "detail_en": "The overwhelming burden leads to collapse, requiring unloading or redistributing tasks.",
+      "id": 110
+    },
+    {
+      "summary_en": "Misleading messages or impulsive actions.",
+      "detail_en": "Initial messages may be misleading or impulsive, it is recommended to slow down and verify.",
+      "id": 111
+    },
+    {
+      "summary_en": "Impulsiveness out of control or recklessness.",
+      "detail_en": "Overzealous actions leading to negative consequences, need to examine direction and Temperance.",
+      "id": 112
+    },
+    {
+      "summary_en": "Emotional or controlling.",
+      "detail_en": "Passion turning into control or emotional, suggesting to return to balance and empathy.",
+      "id": 113
+    },
+    {
+      "summary_en": "Impatience or abuse of power.",
+      "detail_en": "The leadership is too aggressive, needs to reflect on methods and empower others.",
+      "id": 114
+    },
+    {
+      "summary_en": "Emotional blockage or disappointment.",
+      "detail_en": "New emotions or healing are hindered, suggesting a need to repair emotional patterns.",
+      "id": 115
+    },
+    {
+      "summary_en": "Misunderstanding or imbalance in relationships.",
+      "detail_en": "Misunderstandings or imbalance in connections, requiring communication and rebuilding of trust.",
+      "id": 116
+    },
+    {
+      "summary_en": "Social fatigue or superficial relationships.",
+      "detail_en": "Gatherings or friendships becoming shallow, suggesting genuine interaction and filtering relationships.",
+      "id": 117
+    },
+    {
+      "summary_en": "Coming out of indifference or reopening.",
+      "detail_en": "Awakening from indifference, rediscovering the potential of emotions.",
+      "id": 118
+    },
+    {
+      "summary_en": "Let go of pain and see opportunities.",
+      "detail_en": "Healing begins or perspectives shift, suitable for seeking support and rebuilding.",
+      "id": 119
+    },
+    {
+      "summary_en": "Excessive indulgence in the past or misunderstanding.",
+      "detail_en": "Staying in the past hinders the present, it is recommended to face reality and learn to let go.",
+      "id": 120
+    },
+    {
+      "summary_en": "Indecision or being misled by fantasies.",
+      "detail_en": "Missing practical opportunities or indulging in unrealistic fantasies. It is recommended to return to reality and prioritize clear goals.",
+      "id": 121
+    },
+    {
+      "summary_en": "Resisting change or returning to old situations.",
+      "detail_en": "Fear of leaving leading to stagnation, the need to examine true needs and be brave to take small steps forward.",
+      "id": 122
+    },
+    {
+      "summary_en": "False satisfaction or greed.",
+      "detail_en": "Surface satisfaction masks insecurity, reminding to examine inner motives and seek authentic connections.",
+      "id": 123
+    },
+    {
+      "summary_en": "Relationship conflicts or disharmony.",
+      "detail_en": "The ideal in the relationship is shattered, requiring honest communication and rebuilding of shared values.",
+      "id": 124
+    },
+    {
+      "summary_en": "Misinterpreted or delayed emotional messages.",
+      "detail_en": "Unclear information or blocked emotional expression, it is advised to communicate and listen carefully.",
+      "id": 125
+    },
+    {
+      "summary_en": "Unreliable pursuit or excessive idealization.",
+      "detail_en": "Actions lack stability or unrealistic pursuits, need to examine motives and slow down.",
+      "id": 126
+    },
+    {
+      "summary_en": "Emotional imbalance or excessive dependence.",
+      "detail_en": "Empathy turns into emotional overflow or lack of boundaries, suggesting self-care and setting boundaries.",
+      "id": 127
+    },
+    {
+      "summary_en": "Imbalance in emotional control or manipulation of emotions.",
+      "detail_en": "May be using emotions to control relationships or avoid responsibilities. It is advised to honestly face feelings and take on a mature role.",
+      "id": 128
+    },
+    {
+      "summary_en": "The truth is distorted or communication is blocked.",
+      "detail_en": "Information is confused or words are hurtful, clarify the facts and rebuild consensus calmly.",
+      "id": 129
+    },
+    {
+      "summary_en": "Avoiding decision-making or inner conflicts surfacing.",
+      "detail_en": "Refusing to confront challenges leads to a stalemate, it is advised to integrate information and make decisions gradually.",
+      "id": 130
+    },
+    {
+      "summary_en": "Unhealed heartache or refusing to heal.",
+      "detail_en": "Pain is suppressed or delayed, need to face emotions and seek support.",
+      "id": 131
+    },
+    {
+      "summary_en": "Difficult to rest or resist recovery.",
+      "detail_en": "Inability to relax hinders recovery, it is recommended to rest and seek stability.",
+      "id": 132
+    },
+    {
+      "summary_en": "Opportunity for reconciliation or admitting mistakes.",
+      "detail_en": "Conflicts are coming to an end, it is suitable to mend relationships with humility and learn the lessons.",
+      "id": 133
+    },
+    {
+      "summary_en": "Avoidance or trapped in old situations.",
+      "detail_en": "Transition is incomplete or difficult to move away from the problem. It is recommended to face the reasons and seek practical solutions.",
+      "id": 134
+    },
+    {
+      "summary_en": "Truth being revealed or letting go of deception.",
+      "detail_en": "Secret actions leading to consequences, suitable for honesty and rebuilding trust.",
+      "id": 135
+    },
+    {
+      "summary_en": "Gradually releasing constraints or breaking through beliefs.",
+      "detail_en": "The feeling of limitation weakens, encouraging seeking external support and new perspectives to liberate oneself.",
+      "id": 136
+    },
+    {
+      "summary_en": "Anxiety easing or regaining hope.",
+      "detail_en": "Nightmares gradually dissipating, it is recommended to seek support and practice relaxation methods.",
+      "id": 137
+    },
+    {
+      "summary_en": "Slow recovery or a new beginning.",
+      "detail_en": "Although the pain of the ending still lingers, possibilities for recovery and rebuilding are emerging.",
+      "id": 138
+    },
+    {
+      "summary_en": "Delayed or misleading messages.",
+      "detail_en": "Obstacles in learning or communication, it is recommended to verify the source and prepare steadily.",
+      "id": 139
+    },
+    {
+      "summary_en": "Impulsiveness frustrated or recklessness controlled.",
+      "detail_en": "Decreased motivation brings opportunity for reflection, suitable for planning before taking action.",
+      "id": 140
+    },
+    {
+      "summary_en": "Cold or harsh judgment.",
+      "detail_en": "Hurtful communication that is too sharp or defensive damages relationships, requiring cultivation of empathy and softness.",
+      "id": 141
+    },
+    {
+      "summary_en": "Abuse of rationality or errors in judgment.",
+      "detail_en": "Pure rationality may overlook emotions, it is recommended to balance thinking and listen to others.",
+      "id": 142
+    },
+    {
+      "summary_en": "Missed opportunities or obstacles to progress.",
+      "detail_en": "Material opportunities are not realized, requiring a review of readiness and practical planning.",
+      "id": 143
+    },
+    {
+      "summary_en": "Unable to balance multiple tasks.",
+      "detail_en": "Distracted resources lead to decreased efficiency. It is recommended to prioritize and simplify burdens.",
+      "id": 144
+    },
+    {
+      "summary_en": "Issues with cooperation or compromised quality.",
+      "detail_en": "Poor teamwork or declining standards, communication is needed to rebuild processes.",
+      "id": 145
+    },
+    {
+      "summary_en": "Letting go or excessive generosity.",
+      "detail_en": "Excessive guarding turning into openness or blocked resource flow, suggesting a reevaluation of boundaries.",
+      "id": 146
+    },
+    {
+      "summary_en": "Escaping poverty or starting to receive assistance.",
+      "detail_en": "There are signs of relief in adversity, suitable for accepting help and planning for recovery.",
+      "id": 147
+    },
+    {
+      "summary_en": "Giving being misused or unbalanced.",
+      "detail_en": "Helping relationships are imbalanced, boundaries need to be set and ensure reciprocity.",
+      "id": 148
+    },
+    {
+      "summary_en": "Urgency for harvest or lack of patience.",
+      "detail_en": "Neglecting long-term cultivation leads to poor harvest, it is suggested to return to patience and evaluate strategies.",
+      "id": 149
+    },
+    {
+      "summary_en": "Rough work or stagnation.",
+      "detail_en": "Skills are not honed or progressing slowly, suitable for revisiting details and practice.",
+      "id": 150
+    },
+    {
+      "summary_en": "Facing challenges in independence or feeling complacent.",
+      "detail_en": "Feeling self-sufficient or isolated, it is recommended to reflect on resource management and seek balance.",
+      "id": 151
+    },
+    {
+      "summary_en": "Family or career foundation shaken.",
+      "detail_en": "Long-term stability is threatened, requiring a review of values and common goals and taking corrective action.",
+      "id": 152
+    },
+    {
+      "summary_en": "Delayed learning or misinformation in practical matters.",
+      "detail_en": "The practical starting point is unstable, it is recommended to verify from multiple sources and prepare solidly.",
+      "id": 153
+    },
+    {
+      "summary_en": "Being overly slow or stubbornly traditional.",
+      "detail_en": "Conservative actions lead to missed opportunities, it is suitable to seek flexibility within safety.",
+      "id": 154
+    },
+    {
+      "summary_en": "Overcare or resource depletion.",
+      "detail_en": "Taking care of others leads to depletion of one's own resources, need self-recovery and adjustment of investment.",
+      "id": 155
+    },
+    {
+      "summary_en": "Imbalance in material control or stubbornness.",
+      "detail_en": "Excessive control or loss of practical judgment, it is recommended to reevaluate goals and seek cooperation.",
+      "id": 156
+    }
+  ]
+}

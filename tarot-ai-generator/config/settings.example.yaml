@@ -1,0 +1,47 @@
+general:
+  output_path: "./output/card_interpretation_dimensions.json"
+  multilingual_output_path: "./output/multilingual_dimensions.json"
+
+database:
+  path: "data/tarot_config.db"
+  root_locale: "zh-CN"
+  locales:
+    - "zh-CN"
+    - "en-US"
+
+paths:
+  prompt_templates:
+    zh-CN: "prompt_template.txt"
+    en-US: "prompt_template.en.txt"
+  logs_dir: "./output/logs"
+
+llm:
+  default_provider: zhipu
+  default_model: "glm-4-flash"
+  temperature: 0.2
+  max_tokens: 1000
+  rate_limit_per_minute: 60
+  batch_size: 10
+  language_providers:
+    zh-CN:
+      provider: zhipu
+      model: "glm-4-flash"
+      temperature: 0.2
+      rate_limit_per_minute: 60
+      max_tokens: 1000
+    en-US:
+      provider: openai
+      model: "gpt-4o-mini"
+      temperature: 0.2
+      rate_limit_per_minute: 40
+      max_tokens: 1000
+  openai:
+    base_url: "${OPENAI_BASE_URL:-https://api.openai.com/v1}"
+    model: "${OPENAI_MODEL_NAME:-gpt-4o-mini}"
+    api_key: "${OPENAI_API_KEY}"
+  zhipu:
+    model: "${ZHIPU_MODEL_NAME:-glm-4-flash}"
+    api_key: "${ZHIPUAI_API_KEY}"
+  ollama:
+    base_url: "${OLLAMA_BASE_URL:-http://localhost:11434}"
+    model: "${OLLAMA_MODEL:-qwen2.5:7b}"

@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2025-10-13T00:00:00",
+  "model": "gpt-3.5-turbo",
+  "count": 3,
+  "data": [
+    {
+      "name_en": "The Fool",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 1
+    },
+    {
+      "name_en": "The Magician",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 2
+    },
+    {
+      "name_en": "The High Priestess",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 3
+    }
+  ]
+}

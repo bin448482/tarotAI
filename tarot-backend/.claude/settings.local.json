@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(alembic current:*)",
+      "Bash(pip install:*)",
+      "Bash(sqlite3:*)",
+      "Bash(curl:*)",
+      "Read(//d/0-development/projects/MySixth/tarot-admin-web/**)",
+      "Bash(npm audit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

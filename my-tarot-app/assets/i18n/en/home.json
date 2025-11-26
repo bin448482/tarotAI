@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "title": "UNVEIL THE STARTS OF DESTINY",
+    "subtitle": "Begin your tarot journey right now",
+    "tagline": "Listen to your inner voice"
+  },
+  "actions": {
+    "startReading": "Start Reading",
+    "viewHistory": "History",
+    "cardLibrary": "Card Library",
+    "settings": "App Guide"
+  },
+  "declaration": {
+    "lines": [
+      "Step into a realm of mystical tarot insights.",
+      "Every card holds a whisper of the cosmos.",
+      "Explore your inner universe through thoughtful spreads.",
+      "May the starlight guide each choice you make."
+    ]
+  },
+  "disclaimer": "For study and inspiration only. This is not professional advice."
+}

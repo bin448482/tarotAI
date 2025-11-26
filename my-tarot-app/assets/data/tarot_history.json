@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2025-09-18T10:00:00Z",
+  "locales": {
+    "zh-CN": {
+      "description": "塔罗牌历史文化背景介绍 - 为多语言扩展做准备",
+      "overview": "塔罗牌是一套古老的占卜工具，由78张卡牌组成，分为大阿卡纳（Major Arcana）22张和小阿卡纳（Minor Arcana）56张。每张卡牌都蕴含着深层的象征意义，通过不同的排列组合来揭示内心的智慧和指引人生方向。",
+      "origins": "塔罗牌的起源可以追溯到15世纪的欧洲，最初作为一种纸牌游戏出现在意大利贵族之间。随着时间的推移，塔罗牌逐渐演变为一种占卜和自我探索的工具。现代最流行的韦特塔罗牌（Rider-Waite Tarot）由亚瑟·爱德华·韦特设计，帕梅拉·科尔曼·史密斯绘制，于1909年首次发布，至今仍是世界上使用最广泛的塔罗牌套牌。",
+      "major_minor": "大阿卡纳（Major Arcana）代表人生的重大主题和心灵成长的历程，从0号愚者（The Fool）开始，到21号世界（The World）结束，象征着一个完整的人生旅程。小阿卡纳（Minor Arcana）则关注日常生活的具体事务，分为四个花色：权杖（Wands）代表火元素和创造力，圣杯（Cups）代表水元素和情感，宝剑（Swords）代表风元素和思想，星币（Pentacles）代表土元素和物质。每个花色包含14张牌：王牌（Ace）、数字牌2-10，以及宫廷牌页侍（Page）、骑士（Knight）、王后（Queen）、国王（King）。",
+      "usage_notes": "塔罗牌占卜是一种自我反思和探索的工具，而非预测未来的绝对方法。在使用塔罗牌时，重要的是保持开放和诚实的心态，将卡牌的信息作为指引和启发，而不是不可改变的命运。塔罗牌能够帮助我们更好地理解当前的处境，识别内心的需求，并为决策提供不同的视角。记住，真正的力量在于我们自己的选择和行动。",
+      "interpretation_guidance": "每张塔罗牌都有正位（Upright）和逆位（Reversed）两种解读方式。正位通常表示卡牌能量的正面表达和自然流动，而逆位可能暗示能量的阻滞、内在化或需要特别关注的方面。在解读塔罗牌时，应该结合卡牌的传统意义、个人直觉、以及具体的问题情境来进行综合分析。",
+      "references": [
+        "亚瑟·爱德华·韦特《塔罗牌图像的钥匙》",
+        "蕾切尔·波拉克《78度的智慧》",
+        "琼·邦宁《塔罗牌学习指南》",
+        "比德·韦特塔罗牌官方指南"
+      ],
+      "cultural_significance": "在不同文化中，塔罗牌都被视为连接意识与潜意识的桥梁。它不仅是一种占卜工具，更是心理学、哲学和精神成长的载体。现代心理学家卡尔·荣格（Carl Jung）认为塔罗牌的原型象征能够反映人类集体无意识的深层结构，这也是为什么塔罗牌能够跨越文化和时代，持续为人们提供洞察和指引的原因。"
+    },
+    "en": {
+      "description": "An overview of tarot history and culture prepared for multilingual support.",
+      "overview": "Tarot is an ancient divination system made up of 78 cards: 22 Major Arcana and 56 Minor Arcana. Each card carries rich symbolic meaning, and different spreads help reveal inner wisdom and guidance for life decisions.",
+      "origins": "The tarot can be traced back to 15th-century Europe, where it began as a card game played among Italian nobles. Over time it evolved into a tool for divination and personal insight. The modern Rider–Waite Tarot, designed by Arthur Edward Waite and illustrated by Pamela Colman Smith in 1909, remains one of the most widely used decks today.",
+      "major_minor": "The Major Arcana represent profound life themes and spiritual milestones, beginning with 0 The Fool and completing the journey at 21 The World. The Minor Arcana focus on everyday experiences and are divided into four suits: Wands (fire and creativity), Cups (water and emotions), Swords (air and intellect), and Pentacles (earth and the material realm). Each suit contains 14 cards: Ace, numbers 2–10, and the court cards Page, Knight, Queen, and King.",
+      "usage_notes": "Tarot readings are tools for reflection and exploration rather than absolute predictions. Approach the cards with openness and honesty, using their messages as inspiration instead of fixed destiny. Tarot helps clarify the present moment, highlight inner needs, and offer perspectives for decision-making—ultimate agency still rests with your choices and actions.",
+      "interpretation_guidance": "Every tarot card has upright and reversed interpretations. Upright meanings reflect direct, flowing expressions of the card’s energy, while reversed meanings may signal blockages, internalization, or areas needing special attention. Combine traditional meanings, personal intuition, and the question's context to form a holistic reading.",
+      "references": [
+        "Arthur Edward Waite, \"The Pictorial Key to the Tarot\"",
+        "Rachel Pollack, \"Seventy-Eight Degrees of Wisdom\"",
+        "Joan Bunning, \"Learning the Tarot\"",
+        "Official Rider–Waite Tarot Guide"
+      ],
+      "cultural_significance": "Across cultures, tarot is seen as a bridge between the conscious and subconscious. Beyond fortune-telling, it serves as a canvas for psychology, philosophy, and spiritual growth. Psychologist Carl Jung observed that tarot archetypes echo the structures of the collective unconscious—one reason the cards continue to resonate across eras and cultures."
+    }
+  }
+}

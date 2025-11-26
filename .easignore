@@ -1,0 +1,79 @@
+# EAS Build ignore file at monorepo root (applies when building my-tarot-app/)
+# Uses .gitignore-style patterns. These paths are relative to the repo root.
+# Goal: keep upload small by excluding caches, build outputs, and local artifacts.
+
+# --- Monorepo guard: include ONLY my-tarot-app in the archive ---
+/*
+!.easignore
+!/my-tarot-app
+!/my-tarot-app/**
+
+# (The lines above ensure EAS does not traverse unrelated folders like
+# .git, .codex-local, deploy, release, tarot-backend, etc., eliminating
+# permission errors like EACCES on .codex-local.)
+
+# --- my-tarot-app: dependencies & caches ---
+my-tarot-app/node_modules/
+my-tarot-app/.pnp/
+my-tarot-app/.yarn/cache/
+my-tarot-app/.yarn/unplugged/
+my-tarot-app/.yarn/install-state.gz
+my-tarot-app/.expo/
+my-tarot-app/.expo-shared/
+my-tarot-app/.cache/
+my-tarot-app/.npm/
+my-tarot-app/.pnpm-store/
+
+# --- my-tarot-app: build outputs (web / generic) ---
+my-tarot-app/dist/
+my-tarot-app/build/
+my-tarot-app/web-build/
+my-tarot-app/out/
+my-tarot-app/.next/
+my-tarot-app/coverage/
+
+# --- my-tarot-app: logs & env files ---
+my-tarot-app/*.log
+my-tarot-app/.DS_Store
+my-tarot-app/.env*
+!my-tarot-app/.env.example
+
+# --- my-tarot-app: temp files ---
+my-tarot-app/tmp/
+my-tarot-app/temp/
+my-tarot-app/.tmp/
+
+# --- my-tarot-app: optional scripts/docs/tests (not needed for build) ---
+my-tarot-app/scripts/
+my-tarot-app/docs/
+my-tarot-app/*.md
+my-tarot-app/__tests__/
+my-tarot-app/*.test.*
+my-tarot-app/*.spec.*
+
+# --- my-tarot-app: Android caches/outputs ---
+my-tarot-app/android/local.properties
+my-tarot-app/android/app/debug.keystore
+my-tarot-app/android/.gradle/
+my-tarot-app/android/build/
+my-tarot-app/android/app/build/
+my-tarot-app/android/**/.cxx/
+my-tarot-app/android/**/intermediates/
+my-tarot-app/android/**/generated/
+my-tarot-app/android/**/outputs/
+my-tarot-app/android/**/captures/
+my-tarot-app/**/.gradle/
+my-tarot-app/**/build/
+my-tarot-app/*.apk
+my-tarot-app/*.aab
+
+# --- my-tarot-app: iOS caches (Pods installed during EAS build) ---
+my-tarot-app/ios/build/
+my-tarot-app/ios/DerivedData/
+my-tarot-app/ios/*.xcodeproj/project.xcworkspace/xcuserdata
+my-tarot-app/ios/*.xcodeproj/xcuserdata
+
+# --- my-tarot-app: IDE ---
+my-tarot-app/.idea/
+my-tarot-app/*.iml
+my-tarot-app/.vscode/

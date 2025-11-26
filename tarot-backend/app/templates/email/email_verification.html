@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>验证您的邮箱地址</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #4a5568;
+            margin: 0;
+            font-size: 28px;
+        }
+        .mystical-symbol {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #6b46c1;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .verify-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            transition: transform 0.2s ease;
+        }
+        .verify-button:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+            color: white;
+        }
+        .verify-url {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #6b46c1;
+            margin: 20px 0;
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 14px;
+            color: #4a5568;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            color: #718096;
+            font-size: 14px;
+        }
+        .warning {
+            background-color: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #c53030;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="mystical-symbol">🔮</div>
+            <h1>{{ app_name }}</h1>
+        </div>
+
+        <div class="content">
+            <h2>您好，{{ user_name }}！</h2>
+
+            <p>感谢您注册 {{ app_name }}！为了确保您的账户安全，请验证您的邮箱地址。</p>
+
+            <p>点击下面的按钮来验证您的邮箱：</p>
+
+            <div style="text-align: center;">
+                <a href="{{ verification_url }}" class="verify-button">
+                    验证邮箱地址
+                </a>
+            </div>
+
+            <p>如果按钮无法点击，请复制下面的链接到浏览器地址栏中打开：</p>
+            <div class="verify-url">{{ verification_url }}</div>
+
+            <div class="warning">
+                <strong>⚠️ 安全提醒</strong><br>
+                此验证链接将在 {{ expires_hours }} 小时后失效。<br>
+                如果您没有注册 {{ app_name }}，请忽略此邮件。
+            </div>
+
+            <p>验证成功后，您就可以：</p>
+            <ul>
+                <li>🎴 使用AI塔罗牌解读服务</li>
+                <li>📚 保存和查看历史解读记录</li>
+                <li>🔐 通过邮箱登录您的账户</li>
+                <li>💫 获得个性化的塔罗体验</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>此邮件由 {{ app_name }} 自动发送，请勿回复。</p>
+            <p>如有疑问，请联系我们的客服团队。</p>
+            <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;">
+            <p style="font-size: 12px; color: #a0aec0;">
+                © 2024 {{ app_name }}. 保留所有权利。
+            </p>
+        </div>
+    </div>
+</body>
+</html>

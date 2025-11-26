@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.env.windows": 
+    {
+        "CHCP": "65001"
+    },
+    "files.encoding": "utf8"
+}

@@ -1,0 +1,36 @@
+{
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.sortMembers": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.workingDirectories": ["."],
+  "files.associations": {
+    "*.tsx": "typescriptreact",
+    "*.ts": "typescript"
+  },
+  "emmet.includeLanguages": {
+    "typescript": "html",
+    "typescriptreact": "html"
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.expo": true,
+    "**/dist": true,
+    "**/build": true
+  },
+  "files.exclude": {
+    "**/.expo": true,
+    "**/node_modules": true
+  },
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "debug.onTaskErrors": "debugAnyway",
+  "debug.allowBreakpointsEverywhere": true,
+  "reactNativeTools.showUserTips": false,
+  "reactNativeTools.projectRoot": "./",
+  "reactNativeTools.logLevel": "Debug"
+}

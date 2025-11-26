@@ -1,0 +1,41 @@
+services:
+  backend:
+    env_file:
+      - ./env/backend.env
+    environment:
+      DATABASE_URL: sqlite:////data/backend_tarot.db
+    volumes:
+      - /srv/my-tarot/data:/data
+      - ./tarot-backend/static:/app/static:ro
+    ports: []
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8000/health || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  admin:
+    environment:
+      NEXT_PUBLIC_BACKEND_URL: /
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:3000/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  nginx:
+    depends_on:
+      backend:
+        condition: service_healthy
+      admin:
+        condition: service_started
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    volumes:
+      - ./deploy/nginx/nginx.conf:/etc/nginx/nginx.conf:ro

@@ -1,0 +1,201 @@
+{
+  "shared": {
+    "stepIndicator": "Step {{current}} / {{total}}",
+    "alerts": {
+      "confirmExit": {
+        "title": "Leave Reading?",
+        "default": "Leaving now will cancel your current reading. Are you sure?",
+        "afterAnalysis": "You have already completed the AI analysis. Leaving now will forfeit the credits spent. Continue?",
+        "afterAIResult": "You have completed this AI reading. Leaving now will end the session. Continue?"
+      }
+    },
+    "errors": {
+      "network": "Network issue detected. Please check your connection.",
+      "serviceUnavailable": "AI service is currently unavailable. Please try again later.",
+      "invalidResponse": "The AI analysis returned an invalid result. Please refine your question.",
+      "missingDimensions": "Missing reading dimensions. Please go back and choose again.",
+      "dimensionLoadFailed": "Failed to load dimensions. Please try again.",
+      "cardDataFailed": "Unable to load card data. Please check your connection.",
+      "insufficientCards": "Not enough cards available. Please contact support.",
+      "drawFailed": "Drawing cards failed. Please try again.",
+      "aiGenerateFailed": "Failed to generate the AI reading. Please retry.",
+      "aiDataIncomplete": "Reading data is incomplete.",
+      "aiMissingData": "Missing required reading data. Please start over.",
+      "basicGenerateFailed": "Failed to generate the interpretation. Please try again.",
+      "noDetailedInterpretation": "No detailed interpretation available yet."
+    },
+    "status": {
+      "loadingDimensions": "Loading reading dimensions...",
+      "loadingTheme": "Loading categories...",
+      "analyzing": "The AI is analysing your question...",
+      "analysisHint": "This may take a few seconds.",
+      "generating": "The AI is crafting your personalized reading...",
+      "generatingHint": "This may take 10–30 seconds.",
+      "retrying": "Retrying ({{count}}/3)",
+      "analysisStep": "Analysing card meanings..."
+    },
+    "buttons": {
+      "confirmReturn": "Confirm exit",
+      "saveRecord": "Save reading",
+      "readAgain": "Read again",
+      "backHome": "Back to home"
+    },
+    "components": {
+      "cardSlot": {
+        "dropHint": "Drag a card here",
+        "dropHintActive": "Release to place"
+      },
+      "dragDrop": {
+        "slotOccupiedTitle": "Notice",
+        "slotOccupiedMessage": "That slot already has a card. Please choose another position."
+      },
+      "simpleTestCard": {
+        "label": "Try to drag me"
+      },
+      "cardFlip": {
+        "upright": "Upright",
+        "reversed": "Reversed"
+      }
+    }
+  },
+  "type": {
+    "title": "Choose Your Reading",
+    "subtitle": "Select how you want to read. Swipe left to return home.",
+    "offline": {
+      "title": "Offline Reading",
+      "description": "Use the built-in interpretations—no network required.",
+      "status": {
+        "available": "[Available]"
+      }
+    },
+    "ai": {
+      "title": "AI Reading",
+      "costLabel": " (costs {{cost}} credits)",
+      "description": {
+        "checkingService": "Checking service status...",
+        "loadingCredits": "Fetching your credit balance...",
+        "serviceUnavailable": "AI service is currently unavailable. Please try again later.",
+        "insufficientCredits": "Current balance: {{credits}} credits — not enough.",
+        "available": "Personalized AI interpretation (current balance: {{credits}} credits)."
+      },
+      "status": {
+        "checking": "[Checking...]",
+        "loading": "[Loading...]",
+        "unavailable": "[Unavailable]",
+        "insufficient": "[Not enough credits]",
+        "available": "[Available]"
+      }
+    },
+    "alerts": {
+      "insufficientCredits": {
+        "title": "Not enough credits",
+        "message": "AI readings cost {{cost}} credits. You currently have {{balance}}. Please purchase more credits first."
+      }
+    },
+    "actions": {
+      "topUp": "Top up now"
+    },
+    "guidance": {
+      "title": "Reading Tips",
+      "lines": [
+        "Tarot is not about predicting the future—it reflects the energy around you and highlights possible directions.",
+        "Try asking open questions such as “How can I…?” or “What could I do…?” to invite more insightful guidance.",
+        "If you are new, begin with the offline basics, learn the card meanings, then explore AI readings when you feel ready."
+      ]
+    }
+  },
+  "category": {
+    "loading": "Loading categories...",
+    "title": "Choose a Reading Theme",
+    "subtitle": "Pick the theme you want to explore (grouped by focus).",
+    "confirm": "Confirm and continue"
+  },
+  "aiInput": {
+    "title": "Describe Your Question",
+    "description": "Tell the AI what you wish to ask and we will suggest the most relevant dimensions.",
+    "inputLabel": "Your question:",
+    "placeholder": "Describe the situation you want to explore...",
+    "recommendedTitle": "Recommended dimensions:",
+    "continueHint": "Tap below to continue",
+    "errors": {
+      "required": "Please enter your question.",
+      "tooLong": "The description must be no more than 200 characters.",
+      "invalidResponse": "The AI did not return usable recommendations. Please refine your question."
+    },
+    "alerts": {
+      "serviceUnavailable": "AI service is currently unavailable. Please try again later.",
+      "analyzeFailedTitle": "Analysis failed"
+    },
+    "buttons": {
+      "continue": "Continue",
+      "analyze": "Analyze"
+    }
+  },
+  "draw": {
+    "title": "Draw Your Cards",
+    "subtitle": {
+      "ai": "After drawing, take a mindful breath to form a spiritual link with the cards. Drag each one to its position—when the connection is felt, the spirit guide reveals itself and the AI delivers your personalized reading.",
+      "offline": "After drawing, take a mindful breath to form a spiritual link with the cards. Drag each one into place—when the connection is felt, the spirit guide appears and the tailored interpretation unfolds."
+    },
+    "buttons": {
+      "draw": "Draw cards",
+      "generateAI": "Generate AI reading",
+      "viewInterpretation": "View interpretation"
+    },
+    "debug": {
+      "dragTest": "Drag test (if this works, gestures are ready):"
+    },
+    "dragHint": "Drag each card into its matching slot",
+    "positionFallback": "Position {{index}}"
+  },
+  "basic": {
+    "loading": "Preparing your detailed interpretation...",
+    "title": "Foundational Meanings",
+    "subtitle": "In-depth guidance for the {{category}} focus",
+    "labels": {
+      "basic": "Card meaning:",
+      "detail": "Detailed insight:"
+    },
+    "footer": "Step 4 / 4 – Foundational reading complete"
+  },
+  "aiResult": {
+    "loading": {
+      "title": "The AI is preparing your personalized reading...",
+      "subtitle": "This may take 10–30 seconds."
+    },
+    "retrying": "Retrying ({{count}}/3)",
+    "progress": {
+      "analysis": "Interpreting card archetypes..."
+    },
+    "errors": {
+      "title": "We couldn't finish your reading",
+      "dataIncomplete": "Reading data is incomplete.",
+      "noCardData": "No card interpretations were found."
+    },
+    "buttons": {
+      "regenerate": "Generate again",
+      "retry": "Retry",
+      "tryAgain": "Try again",
+      "back": "Back to previous step"
+    },
+    "tips": {
+      "title": "💡 Helpful tips:",
+      "network": "• Check that your network is stable.",
+      "busy": "• Try again shortly; the AI may be busy.",
+      "rewrite": "• Rephrase your question for a sharper response."
+    },
+    "sections": {
+      "overview": "Overall overview",
+      "insights": "Key insights"
+    },
+    "labels": {
+      "basic": "Card meaning:",
+      "aiDetail": "AI insight:"
+    },
+    "fallback": {
+      "dimension": "Dimension {{index}}"
+    },
+    "footer": "Step 4 / 4 – Complete",
+    "generatedAt": "Generated at {{time}}"
+  }
+}

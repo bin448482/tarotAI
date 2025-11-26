@@ -1,0 +1,53 @@
+﻿services:
+  backend:
+    build: ./tarot-backend
+    env_file: ./tarot-backend/.env
+    environment:
+      - DATABASE_URL=sqlite:////data/backend_tarot.db
+    volumes:
+      - backend_data:/data
+      - ./tarot-backend/static:/app/static:ro
+      - ./tarot-backend/static/app-releases:/app/static/app-releases
+      # Google Play service account (read-only, not committed to VCS)
+      - ./deploy/secrets/google-service-account.json:/app/creds/google-service-account.json:ro
+    expose:
+      - "8000"
+    ports:
+      - "8001:8000"  # 使用 8001 绕过 Windows iphlpsvc 占用的端口 8000
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  admin:
+    build: ./tarot-admin-web
+    environment:
+      - NEXT_PUBLIC_BACKEND_URL=/
+    depends_on:
+      - backend
+    expose:
+      - "3000"
+
+  nginx:
+    image: nginx:alpine
+    depends_on:
+      - backend
+      - admin
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./deploy/certbot/www:/var/www/certbot:ro
+      - ./deploy/certbot/conf:/etc/letsencrypt:ro
+      - ./deploy/nginx/dhparam.pem:/etc/nginx/dhparam.pem:ro
+
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./deploy/certbot/www:/var/www/certbot
+      - ./deploy/certbot/conf:/etc/letsencrypt
+
+volumes:
+  backend_data:

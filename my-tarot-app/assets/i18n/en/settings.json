@@ -1,0 +1,228 @@
+{
+  "header": {
+    "title": "App Guide"
+  },
+  "language": {
+    "title": "Language",
+    "description": "Choose your preferred interface language.",
+    "current": "Active",
+    "updating": "Switching language…",
+    "options": {
+      "zh-CN": "简体中文",
+      "en": "English"
+    }
+  },
+  "status": {
+    "loading": "Fetching your data…",
+    "error": "Unable to load user info",
+    "retry": "Try again"
+  },
+  "appInfo": {
+    "title": "App Information",
+    "appName": "Mystic Tarot",
+    "versionFormat": "v{{version}} ({{buildNumber}})",
+    "vision": {
+      "title": "Our Vision",
+      "description": "Deliver deep, personalized tarot insights for every seeker"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Blend traditional tarot wisdom with modern AI to help you explore your inner world"
+    }
+  },
+  "disclaimer": {
+    "title": "Usage Statement",
+    "items": [
+      {
+        "icon": "💫",
+        "title": "Purpose",
+        "content": "This app supports personal growth and self-reflection with tarot guidance for inspiration and entertainment.",
+        "type": "info"
+      },
+      {
+        "icon": "⚠️",
+        "title": "Disclaimer",
+        "content": "Tarot readings are for reference only and do not constitute medical, legal, or financial advice. Please make your own decisions responsibly.",
+        "type": "warning"
+      },
+      {
+        "icon": "🧘",
+        "title": "Suggested Mindset",
+        "content": "Stay open and reflective. Treat readings as prompts for thought, honor your free will, and avoid over-reliance on predictions.",
+        "type": "suggestion"
+      },
+      {
+        "icon": "👶",
+        "title": "Age Guidance",
+        "content": "Minors should use the app only with guardian consent and guidance to ensure proper understanding of the tarot content.",
+        "type": "restriction"
+      }
+    ],
+    "important": {
+      "title": "⚡ Key Reminder",
+      "content": "Tarot is a projection tool that encourages reflection.\nUse the insights as inspiration, not as absolute truth or direct instructions."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "items": [
+      {
+        "id": "collection",
+        "icon": "📊",
+        "title": "Data Collection",
+        "summary": "We follow a minimal, necessary data-collection principle",
+        "details": "We only collect the data required to deliver our services:\n\n• Reading history: questions, chosen cards, generated insights\n• Preferences: interface settings, language choices, personalization\n• Device info: model and OS version (for compatibility improvements)\n• Usage analytics: feature frequency and navigation paths (to enhance UX)\n\nWe never collect your name, address, phone number, or other identity data."
+      },
+      {
+        "id": "usage",
+        "icon": "🎯",
+        "title": "Data Usage",
+        "summary": "Improve experiences and personalization — never sold",
+        "details": "Your data is used to:\n\n• Provide tarot reading services\n• Store and sync your reading history\n• Improve features and overall experience\n• Offer tailored recommendations and settings\n• Deliver technical support\n\nWe promise:\n• We never sell your data\n• We do not use it for ad targeting\n• We do not share personal data with other apps or services"
+      },
+      {
+        "id": "protection",
+        "icon": "🔒",
+        "title": "Data Protection",
+        "summary": "Encrypted storage, regular audits, export & deletion support",
+        "details": "We apply industry-standard security measures:\n\n• Encrypted storage: AES-256 for all data\n• Secure transport: HTTPS/TLS encryption\n• Access control: restricted internal permissions\n• Regular audits: security reviews and vulnerability scans\n• Backup safety: resilient backup and recovery\n\nYour rights:\n• View and export your data anytime\n• Request full deletion of your data\n• Update or correct your information\n• Withdraw consent for data usage"
+      }
+    ],
+    "contact": {
+      "title": "📧 Privacy Enquiries",
+      "description": "If you have questions about our privacy policy, contact us at:",
+      "email": "biiinnn001@gmail.com"
+    }
+  },
+  "support": {
+    "title": "Help & Support",
+    "groups": [
+      {
+        "id": "contact",
+        "title": "Contact Us",
+        "buttons": [
+          {
+            "id": "email",
+            "icon": "✉️",
+            "title": "Email Support",
+            "subtitle": "Reach a specialist for one-on-one help",
+            "action": "email"
+          },
+          {
+            "id": "feedback",
+            "icon": "💬",
+            "title": "Share Feedback",
+            "subtitle": "Send suggestions and experience reports",
+            "action": "feedback"
+          }
+        ]
+      },
+      {
+        "id": "selfService",
+        "title": "Self-Service",
+        "buttons": [
+          {
+            "id": "update",
+            "icon": "🔄",
+            "title": "Check for Updates",
+            "subtitle": "See if a new version is available",
+            "action": "update"
+          },
+          {
+            "id": "help",
+            "icon": "📖",
+            "title": "Quick Guide",
+            "subtitle": "Review the reading flow and key features",
+            "action": "help"
+          },
+          {
+            "id": "faq",
+            "icon": "📋",
+            "title": "FAQ",
+            "subtitle": "Browse common questions",
+            "action": "faq"
+          }
+        ]
+      }
+    ],
+    "contact": {
+      "email": "biiinnn001@gmail.com",
+      "feedbackEmail": "biiinnn001@gmail.com"
+    },
+    "common": {
+      "ok": "OK",
+      "cancel": "Cancel",
+      "sendEmail": "Send Email"
+    },
+    "alerts": {
+      "email": {
+        "subject": "Mystic Tarot - Support Request",
+        "body": "App version: {{version}}\nDevice info: {{device}}\n\nDescribe your question:\n\n[Please add details here]",
+        "errorTitle": "Unable to open mail app",
+        "errorMessage": "Please send a message to {{email}} manually."
+      },
+      "feedback": {
+        "title": "Share Feedback",
+        "message": "Thank you! You can reach us in these ways:\n\n1. Email {{email}}\n2. Leave a review in the app store\n3. Join our community chat"
+      },
+      "update": {
+        "title": "Check for Updates",
+        "message": "Current version: {{version}}\n\nYou're already on the latest release!"
+      },
+      "help": {
+        "title": "Quick Guide",
+        "message": "Here are a few quick tips:\n\n• Reading flow: choose a mode → ask a question → draw cards → review insights\n• History: revisit every reading and interpretation\n• Card library: learn the meaning of all 78 tarot cards\n• AI readings: receive deeper, personalized insights"
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "message": "Common answers at a glance:\n\nQ: How accurate are tarot readings?\nA: Tarot invites reflection; focus on personal insight.\n\nQ: How is AI reading priced?\nA: It uses credits (1 credit = ¥1).\n\nQ: Will my data be lost?\nA: Data is stored locally and can sync to the cloud.\n\nQ: How do I delete a reading?\nA: Long press a history item to remove it."
+      }
+    },
+    "version": {
+      "title": "Version Info",
+      "labels": {
+        "appVersion": "App version",
+        "buildNumber": "Build number",
+        "updatedAt": "Last updated"
+      },
+      "updatedAt": "2024-01-01"
+    }
+  },
+  "recharge": {
+    "title": "Credit Management",
+    "balance": {
+      "label": "Current credit balance",
+      "note": "1 credit = ¥1 CNY"
+    },
+    "redeem": {
+      "title": "Redeem code top-up"
+    },
+    "history": {
+      "title": "Recent activity",
+      "viewMore": "View more",
+      "status": {
+        "recharge": "Top-up",
+        "consume": "Spent",
+        "refund": "Refund",
+        "other": "Other"
+      },
+      "creditChange": "{{sign}}{{value}} credits"
+    },
+    "iap": {
+      "title": "Buy credits (via Google Play)",
+      "loading": "Loading products…",
+      "retry": "Retry loading",
+      "unavailable": "The store is unavailable. Please try again later or use a redeem code.",
+      "popular": "Popular",
+      "bestValue": "Best value",
+      "buy": "Buy",
+      "success": "Successfully added {{credits}} credits",
+      "verifying": "Verifying your purchase…",
+      "error": {
+        "cancelled": "Purchase cancelled",
+        "failed": "Purchase failed: {{message}}",
+        "verify": "Verification failed. Please try again later or use a redeem code."
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "app": {
+    "name": "星辉塔罗",
+    "loading": "加载中…",
+    "retry": "重试",
+    "confirm": "确认",
+    "cancel": "取消",
+    "back": "返回"
+  },
+  "status": {
+    "initializing": "正在初始化应用…",
+    "databaseReady": "数据库已就绪",
+    "aiUnavailable": "AI服务暂不可用",
+    "authenticating": "正在验证身份…"
+  },
+  "errors": {
+    "unknown": "发生未知错误",
+    "network": "网络连接异常，请稍后再试",
+    "database": "数据库初始化失败",
+    "auth": "认证失败，请稍后重试"
+  }
+}

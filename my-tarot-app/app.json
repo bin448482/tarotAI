@@ -1,0 +1,83 @@
+{
+  "expo": {
+    "name": "my-tarot-app",
+    "slug": "my-tarot-app",
+    "version": "1.0.2",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "mytarotapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.mysixth.tarot",
+      "versionCode": 4,
+      "adaptiveIcon": {
+        "backgroundColor": "#5B4A8A",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "usesCleartextTraffic": true,
+      "permissions": ["com.android.vending.BILLING"]
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/icon.png",
+          "imageWidth": 240,
+          "resizeMode": "contain",
+          "backgroundColor": "#5B4A8A",
+          "dark": {
+            "image": "./assets/images/icon.png",
+            "backgroundColor": "#5B4A8A"
+          }
+        }
+      ],
+      "react-native-iap"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": false
+    },
+    "extra": {
+      "tabsConfig": {
+        // "tabBarEnabled": true,
+        "tabs": {
+          "home": {
+            "enabled": true,
+            "title": "Home",
+            "icon": "house.fill"
+          },
+          "explore": {
+            "enabled": true,
+            "title": "Explore",
+            "icon": "paperplane.fill"
+          }
+        }
+      },
+      "router": {},
+      "API_BASE_URL": "http://192.168.71.16",
+      // "API_BASE_URL": "https://www.miidea.top/api/v1",
+      // "PUBLIC_API_BASE_URL": "https://www.miidea.top/api/v1",
+      "PUBLIC_API_BASE_URL": "http://192.168.71.16",
+      "eas": {
+        "projectId": "0d19ed54-5efd-4fe1-ae51-23a1b6602215"
+      }
+    },
+    "assetBundlePatterns": [
+      "assets/images/**/*",
+      "assets/db/**/*",
+      "assets/data/**/*"
+    ]
+  }
+}

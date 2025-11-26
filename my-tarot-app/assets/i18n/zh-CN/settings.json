@@ -1,0 +1,228 @@
+{
+  "header": {
+    "title": "系统说明"
+  },
+  "language": {
+    "title": "界面语言",
+    "description": "选择你习惯的语言，应用会立即切换显示内容。",
+    "current": "当前使用",
+    "updating": "正在切换语言…",
+    "options": {
+      "zh-CN": "简体中文",
+      "en": "英语 English"
+    }
+  },
+  "status": {
+    "loading": "正在加载用户信息…",
+    "error": "加载用户信息失败",
+    "retry": "重试"
+  },
+  "appInfo": {
+    "title": "应用信息",
+    "appName": "神秘塔罗牌",
+    "versionFormat": "v{{version}} ({{buildNumber}})",
+    "vision": {
+      "title": "我们的愿景",
+      "description": "为用户提供深入、个性化的塔罗牌洞察"
+    },
+    "mission": {
+      "title": "我们的使命",
+      "description": "结合传统塔罗智慧与现代AI技术，帮助用户探索内心世界"
+    }
+  },
+  "disclaimer": {
+    "title": "使用声明",
+    "items": [
+      {
+        "icon": "💫",
+        "title": "应用目的",
+        "content": "本应用旨在提供个人成长和自我探索的工具，帮助用户通过塔罗牌获得心理咨询和个人洞察，同时提供娱乐性和启发性体验。",
+        "type": "info"
+      },
+      {
+        "icon": "⚠️",
+        "title": "免责声明",
+        "content": "塔罗牌解读仅供参考，不构成医学、法律、金融等专业建议。本应用不能替代心理咨询与专业诊断，用户需对自身决策承担责任。",
+        "type": "warning"
+      },
+      {
+        "icon": "🧘",
+        "title": "使用建议",
+        "content": "建议用户保持开放和反思的心态，不要过度依赖占卜结果。请理性看待占卜内容，尊重个人意志和选择，将其作为思考和成长的辅助工具。",
+        "type": "suggestion"
+      },
+      {
+        "icon": "👶",
+        "title": "年龄限制",
+        "content": "未成年人使用本应用需要监护人的同意和指导。我们建议家长陪同未成年人一起使用，确保正确理解和使用塔罗牌功能。",
+        "type": "restriction"
+      }
+    ],
+    "important": {
+      "title": "⚡ 重要提醒",
+      "content": "塔罗牌是一种心理投射工具，其价值在于帮助用户反思和探索内心。\n请将占卜结果作为参考和启发，而非绝对真理或行动指南。"
+    }
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "items": [
+      {
+        "id": "collection",
+        "icon": "📊",
+        "title": "数据收集说明",
+        "summary": "我们遵循最小化、必要性原则收集数据",
+        "details": "我们仅收集提供服务所必需的数据，包括：\n\n• 占卜记录：您的占卜问题、选择的卡牌、解读结果\n• 使用偏好：界面设置、语言偏好等个性化配置\n• 设备信息：设备型号、操作系统版本（用于兼容性优化）\n• 使用统计：功能使用频率、操作路径（用于改善用户体验）\n\n我们承诺不收集您的姓名、地址、电话等个人身份信息。"
+      },
+      {
+        "id": "usage",
+        "icon": "🎯",
+        "title": "数据使用方式",
+        "summary": "用于改进体验与个性化，不出售数据",
+        "details": "您的数据仅用于以下目的：\n\n• 提供塔罗牌解读服务\n• 保存和同步您的占卜历史\n• 改善应用功能和用户体验\n• 提供个性化推荐和设置\n• 技术支持和客户服务\n\n我们承诺：\n• 绝不将您的数据出售给第三方\n• 不用于广告投放或营销目的\n• 不与其他应用或服务共享个人数据"
+      },
+      {
+        "id": "protection",
+        "icon": "🔒",
+        "title": "数据保护承诺",
+        "summary": "加密存储、定期审计、支持导出与删除",
+        "details": "我们采用行业标准的安全措施保护您的数据：\n\n• 加密存储：所有数据采用AES-256加密存储\n• 传输安全：使用HTTPS/TLS加密传输\n• 访问控制：严格限制数据访问权限\n• 定期审计：定期进行安全审计和漏洞扫描\n• 备份保护：安全的数据备份和恢复机制\n\n您的权利：\n• 随时查看和导出您的数据\n• 请求删除您的所有数据\n• 修正或更新您的信息\n• 撤回数据使用同意"
+      }
+    ],
+    "contact": {
+      "title": "📧 隐私问题咨询",
+      "description": "如果您对我们的隐私政策有任何疑问，请通过以下方式联系我们：",
+      "email": "76626123@qq.com"
+    }
+  },
+  "support": {
+    "title": "帮助与支持",
+    "groups": [
+      {
+        "id": "contact",
+        "title": "联系我们",
+        "buttons": [
+          {
+            "id": "email",
+            "icon": "✉️",
+            "title": "邮件支持",
+            "subtitle": "发送邮件获取一对一帮助",
+            "action": "email"
+          },
+          {
+            "id": "feedback",
+            "icon": "💬",
+            "title": "用户反馈",
+            "subtitle": "提交建议和使用体验",
+            "action": "feedback"
+          }
+        ]
+      },
+      {
+        "id": "selfService",
+        "title": "自助帮助",
+        "buttons": [
+          {
+            "id": "update",
+            "icon": "🔄",
+            "title": "检查更新",
+            "subtitle": "查看是否有新版本",
+            "action": "update"
+          },
+          {
+            "id": "help",
+            "icon": "📖",
+            "title": "使用指南",
+            "subtitle": "了解占卜流程与功能",
+            "action": "help"
+          },
+          {
+            "id": "faq",
+            "icon": "📋",
+            "title": "常见问题",
+            "subtitle": "查看常见问题解答",
+            "action": "faq"
+          }
+        ]
+      }
+    ],
+    "contact": {
+      "email": "76626123@qq.com",
+      "feedbackEmail": "76626123@qq.com"
+    },
+    "common": {
+      "ok": "确定",
+      "cancel": "取消",
+      "sendEmail": "发送邮件"
+    },
+    "alerts": {
+      "email": {
+        "subject": "塔罗牌应用 - 用户咨询",
+        "body": "应用版本: {{version}}\n设备信息: {{device}}\n\n问题描述:\n\n[请在此处描述您遇到的问题或需要咨询的内容]",
+        "errorTitle": "无法打开邮箱",
+        "errorMessage": "请手动发送邮件至：{{email}}"
+      },
+      "feedback": {
+        "title": "用户反馈",
+        "message": "感谢您的反馈！您可以通过以下方式向我们提供建议：\n\n1. 发送邮件至 {{email}}\n2. 在应用商店留下评价\n3. 加入我们的用户群交流"
+      },
+      "update": {
+        "title": "检查更新",
+        "message": "当前版本: {{version}}\n\n您已经使用的是最新版本！"
+      },
+      "help": {
+        "title": "使用帮助",
+        "message": "以下是一些常用功能的快速指南：\n\n• 占卜流程：选择类型 → 输入问题 → 抽牌 → 查看解读\n• 历史记录：可查看所有占卜历史和详细解读\n• 卡牌说明：了解78张塔罗牌的含义和背景\n• AI解读：获得更个性化的深度解读"
+      },
+      "faq": {
+        "title": "常见问题",
+        "message": "以下是一些常见问题的解答：\n\nQ: 塔罗牌准确吗？\nA: 塔罗牌是心理投射工具，重在启发思考。\n\nQ: AI解读如何收费？\nA: 按积分消费，1积分=1元。\n\nQ: 数据会丢失吗？\nA: 数据本地存储并可云端同步。\n\nQ: 如何删除历史记录？\nA: 在历史页面长按记录即可删除。"
+      }
+    },
+    "version": {
+      "title": "版本信息",
+      "labels": {
+        "appVersion": "应用版本",
+        "buildNumber": "构建版本",
+        "updatedAt": "更新时间"
+      },
+      "updatedAt": "2024-01-01"
+    }
+  },
+  "recharge": {
+    "title": "积分管理",
+    "balance": {
+      "label": "当前积分余额",
+      "note": "1 积分 = 1 元人民币"
+    },
+    "redeem": {
+      "title": "兑换码充值"
+    },
+    "history": {
+      "title": "充值记录",
+      "viewMore": "查看更多",
+      "status": {
+        "recharge": "充值",
+        "consume": "消费",
+        "refund": "退款",
+        "other": "其他"
+      },
+      "creditChange": "{{sign}}{{value}} 积分"
+    },
+    "iap": {
+      "title": "购买积分（通过 Google Play）",
+      "loading": "正在加载商品…",
+      "retry": "重试加载商品",
+      "unavailable": "商店暂不可用，请稍后再试或使用兑换码",
+      "popular": "最受欢迎",
+      "bestValue": "超值",
+      "buy": "购买",
+      "success": "已成功充值 {{credits}} 积分",
+      "verifying": "正在确认订单…",
+      "error": {
+        "cancelled": "购买已取消",
+        "failed": "购买失败：{{message}}",
+        "verify": "订单校验失败，请稍后重试或使用兑换码"
+      }
+    }
+  }
+}

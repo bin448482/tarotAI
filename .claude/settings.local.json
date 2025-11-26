@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(find:*)",
+      "Bash(venvScripts:*)",
+      "Bash(pip install:*)",
+      "Bash(.venvScriptsactivate)",
+      "Bash(npx ts-node:*)",
+      "Bash(npx tsx:*)",
+      "Bash(sqlite3:*)",
+      "Bash(npx expo:*)",
+      "Bash(docker compose:*)",
+      "Bash(curl:*)",
+      "Bash(docker inspect:*)",
+      "Bash(ip addr:*)",
+      "Bash(docker network:*)",
+      "Bash(echo:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(for ip in 127.0.0.1 172.28.128.1 192.168.71.16)",
+      "Bash(do echo \"Testing $ip:8000\" timeout 3 curl -s -X POST \"http://$ip:8000/api/v1/users/register\" -H \"Content-Type: application/json\" -d '{\"\"\"\"installation_id\"\"\"\":\"\"\"\"test\"\"\"\"}')",
+      "Bash(docker exec:*)",
+      "Bash(netstat:*)",
+      "Bash(taskkill:*)",
+      "Bash(findstr:*)",
+      "Bash(wsl:*)",
+      "Bash(cmd:*)",
+      "Bash(timeout:*)",
+      "Bash(nul)",
+      "Bash(docker port:*)",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File update-wslconfig.ps1)",
+      "Bash(netsh interface portproxy show:*)",
+      "Bash(netsh interface portproxy delete:*)",
+      "Bash(netsh interface portproxy add:*)",
+      "Bash(powershell.exe -Command \"New-Item -ItemType Directory -Force -Path D:\\wsl-proxy-nginx\")",
+      "Bash(powershell.exe -Command:*)",
+      "Bash(cmd.exe /c \"echo worker_processes  1; > D:\\wsl-proxy-nginx\\nginx.conf && echo events { worker_connections 1024; } >> D:\\wsl-proxy-nginx\\nginx.conf && echo http { >> D:\\wsl-proxy-nginx\\nginx.conf && echo   sendfile on; >> D:\\wsl-proxy-nginx\\nginx.conf && echo   proxy_http_version 1.1; >> D:\\wsl-proxy-nginx\\nginx.conf && echo. >> D:\\wsl-proxy-nginx\\nginx.conf && echo   upstream app { >> D:\\wsl-proxy-nginx\\nginx.conf && echo     server host.docker.internal:80; >> D:\\wsl-proxy-nginx\\nginx.conf && echo   } >> D:\\wsl-proxy-nginx\\nginx.conf && echo. >> D:\\wsl-proxy-nginx\\nginx.conf && echo   server { >> D:\\wsl-proxy-nginx\\nginx.conf && echo     listen 80; >> D:\\wsl-proxy-nginx\\nginx.conf && echo     location / { >> D:\\wsl-proxy-nginx\\nginx.conf && echo       proxy_pass http://app; >> D:\\wsl-proxy-nginx\\nginx.conf && echo       proxy_set_header Host $host; >> D:\\wsl-proxy-nginx\\nginx.conf && echo       proxy_set_header X-Real-IP $remote_addr; >> D:\\wsl-proxy-nginx\\nginx.conf && echo       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; >> D:\\wsl-proxy-nginx\\nginx.conf && echo       proxy_set_header X-Forwarded-Proto $scheme; >> D:\\wsl-proxy-nginx\\nginx.conf && echo     } >> D:\\wsl-proxy-nginx\\nginx.conf && echo   } >> D:\\wsl-proxy-nginx\\nginx.conf && echo } >> D:\\wsl-proxy-nginx\\nginx.conf\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

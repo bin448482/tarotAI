@@ -1,0 +1,65 @@
+{
+  "history": {
+    "title": "Tarot History & Lore",
+    "sections": {
+      "overview": "Overview",
+      "origins": "Origins",
+      "majorMinor": "Major & Minor Arcana",
+      "usage": "How to Use"
+    }
+  },
+  "arcana": {
+    "major": "Major Arcana",
+    "minor": "Minor Arcana"
+  },
+  "sideToggle": {
+    "label": "Reading Direction",
+    "upright": "Upright",
+    "reversed": "Reversed",
+    "uprightTitle": "Upright Interpretation",
+    "reversedTitle": "Reversed Interpretation"
+  },
+  "interpretation": {
+    "summary": "Key Meanings",
+    "detail": "Detailed Guidance"
+  },
+  "filters": {
+    "title": "Filter Cards",
+    "arcanaLabel": "Arcana:",
+    "suitLabel": "Suit:",
+    "arcana": {
+      "all": "All",
+      "major": "Major Arcana",
+      "minor": "Minor Arcana"
+    },
+    "suit": {
+      "all": "All",
+      "wands": "Wands",
+      "cups": "Cups",
+      "swords": "Swords",
+      "pentacles": "Pentacles"
+    }
+  },
+  "list": {
+    "title": "Tarot Library ({{count}} cards)"
+  },
+  "status": {
+    "dbInitFailed": "Failed to initialize database",
+    "dbInitializing": "Initializing database...",
+    "loadingCards": "Loading cards...",
+    "loadingDetail": "Loading card detail..."
+  },
+  "alerts": {
+    "errorTitle": "Error",
+    "loadCardsFailed": "Unable to load card data",
+    "loadDataFailed": "An error occurred while loading data",
+    "loadCardDetailFailed": "Unable to load card detail",
+    "loadCardDetailError": "An error occurred while loading the card detail"
+  },
+  "detail": {
+    "header": "Card Library",
+    "detailHeader": "Card Detail",
+    "number": "No. {{number}}",
+    "deck": "Deck: {{deck}}"
+  }
+}

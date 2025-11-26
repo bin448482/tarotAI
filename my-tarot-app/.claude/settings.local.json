@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/0-development/projects/MySixth/tarot-backend/app/api/**)",
+      "Read(//d/0-development/projects/MySixth/tarot-backend/app/services/**)",
+      "Bash(eas build:*)",
+      "WebFetch(domain:expo.dev)",
+      "Bash(eas build:list:*)",
+      "Bash(npm install)",
+      "Bash(timeout:*)",
+      "Bash(npm install:*)",
+      "Bash(npx expo:*)",
+      "Bash(java:*)",
+      "Bash(where gradle)",
+      "Bash(.gradlew assembleRelease)",
+      "Bash(sqlite3:*)",
+      "Bash(adb shell pm clear:*)",
+      "Bash(adb uninstall:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
