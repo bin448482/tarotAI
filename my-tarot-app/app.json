@@ -66,10 +66,10 @@
         }
       },
       "router": {},
-      "API_BASE_URL": "http://192.168.71.16",
+      "API_BASE_URL": "http://192.168.84.239",
       // "API_BASE_URL": "https://www.miidea.top/api/v1",
       // "PUBLIC_API_BASE_URL": "https://www.miidea.top/api/v1",
-      "PUBLIC_API_BASE_URL": "http://192.168.71.16",
+      "PUBLIC_API_BASE_URL": "http://192.168.84.239",
       "eas": {
         "projectId": "0d19ed54-5efd-4fe1-ae51-23a1b6602215"
       }
