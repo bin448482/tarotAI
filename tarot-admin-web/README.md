@@ -13,14 +13,26 @@ Next.js App Router dashboard for operating TarotAI: manage users, vouchers, orde
 - 📱 Client portal：`/client-portal` 托管最新 APK / AAB 下载说明。
 - 🧱 Tailwind + Ant Design theme：黑金塔罗风格，可扩展多主题。
 
-## 3. 技术栈 | Tech Stack
+## 3. 前端路由 | Frontend Routes
+- `/` - 根路由（重定向）
+- `/login` - 管理员登录
+- `/dashboard` - 仪表板
+- `/users` - 用户管理
+- `/redeem-codes` - 兑换码管理
+- `/orders` - 订单管理
+- `/verify-email` - 邮箱验证入口
+- `/app-release` - 应用发布管理
+- `/client-portal` - 客户端下载门户
+- `/privacy` - 隐私政策
+
+## 4. 技术栈 | Tech Stack
 - **Language**: TypeScript 5.x
 - **Framework**: Next.js 15 App Router, React 19, Ant Design 6
 - **State/Data**: Zustand store, SWR data fetching, Zod schema validation
 - **Styling**: Tailwind CSS, CSS Modules, Ant Design tokens
 - **Others**: ESLint, Prettier, Vercel-ready build scripts, Docker support via root compose
 
-## 4. 安装与运行 | Installation & Usage
+## 5. 安装与运行 | Installation & Usage
 ### 环境要求 | Requirements
 - Node.js >= 18.18
 - npm / pnpm / yarn (示例以 npm)

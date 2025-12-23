@@ -15,7 +15,9 @@
       "Bash(.gradlew assembleRelease)",
       "Bash(sqlite3:*)",
       "Bash(adb shell pm clear:*)",
-      "Bash(adb uninstall:*)"
+      "Bash(adb uninstall:*)",
+      "Bash(adb logcat:*)",
+      "WebFetch(domain:www.miidea.top)"
     ],
     "deny": [],
     "ask": []
