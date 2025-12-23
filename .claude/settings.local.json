@@ -40,7 +40,8 @@
       "Bash(ipconfig:*)",
       "Bash(cat:*)",
       "Bash(npm cache clean:*)",
-      "Bash(npm run android:*)"
+      "Bash(npm run android:*)",
+      "Bash(git log:*)"
     ],
     "deny": [],
     "ask": []
