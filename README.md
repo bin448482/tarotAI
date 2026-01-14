@@ -1,61 +1,127 @@
-# TarotAI Omnichannel Tarot Suite
+# TarotAI
 
-TarotAI is a full-stack, cross-platform experience that lets anonymous users perform guided tarot readings, save their history, and optionally pay for AI-enhanced interpretations across mobile, web, and admin channels.
+[![GitHub](https://img.shields.io/badge/GitHub-bin448482%2FtarotAI-blue?logo=github)](https://github.com/bin448482/tarotAI)
+[![Expo](https://img.shields.io/badge/Expo-SDK%2054-000020?logo=expo)](https://expo.dev/)
+[![React%20Native](https://img.shields.io/badge/React%20Native-0.81-61DAFB?logo=react&logoColor=black)](https://reactnative.dev/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
+[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://docs.docker.com/compose/)
 
-## 1. 项目简介 | Description
-TarotAI combines an Expo React Native mobile client, a FastAPI backend, and a Next.js admin console to deliver a seamless four-step tarot journey. Anonymous users can draw spreads, receive static card meanings, and upgrade to paid LLM insights (GLM-4 + OpenAI). Admins monitor readings, manage users, vouchers, and dashboards, while AI authoring tools batch-generate narrative content for each card dimension. The system targets reliability (offline-first sync, SQLite persistence), monetization (Stripe Checkout + Google Play IAP compatibility), and operational efficiency through containerized deployment.
+English README · 中文说明请看 `README_CN.md`
 
-## 2. 功能特性 | Features
-- 🎴 End-to-end tarot workflow: select reading mode, enter intent (≤200 chars), draw spreads (3-card or Celtic Cross), and view layered interpretations.
-- 🤖 Dual-phase AI pipeline: `/readings/analyze` recommends dimensions, `/readings/generate` delivers personalized narratives with optional paid upgrades.
-- 🧑‍💻 Modern admin web console: user CRUD, credit adjustments, voucher batches, order source tracking, dashboards, and system health views.
-- 💳 Recharge flexibility: Google Play IAP when available, fallback redeem-code top-ups, and Stripe Checkout (API placeholder ready) for global users.
-- 🔐 Anonymous yet attributable identity: stable `installation_id`, optional email binding on purchase verification, JWT-based auth across surfaces.
-- 📱 Cross-platform delivery: Expo-managed iOS/Android app, responsive web admin, and Dockerized backend/admin/Nginx stack.
+## Overview
+TarotAI is a full-stack, cross-platform tarot suite:
 
-## 3. 技术栈 | Tech Stack
-- **Languages**: TypeScript (Expo + Next.js), Python (FastAPI), SQL (SQLite), plus scripting in Node.js/Python for tooling.
-- **Frameworks**: Expo SDK 54 / React Native 0.81, Expo Router 6, Zustand + SWR on admin, FastAPI 0.104 with SQLAlchemy, Uvicorn, and LLM client abstractions.
-- **Databases & Storage**: SQLite per service, Expo SQLite on device, static assets served via FastAPI + CDN-friendly bundles.
-- **AI & Payments**: GLM-4 + OpenAI integrations, Stripe Checkout scaffolding, Google Play Billing verification via `/api/v1/payments/google/verify`.
-- **Tooling & Ops**: Docker Compose (backend/admin/Nginx), EAS Build for mobile, Tailwind + Ant Design UI, @ant-design/charts for dashboards.
+- **Mobile (Expo RN)**: mystical home + guided 4-step reading flow + history + optional paid AI interpretations
 
-## 4. 安装与运行 | Installation & Usage
-### 环境要求 | Requirements
-- Node.js 18+ with npm or yarn (Expo + Next.js)
-- Python 3.10+ with pip (FastAPI backend & AI generator)
-- Docker Desktop / Engine (for containerized deployments)
-- Stripe / LLM API keys stored in `tarot-backend/.env`
+- **Backend (FastAPI)**: anonymous auth, cards/spreads/dimensions APIs, dual-phase LLM readings,
+  credits/payments scaffolding
 
-### 安装步骤 | Setup
-```bash
-# 1. Clone the mono-repo
-git clone <your-git-url> tarotAI
+- **Admin (Next.js)**: user/credits, redeem codes, orders, dashboards & monitoring
+
+## Features
+- Guided 4-step reading flow (mode → intent → draw → interpretation)
+- Two-step AI flow: `POST /api/v1/readings/analyze` → `POST /api/v1/readings/generate`
+- Anonymous identity: stable `installation_id` + JWT; optional email binding on purchase verification
+- Docker Compose deployment: `nginx` reverse proxy + persistent SQLite volume
+
+## Architecture
+~~~text
+Expo RN (my-tarot-app/)
+  └─ HTTPS
+FastAPI (tarot-backend/)  ── serves /api/* and /static/*
+  └─ used by
+Next.js Admin (tarot-admin-web/)
+~~~
+
+## Getting Started
+### Quickstart (Docker)
+~~~bash
+git clone https://github.com/bin448482/tarotAI.git
 cd tarotAI
 
-# 2. Mobile app (my-tarot-app)
-npm ci
-npx expo-doctor --verbose
-npx expo start -c
+cp tarot-backend/.env.example tarot-backend/.env
+  # edit tarot-backend/.env (JWT_SECRET_KEY, ADMIN_PASSWORD, LLM keys, etc.)
 
-# 3. Backend (tarot-backend)
-python -m venv .venv && source .venv/bin/activate
+docker compose up -d --build
+~~~
+
+Endpoints:
+
+- Admin (via nginx): `http://localhost/`
+- Backend health (via nginx): `http://localhost/health`
+- Backend debug port (host → backend): `http://localhost:8001/health`
+- Backend Swagger (debug port): `http://localhost:8001/docs`
+
+Notes:
+
+- If you don’t have a Google Play service account file locally, either create
+  `deploy/secrets/google-service-account.json` or remove that bind mount in `docker-compose.yml`.
+
+- Variants:
+  - Dev hot-reload backend: `docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build`
+  - Production example: `docker compose -f docker-compose.prod.yml up -d --build` (expects `env/backend.env`)
+
+### Local Development (No Docker)
+#### Backend (FastAPI)
+~~~bash
+cd tarot-backend
+python -m venv .venv
+~~~
+
+macOS/Linux:
+~~~bash
+source .venv/bin/activate
 pip install -r requirements.txt
+cp .env.example .env
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+~~~
 
-# 4. Admin web (tarot-admin-web)
+Windows (PowerShell):
+~~~powershell
+.venv\\Scripts\\Activate.ps1
+pip install -r requirements.txt
+Copy-Item .env.example .env
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+~~~
+
+#### Admin (Next.js)
+~~~bash
+cd tarot-admin-web
 npm ci
 npm run dev
+~~~
 
-# 5. Optional: full stack via Docker
-cd ..  # repo root
-cp tarot-backend/.env.example tarot-backend/.env  # edit secrets
-docker compose up -d --build
-```
+#### Mobile (Expo)
+~~~bash
+cd my-tarot-app
+npm ci
+EXPO_PUBLIC_API_BASE_URL=http://<YOUR_LAN_IP>:8000 npx expo start -c
+~~~
 
-- Mobile app connects to FastAPI via HTTPS; configure `EXPO_PUBLIC_API_BASE` or equivalent env.
-- Admin UI expects `NEXT_PUBLIC_BACKEND_URL` (default `/` behind Nginx proxy).
-- SQLite file persists inside Docker volume `backend_data`; use `docker cp` to back up `/data/backend_tarot.db`.
-- Before production builds, update icons via `scripts/generate-icons.js` and ensure `assetBundlePatterns` include databases/images.
+## Repository Structure
 
-For a full Chinese walkthrough, see `README_CN.md`.
+- `my-tarot-app/` - Expo React Native client (`my-tarot-app/README.md`)
+- `tarot-backend/` - FastAPI backend (`tarot-backend/README.md`)
+- `tarot-admin-web/` - Next.js admin dashboard (`tarot-admin-web/README.md`)
+- `tarot-ai-generator/` - Python content generator (`tarot-ai-generator/README.md`)
+- `deploy/` - nginx config + certbot assets
+
+## API Notes
+- Public API base: `/api/v1/*` (served under nginx `/api/` → backend)
+- Health: `GET /health`
+- Static assets: `/static/*` (cards/images/app releases)
+
+## Contributing
+1. Fork the repo
+2. Create a branch (`git checkout -b feature/my-change`)
+3. Commit (`git commit -m "..."`)
+4. Push (`git push origin feature/my-change`)
+5. Open a Pull Request
+
+## License
+No license file is present in this repository.
+If you plan to publish or distribute this project, add a `LICENSE` and update this section.
+
+## Contact
+- GitHub Issues: [bin448482/tarotAI/issues](https://github.com/bin448482/tarotAI/issues)
