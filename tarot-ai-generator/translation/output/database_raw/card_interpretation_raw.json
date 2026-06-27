@@ -1,0 +1,1257 @@
+{
+  "table_name": "card_interpretation",
+  "source_locale": "zh-CN",
+  "total_count": 156,
+  "exported_at": "2025-10-13T17:43:30Z",
+  "description": "卡牌解读信息，包括每张牌的正位和逆位解读",
+  "data": [
+    {
+      "id": 1,
+      "card_id": 1,
+      "direction": "正位",
+      "summary": "新的开始、天真。",
+      "detail": "象征旅程的起点与开放的可能，鼓励冒险与信任内心。",
+      "card_name": "愚者"
+    },
+    {
+      "id": 2,
+      "card_id": 2,
+      "direction": "正位",
+      "summary": "意志与创造力。",
+      "detail": "代表将想法化为现实的能力，强调资源整合与执行。",
+      "card_name": "魔术师"
+    },
+    {
+      "id": 3,
+      "card_id": 3,
+      "direction": "正位",
+      "summary": "直觉与内在智慧。",
+      "detail": "提示倾听潜意识与隐秘信息，适合静心与内省。",
+      "card_name": "女祭司"
+    },
+    {
+      "id": 4,
+      "card_id": 4,
+      "direction": "正位",
+      "summary": "滋养与丰盛。",
+      "detail": "象征关怀、创造力与情感支持，带来成长与丰盛。",
+      "card_name": "皇后"
+    },
+    {
+      "id": 5,
+      "card_id": 5,
+      "direction": "正位",
+      "summary": "结构与稳定。",
+      "detail": "代表秩序与权威，适合规划、建立规则与长期安排。",
+      "card_name": "皇帝"
+    },
+    {
+      "id": 6,
+      "card_id": 6,
+      "direction": "正位",
+      "summary": "传统与指引。",
+      "detail": "强调信念与制度的支持，适合寻求导师或框架。",
+      "card_name": "教皇"
+    },
+    {
+      "id": 7,
+      "card_id": 7,
+      "direction": "正位",
+      "summary": "关系与选择。",
+      "detail": "关乎重要抉择与亲密连结，强调价值观契合。",
+      "card_name": "恋人"
+    },
+    {
+      "id": 8,
+      "card_id": 8,
+      "direction": "正位",
+      "summary": "决心与前进。",
+      "detail": "象征克服阻碍与稳健推进，适合把握方向与意志。",
+      "card_name": "战车"
+    },
+    {
+      "id": 9,
+      "card_id": 9,
+      "direction": "正位",
+      "summary": "勇气与同情。",
+      "detail": "通过温柔与坚韧克服困难，强调自制與同理心。",
+      "card_name": "力量"
+    },
+    {
+      "id": 10,
+      "card_id": 10,
+      "direction": "正位",
+      "summary": "内省与寻真。",
+      "detail": "提示退隐反思以寻求更深的洞见与智慧。",
+      "card_name": "隐者"
+    },
+    {
+      "id": 11,
+      "card_id": 11,
+      "direction": "正位",
+      "summary": "变化与机遇。",
+      "detail": "代表周期性变化与运势转机，建议顺势把握时机。",
+      "card_name": "命运之轮"
+    },
+    {
+      "id": 12,
+      "card_id": 12,
+      "direction": "正位",
+      "summary": "公平与因果。",
+      "detail": "强调公正与承担责任，以理性与原则处理事务。",
+      "card_name": "正义"
+    },
+    {
+      "id": 13,
+      "card_id": 13,
+      "direction": "正位",
+      "summary": "视角与暂停。",
+      "detail": "透過放下或暂停获得新视角，适合接受与转换。",
+      "card_name": "倒吊人"
+    },
+    {
+      "id": 14,
+      "card_id": 14,
+      "direction": "正位",
+      "summary": "结束与转化。",
+      "detail": "象征阶段终结与重生，提示放下旧有以迎接新生。",
+      "card_name": "死神"
+    },
+    {
+      "id": 15,
+      "card_id": 15,
+      "direction": "正位",
+      "summary": "平衡与整合。",
+      "detail": "提醒调和对立、恢复节制，有利于疗愈与稳定。",
+      "card_name": "节制"
+    },
+    {
+      "id": 16,
+      "card_id": 16,
+      "direction": "正位",
+      "summary": "诱惑与束缚。",
+      "detail": "揭示被欲望或习惯束缚之处，需识别并寻求解脱。",
+      "card_name": "恶魔"
+    },
+    {
+      "id": 17,
+      "card_id": 17,
+      "direction": "正位",
+      "summary": "突变与觉醒。",
+      "detail": "带来震荡与真相显露，虽然痛苦但促成重建。",
+      "card_name": "塔"
+    },
+    {
+      "id": 18,
+      "card_id": 18,
+      "direction": "正位",
+      "summary": "希望与疗愈。",
+      "detail": "象征恢复信念與指引，带来治愈與启示。",
+      "card_name": "星星"
+    },
+    {
+      "id": 19,
+      "card_id": 19,
+      "direction": "正位",
+      "summary": "潜意识与幻象。",
+      "detail": "涉及情绪與直觉，提示辨识幻象并倾听内心。",
+      "card_name": "月亮"
+    },
+    {
+      "id": 20,
+      "card_id": 20,
+      "direction": "正位",
+      "summary": "成就与喜悦。",
+      "detail": "代表清晰與活力，带来成功與积极能量。",
+      "card_name": "太阳"
+    },
+    {
+      "id": 21,
+      "card_id": 21,
+      "direction": "正位",
+      "summary": "觉醒与检视。",
+      "detail": "提示反思與更新，可能进入新的阶段或呼召。",
+      "card_name": "审判"
+    },
+    {
+      "id": 22,
+      "card_id": 22,
+      "direction": "正位",
+      "summary": "完成与圆满。",
+      "detail": "象征周期的完成與整合，适合庆祝與收尾。",
+      "card_name": "世界"
+    },
+    {
+      "id": 23,
+      "card_id": 23,
+      "direction": "正位",
+      "summary": "灵感与开端。",
+      "detail": "带来创造性机会與行动的起点，鼓励尝试。",
+      "card_name": "权杖王牌"
+    },
+    {
+      "id": 24,
+      "card_id": 24,
+      "direction": "正位",
+      "summary": "计划与视野。",
+      "detail": "强调策略制定與远景规划，关注合作可能。",
+      "card_name": "权杖二"
+    },
+    {
+      "id": 25,
+      "card_id": 25,
+      "direction": "正位",
+      "summary": "拓展与远见。",
+      "detail": "早期努力显现前景，适合扩展與寻找伙伴。",
+      "card_name": "权杖三"
+    },
+    {
+      "id": 26,
+      "card_id": 26,
+      "direction": "正位",
+      "summary": "稳定与庆祝。",
+      "detail": "象征稳固基础與团体支持，适合庆祝成果。",
+      "card_name": "权杖四"
+    },
+    {
+      "id": 27,
+      "card_id": 27,
+      "direction": "正位",
+      "summary": "竞争与测试。",
+      "detail": "常见挑战或冲突，是检验能力的时刻。",
+      "card_name": "权杖五"
+    },
+    {
+      "id": 28,
+      "card_id": 28,
+      "direction": "正位",
+      "summary": "胜利与认可。",
+      "detail": "代表努力被认可，适合展示成果並接受赞誉。",
+      "card_name": "权杖六"
+    },
+    {
+      "id": 29,
+      "card_id": 29,
+      "direction": "正位",
+      "summary": "防守与坚持。",
+      "detail": "需要捍卫立场并在压力下保持韧性。",
+      "card_name": "权杖七"
+    },
+    {
+      "id": 30,
+      "card_id": 30,
+      "direction": "正位",
+      "summary": "快速推进与信息流。",
+      "detail": "象征行动或信息加速，适合把握时机与迅速反应。",
+      "card_name": "权杖八"
+    },
+    {
+      "id": 31,
+      "card_id": 31,
+      "direction": "正位",
+      "summary": "坚韧与守望。",
+      "detail": "提示持续努力與防守直到完成。",
+      "card_name": "权杖九"
+    },
+    {
+      "id": 32,
+      "card_id": 32,
+      "direction": "正位",
+      "summary": "负担与责任。",
+      "detail": "显示责任沉重，建议分担或调整以保养自己。",
+      "card_name": "权杖十"
+    },
+    {
+      "id": 33,
+      "card_id": 33,
+      "direction": "正位",
+      "summary": "消息與好奇。",
+      "detail": "带来初步动机或讯息，适合探索與起步。",
+      "card_name": "权杖侍者"
+    },
+    {
+      "id": 34,
+      "card_id": 34,
+      "direction": "正位",
+      "summary": "冲劲與冒险。",
+      "detail": "代表迅速行动與热情，注意方向与节制冲动。",
+      "card_name": "权杖骑士"
+    },
+    {
+      "id": 35,
+      "card_id": 35,
+      "direction": "正位",
+      "summary": "热情與支持。",
+      "detail": "以热情與直觉推动创造並滋养他人或项目。",
+      "card_name": "权杖王后"
+    },
+    {
+      "id": 36,
+      "card_id": 36,
+      "direction": "正位",
+      "summary": "领导與果断。",
+      "detail": "象征成熟的领导力與决断力，适合引领方向。",
+      "card_name": "权杖国王"
+    },
+    {
+      "id": 37,
+      "card_id": 37,
+      "direction": "正位",
+      "summary": "情感新生与滋养。",
+      "detail": "表示感情或关系的新起点，带来共鸣與疗愈。",
+      "card_name": "圣杯王牌"
+    },
+    {
+      "id": 38,
+      "card_id": 38,
+      "direction": "正位",
+      "summary": "伙伴與连结。",
+      "detail": "象征亲密的连结與互相支持，适于建立关系。",
+      "card_name": "圣杯二"
+    },
+    {
+      "id": 39,
+      "card_id": 39,
+      "direction": "正位",
+      "summary": "庆祝與友情。",
+      "detail": "代表社群與情感分享，适合庆祝與联结。",
+      "card_name": "圣杯三"
+    },
+    {
+      "id": 40,
+      "card_id": 40,
+      "direction": "正位",
+      "summary": "反思與不满足。",
+      "detail": "提示对现状冷感，建议内省尋找新机会。",
+      "card_name": "圣杯四"
+    },
+    {
+      "id": 41,
+      "card_id": 41,
+      "direction": "正位",
+      "summary": "失落與哀伤。",
+      "detail": "代表情感上的损失，需要面对并逐步疗愈。",
+      "card_name": "圣杯五"
+    },
+    {
+      "id": 42,
+      "card_id": 42,
+      "direction": "正位",
+      "summary": "回忆與疗愈。",
+      "detail": "带来温暖回忆與修复的机会，适合连接过去。",
+      "card_name": "圣杯六"
+    },
+    {
+      "id": 43,
+      "card_id": 43,
+      "direction": "正位",
+      "summary": "幻想與选择。",
+      "detail": "存在多种可能，需辨别现实與幻象并抉择。",
+      "card_name": "圣杯七"
+    },
+    {
+      "id": 44,
+      "card_id": 44,
+      "direction": "正位",
+      "summary": "离开與寻意义。",
+      "detail": "提示离开熟悉以寻求更深的情感或灵性目标。",
+      "card_name": "圣杯八"
+    },
+    {
+      "id": 45,
+      "card_id": 45,
+      "direction": "正位",
+      "summary": "满足與愿望成真。",
+      "detail": "象征情感满足與心愿实现，提醒感恩享受。",
+      "card_name": "圣杯九"
+    },
+    {
+      "id": 46,
+      "card_id": 46,
+      "direction": "正位",
+      "summary": "家庭圆满與和谐。",
+      "detail": "代表情感与家庭的稳定與和谐。",
+      "card_name": "圣杯十"
+    },
+    {
+      "id": 47,
+      "card_id": 47,
+      "direction": "正位",
+      "summary": "温柔消息與启发。",
+      "detail": "带来温柔情感的讯息或启发，鼓励开放接纳。",
+      "card_name": "圣杯侍者"
+    },
+    {
+      "id": 48,
+      "card_id": 48,
+      "direction": "正位",
+      "summary": "浪漫與追求。",
+      "detail": "代表为情感行动的人，适合表达與追求情感。",
+      "card_name": "圣杯骑士"
+    },
+    {
+      "id": 49,
+      "card_id": 49,
+      "direction": "正位",
+      "summary": "同理與滋养。",
+      "detail": "体现情感成熟與关怀，适合给予支持與抚慰。",
+      "card_name": "圣杯王后"
+    },
+    {
+      "id": 50,
+      "card_id": 50,
+      "direction": "正位",
+      "summary": "情感稳健與经验。",
+      "detail": "代表情绪稳定與经验的指导，适合引导他人。",
+      "card_name": "圣杯国王"
+    },
+    {
+      "id": 51,
+      "card_id": 51,
+      "direction": "正位",
+      "summary": "真相與清晰。",
+      "detail": "表示认知或信息的突破，适合理性分析與判断。",
+      "card_name": "宝剑王牌"
+    },
+    {
+      "id": 52,
+      "card_id": 52,
+      "direction": "正位",
+      "summary": "抉择與平衡。",
+      "detail": "涉及在信息或立场间取得平衡並做决定。",
+      "card_name": "宝剑二"
+    },
+    {
+      "id": 53,
+      "card_id": 53,
+      "direction": "正位",
+      "summary": "心痛與觉醒。",
+      "detail": "代表情感伤痛與觉察，是疗愈與成长的信号。",
+      "card_name": "宝剑三"
+    },
+    {
+      "id": 54,
+      "card_id": 54,
+      "direction": "正位",
+      "summary": "休整與恢复。",
+      "detail": "建议暂时休息以恢复精力並重新规划。",
+      "card_name": "宝剑四"
+    },
+    {
+      "id": 55,
+      "card_id": 55,
+      "direction": "正位",
+      "summary": "冲突與策略。",
+      "detail": "指示竞争或代价高的胜利，需审视后果與调整策略。",
+      "card_name": "宝剑五"
+    },
+    {
+      "id": 56,
+      "card_id": 56,
+      "direction": "正位",
+      "summary": "过渡與离开困境。",
+      "detail": "象征从困境迁移至更平静的状态，适合疗愈。",
+      "card_name": "宝剑六"
+    },
+    {
+      "id": 57,
+      "card_id": 57,
+      "direction": "正位",
+      "summary": "策略與隐秘行动。",
+      "detail": "提示需要谨慎與策略以保全资源或利益。",
+      "card_name": "宝剑七"
+    },
+    {
+      "id": 58,
+      "card_id": 58,
+      "direction": "正位",
+      "summary": "限制與束缚。",
+      "detail": "表示受限的观念或状态，需寻找解放的方法。",
+      "card_name": "宝剑八"
+    },
+    {
+      "id": 59,
+      "card_id": 59,
+      "direction": "正位",
+      "summary": "焦虑與噩梦。",
+      "detail": "提示过度忧虑，建议寻求支持與理性缓解。",
+      "card_name": "宝剑九"
+    },
+    {
+      "id": 60,
+      "card_id": 60,
+      "direction": "正位",
+      "summary": "结束與崩解。",
+      "detail": "标志极端的结束，但也提供重建與重生的契机。",
+      "card_name": "宝剑十"
+    },
+    {
+      "id": 61,
+      "card_id": 61,
+      "direction": "正位",
+      "summary": "信息與学习起点。",
+      "detail": "代表消息或学习的开始，适合探究與准备。",
+      "card_name": "宝剑侍者"
+    },
+    {
+      "id": 62,
+      "card_id": 62,
+      "direction": "正位",
+      "summary": "迅速行动與锋利言语。",
+      "detail": "行动快速且直接，注意沟通與冲突风险。",
+      "card_name": "宝剑骑士"
+    },
+    {
+      "id": 63,
+      "card_id": 63,
+      "direction": "正位",
+      "summary": "冷静與洞察。",
+      "detail": "体现清晰判断與理性分析，适合复杂问题。",
+      "card_name": "宝剑王后"
+    },
+    {
+      "id": 64,
+      "card_id": 64,
+      "direction": "正位",
+      "summary": "战略與权威。",
+      "detail": "代表用理性與策略掌控局面並引导决策。",
+      "card_name": "宝剑国王"
+    },
+    {
+      "id": 65,
+      "card_id": 65,
+      "direction": "正位",
+      "summary": "物质机会與务实。",
+      "detail": "象征实际机遇與事业起点，鼓励稳健规划。",
+      "card_name": "钱币王牌"
+    },
+    {
+      "id": 66,
+      "card_id": 66,
+      "direction": "正位",
+      "summary": "多任务與资源平衡。",
+      "detail": "提示在多项事务中保持灵活與平衡。",
+      "card_name": "钱币二"
+    },
+    {
+      "id": 67,
+      "card_id": 67,
+      "direction": "正位",
+      "summary": "合作與工艺。",
+      "detail": "代表团队合作與技能的认可，重视品质與执行。",
+      "card_name": "钱币三"
+    },
+    {
+      "id": 68,
+      "card_id": 68,
+      "direction": "正位",
+      "summary": "守护與保守。",
+      "detail": "显示保护资源與稳定，但警惕过度保守。",
+      "card_name": "钱币四"
+    },
+    {
+      "id": 69,
+      "card_id": 69,
+      "direction": "正位",
+      "summary": "匮乏與求助。",
+      "detail": "象征物质或健康困难，建议寻求支持與实际方案。",
+      "card_name": "钱币五"
+    },
+    {
+      "id": 70,
+      "card_id": 70,
+      "direction": "正位",
+      "summary": "给予與接受。",
+      "detail": "代表资源流动與互助，鼓励平衡地给予與接受。",
+      "card_name": "钱币六"
+    },
+    {
+      "id": 71,
+      "card_id": 71,
+      "direction": "正位",
+      "summary": "耕耘與等待回报。",
+      "detail": "提示耐心耕耘與长期计划，评估进展並坚持。",
+      "card_name": "钱币七"
+    },
+    {
+      "id": 72,
+      "card_id": 72,
+      "direction": "正位",
+      "summary": "勤勉與精进。",
+      "detail": "通过专注與练习提升技能，适合精进与工匠精神。",
+      "card_name": "钱币八"
+    },
+    {
+      "id": 73,
+      "card_id": 73,
+      "direction": "正位",
+      "summary": "独立富足與成就。",
+      "detail": "象征通过努力获得的独立與舒适，提醒享受成果。",
+      "card_name": "钱币九"
+    },
+    {
+      "id": 74,
+      "card_id": 74,
+      "direction": "正位",
+      "summary": "传承與稳定。",
+      "detail": "代表家族或事业的长期稳定與传承，适于长期规划。",
+      "card_name": "钱币十"
+    },
+    {
+      "id": 75,
+      "card_id": 75,
+      "direction": "正位",
+      "summary": "学习起点與实务消息。",
+      "detail": "带来实务方面的学习或可靠消息，适合脚踏实地开始。",
+      "card_name": "钱币侍者"
+    },
+    {
+      "id": 76,
+      "card_id": 76,
+      "direction": "正位",
+      "summary": "稳健执行與务实。",
+      "detail": "象征持续且可靠的行动，适合长期计划的落实。",
+      "card_name": "钱币骑士"
+    },
+    {
+      "id": 77,
+      "card_id": 77,
+      "direction": "正位",
+      "summary": "务实關怀與资源管理。",
+      "detail": "以务实與温柔管理资源并照顾家庭与事业。",
+      "card_name": "钱币王后"
+    },
+    {
+      "id": 78,
+      "card_id": 78,
+      "direction": "正位",
+      "summary": "物质掌控與负责。",
+      "detail": "代表稳健的物质管理與可靠领导。",
+      "card_name": "钱币国王"
+    },
+    {
+      "id": 79,
+      "card_id": 1,
+      "direction": "逆位",
+      "summary": "犹豫與缺乏准备。",
+      "detail": "可能缺乏准备或鲁莽，建议审慎评估與规划。",
+      "card_name": "愚者"
+    },
+    {
+      "id": 80,
+      "card_id": 2,
+      "direction": "逆位",
+      "summary": "技能滥用與误导。",
+      "detail": "资源或技巧未被正向使用，需检视方法与意图。",
+      "card_name": "魔术师"
+    },
+    {
+      "id": 81,
+      "card_id": 3,
+      "direction": "逆位",
+      "summary": "直觉受阻或隐匿信息。",
+      "detail": "内在声音被压抑或信息被隐藏，适合回归内省。",
+      "card_name": "女祭司"
+    },
+    {
+      "id": 82,
+      "card_id": 4,
+      "direction": "逆位",
+      "summary": "过度付出與耗竭。",
+      "detail": "因为付出过多而疲惫，需重建界限與自我照顾。",
+      "card_name": "皇后"
+    },
+    {
+      "id": 83,
+      "card_id": 5,
+      "direction": "逆位",
+      "summary": "过度控制與僵化。",
+      "detail": "权力或规则失衡，建议放下强制並恢复弹性。",
+      "card_name": "皇帝"
+    },
+    {
+      "id": 84,
+      "card_id": 6,
+      "direction": "逆位",
+      "summary": "教条或信念受质疑。",
+      "detail": "可能面临信念冲突或导师失衡，需重新评估价值观。",
+      "card_name": "教皇"
+    },
+    {
+      "id": 85,
+      "card_id": 7,
+      "direction": "逆位",
+      "summary": "关系失衡或犹豫。",
+      "detail": "关系中价值冲突或选择未定，建议沟通並澄清。",
+      "card_name": "恋人"
+    },
+    {
+      "id": 86,
+      "card_id": 8,
+      "direction": "逆位",
+      "summary": "方向迷失或冲动。",
+      "detail": "动力受阻或方向不明，需调整计划並稳住节奏。",
+      "card_name": "战车"
+    },
+    {
+      "id": 87,
+      "card_id": 9,
+      "direction": "逆位",
+      "summary": "自信受挫或压抑愤怒。",
+      "detail": "可能过于自我怀疑或以消极方式表达情绪，需自我接纳。",
+      "card_name": "力量"
+    },
+    {
+      "id": 88,
+      "card_id": 10,
+      "direction": "逆位",
+      "summary": "孤立或拒绝内省。",
+      "detail": "过度退缩或拒绝求助，建议适度开放並寻求支持。",
+      "card_name": "隐者"
+    },
+    {
+      "id": 89,
+      "card_id": 11,
+      "direction": "逆位",
+      "summary": "变化停滞或抗拒。",
+      "detail": "周期被延迟或抗拒改变，需适应並寻找新路径。",
+      "card_name": "命运之轮"
+    },
+    {
+      "id": 90,
+      "card_id": 12,
+      "direction": "逆位",
+      "summary": "偏颇或责任回避。",
+      "detail": "决策不公或推卸责任，需纠正並承担后果。",
+      "card_name": "正义"
+    },
+    {
+      "id": 91,
+      "card_id": 13,
+      "direction": "逆位",
+      "summary": "抵抗或停滞。",
+      "detail": "不愿放下或视角受限，建议尝试转换思路。",
+      "card_name": "倒吊人"
+    },
+    {
+      "id": 92,
+      "card_id": 14,
+      "direction": "逆位",
+      "summary": "抵抗变化或无法放下。",
+      "detail": "难以接受结束，需逐步释放旧有结构。",
+      "card_name": "死神"
+    },
+    {
+      "id": 93,
+      "card_id": 15,
+      "direction": "逆位",
+      "summary": "失衡或极端。",
+      "detail": "失去中庸或过度妥协，建议恢复界限與节制。",
+      "card_name": "节制"
+    },
+    {
+      "id": 94,
+      "card_id": 16,
+      "direction": "逆位",
+      "summary": "觉察束缚並开始挣脱。",
+      "detail": "识别并开始面对欲望或成瘾的影响，适合寻求改变。",
+      "card_name": "恶魔"
+    },
+    {
+      "id": 95,
+      "card_id": 17,
+      "direction": "逆位",
+      "summary": "避免崩解或延迟觉醒。",
+      "detail": "阻挡变革或延迟真相显现，需诚实面对问题。",
+      "card_name": "塔"
+    },
+    {
+      "id": 96,
+      "card_id": 18,
+      "direction": "逆位",
+      "summary": "希望受挫或失去信心。",
+      "detail": "感觉失望或迷惘，建议小步恢复信念與疗愈。",
+      "card_name": "星星"
+    },
+    {
+      "id": 97,
+      "card_id": 19,
+      "direction": "逆位",
+      "summary": "迷惑澄清或恐惧显现。",
+      "detail": "幻象开始被揭示，需面对恐惧並寻求事实。",
+      "card_name": "月亮"
+    },
+    {
+      "id": 98,
+      "card_id": 20,
+      "direction": "逆位",
+      "summary": "自信受损或表面光鲜。",
+      "detail": "成功感受受阻或虚假外显，建议回归真实與自我恢复。",
+      "card_name": "太阳"
+    },
+    {
+      "id": 99,
+      "card_id": 21,
+      "direction": "逆位",
+      "summary": "抵抗觉醒或自我否定。",
+      "detail": "难以接纳召唤或评判过重，适合宽恕與接纳。",
+      "card_name": "审判"
+    },
+    {
+      "id": 100,
+      "card_id": 22,
+      "direction": "逆位",
+      "summary": "未完成或错失整合。",
+      "detail": "循环未完成或难以整合经验，建议检视遗漏並收尾。",
+      "card_name": "世界"
+    },
+    {
+      "id": 101,
+      "card_id": 23,
+      "direction": "逆位",
+      "summary": "灵感受阻或挥霍机会。",
+      "detail": "热情或机会未能落实，需回到实际执行並聚焦。",
+      "card_name": "权杖王牌"
+    },
+    {
+      "id": 102,
+      "card_id": 24,
+      "direction": "逆位",
+      "summary": "计划受阻或犹豫。",
+      "detail": "远景难定或行动延迟，建议调整策略並开始小步。",
+      "card_name": "权杖二"
+    },
+    {
+      "id": 103,
+      "card_id": 25,
+      "direction": "逆位",
+      "summary": "发展停滞或合作问题。",
+      "detail": "扩展受阻或伙伴关系出现问题，需修正期待。",
+      "card_name": "权杖三"
+    },
+    {
+      "id": 104,
+      "card_id": 26,
+      "direction": "逆位",
+      "summary": "不稳定或庆祝受阻。",
+      "detail": "基础松动或冲突破坏氛围，需修复关系與结构。",
+      "card_name": "权杖四"
+    },
+    {
+      "id": 105,
+      "card_id": 27,
+      "direction": "逆位",
+      "summary": "冲突升级或畏缩。",
+      "detail": "冲突难以建设性解决，建议寻求调解或改变态度。",
+      "card_name": "权杖五"
+    },
+    {
+      "id": 106,
+      "card_id": 28,
+      "direction": "逆位",
+      "summary": "骄傲或认可缺失。",
+      "detail": "成就感受损或傲慢导致隔阂，需谦逊與重建信任。",
+      "card_name": "权杖六"
+    },
+    {
+      "id": 107,
+      "card_id": 29,
+      "direction": "逆位",
+      "summary": "力量被削弱或放弃防守。",
+      "detail": "难以维持立场或资源耗尽，建议重整並寻求支持。",
+      "card_name": "权杖七"
+    },
+    {
+      "id": 108,
+      "card_id": 30,
+      "direction": "逆位",
+      "summary": "延误或信息阻断。",
+      "detail": "行动或通讯被延迟，需耐心並清理障碍。",
+      "card_name": "权杖八"
+    },
+    {
+      "id": 109,
+      "card_id": 31,
+      "direction": "逆位",
+      "summary": "疲惫與防线崩溃。",
+      "detail": "持续压力导致脆弱，建议暂停恢復與补给。",
+      "card_name": "权杖九"
+    },
+    {
+      "id": 110,
+      "card_id": 32,
+      "direction": "逆位",
+      "summary": "无法承受的重担或逃避责任。",
+      "detail": "负担过重导致崩溃，需卸载或重分配任务。",
+      "card_name": "权杖十"
+    },
+    {
+      "id": 111,
+      "card_id": 33,
+      "direction": "逆位",
+      "summary": "消息误导或冲动行动。",
+      "detail": "初步讯息可能误导或冲动，建议慢下来核实。",
+      "card_name": "权杖侍者"
+    },
+    {
+      "id": 112,
+      "card_id": 34,
+      "direction": "逆位",
+      "summary": "冲动失控或鲁莽。",
+      "detail": "行动过猛带来负面后果，需检视方向與节制。",
+      "card_name": "权杖骑士"
+    },
+    {
+      "id": 113,
+      "card_id": 35,
+      "direction": "逆位",
+      "summary": "情绪化或操控。",
+      "detail": "热情变为控制或情绪化，建议回到平衡與同理。",
+      "card_name": "权杖王后"
+    },
+    {
+      "id": 114,
+      "card_id": 36,
+      "direction": "逆位",
+      "summary": "暴躁或权力滥用。",
+      "detail": "领导过于强硬，需反思方法並授权他人。",
+      "card_name": "权杖国王"
+    },
+    {
+      "id": 115,
+      "card_id": 37,
+      "direction": "逆位",
+      "summary": "情感阻塞或失望。",
+      "detail": "新感情或疗愈被阻碍，建议修复情感模式。",
+      "card_name": "圣杯王牌"
+    },
+    {
+      "id": 116,
+      "card_id": 38,
+      "direction": "逆位",
+      "summary": "关系误解或失衡。",
+      "detail": "连结出现误解或不对等，需沟通並重建信任。",
+      "card_name": "圣杯二"
+    },
+    {
+      "id": 117,
+      "card_id": 39,
+      "direction": "逆位",
+      "summary": "社交疲乏或表面关系。",
+      "detail": "聚会或友情变浅，建议真诚互动與筛选关系。",
+      "card_name": "圣杯三"
+    },
+    {
+      "id": 118,
+      "card_id": 40,
+      "direction": "逆位",
+      "summary": "走出冷漠或重新开放。",
+      "detail": "从冷漠中觉醒，重新发现情感的可能性。",
+      "card_name": "圣杯四"
+    },
+    {
+      "id": 119,
+      "card_id": 41,
+      "direction": "逆位",
+      "summary": "放下痛苦並看到机会。",
+      "detail": "疗愈开始或视角转变，适合寻求支持與重建。",
+      "card_name": "圣杯五"
+    },
+    {
+      "id": 120,
+      "card_id": 42,
+      "direction": "逆位",
+      "summary": "过度沉湎过去或误解。",
+      "detail": "停留于过去阻碍现在，建议面对现实並学习放下。",
+      "card_name": "圣杯六"
+    },
+    {
+      "id": 121,
+      "card_id": 43,
+      "direction": "逆位",
+      "summary": "无法抉择或被幻想迷惑。",
+      "detail": "错失实际机会或沉溺于不切实际的幻想，建议回到现实并优先清晰目标。",
+      "card_name": "圣杯七"
+    },
+    {
+      "id": 122,
+      "card_id": 44,
+      "direction": "逆位",
+      "summary": "抗拒改变或退回旧情境。",
+      "detail": "害怕离开导致停滞，需检视真正需求并勇于迈出小步。",
+      "card_name": "圣杯八"
+    },
+    {
+      "id": 123,
+      "card_id": 45,
+      "direction": "逆位",
+      "summary": "虚假的满足或贪婪。",
+      "detail": "表面的满足掩盖不安，提醒审视内在动机并寻求真实连接。",
+      "card_name": "圣杯九"
+    },
+    {
+      "id": 124,
+      "card_id": 46,
+      "direction": "逆位",
+      "summary": "关系冲突或失和。",
+      "detail": "关系中的理想破裂，需坦诚沟通并重建共同价值。",
+      "card_name": "圣杯十"
+    },
+    {
+      "id": 125,
+      "card_id": 47,
+      "direction": "逆位",
+      "summary": "情感消息被误读或迟缓。",
+      "detail": "信息不清或情绪表达受阻，建议谨慎沟通與倾听。",
+      "card_name": "圣杯侍者"
+    },
+    {
+      "id": 126,
+      "card_id": 48,
+      "direction": "逆位",
+      "summary": "不可靠的追求或过度理想化。",
+      "detail": "行动缺乏稳定性或不切实际的追求，需检视动机并放慢脚步。",
+      "card_name": "圣杯骑士"
+    },
+    {
+      "id": 127,
+      "card_id": 49,
+      "direction": "逆位",
+      "summary": "情绪失衡或过度依赖。",
+      "detail": "同理心变为情感泛滥或照顾缺界，建议自我照顾與设界。",
+      "card_name": "圣杯王后"
+    },
+    {
+      "id": 128,
+      "card_id": 50,
+      "direction": "逆位",
+      "summary": "情绪控制失衡或操纵情绪。",
+      "detail": "可能以情绪控制关系或逃避责任，建议诚实面对感受並承担成熟角色。",
+      "card_name": "圣杯国王"
+    },
+    {
+      "id": 129,
+      "card_id": 51,
+      "direction": "逆位",
+      "summary": "真相被扭曲或沟通受阻。",
+      "detail": "信息混乱或言语伤害，需澄清事实並以冷静重建共识。",
+      "card_name": "宝剑王牌"
+    },
+    {
+      "id": 130,
+      "card_id": 52,
+      "direction": "逆位",
+      "summary": "回避抉择或内在冲突显现。",
+      "detail": "拒绝面对难题导致僵局，建议整合信息並逐步决断。",
+      "card_name": "宝剑二"
+    },
+    {
+      "id": 131,
+      "card_id": 53,
+      "direction": "逆位",
+      "summary": "心痛未愈或拒绝疗伤。",
+      "detail": "伤痛被压抑或延迟处理，需正视情绪並寻找支持。",
+      "card_name": "宝剑三"
+    },
+    {
+      "id": 132,
+      "card_id": 54,
+      "direction": "逆位",
+      "summary": "难以休整或抗拒恢复。",
+      "detail": "无法放松导致恢复受阻，建议安排休息並寻求安稳。",
+      "card_name": "宝剑四"
+    },
+    {
+      "id": 133,
+      "card_id": 55,
+      "direction": "逆位",
+      "summary": "和解或认错的机会出现。",
+      "detail": "冲突趋于结束，适合低姿态修补关系並学习教训。",
+      "card_name": "宝剑五"
+    },
+    {
+      "id": 134,
+      "card_id": 56,
+      "direction": "逆位",
+      "summary": "逃避或困于旧境。",
+      "detail": "过渡未完成或难以离开问题，建议面对原因并寻求实际方案。",
+      "card_name": "宝剑六"
+    },
+    {
+      "id": 135,
+      "card_id": 57,
+      "direction": "逆位",
+      "summary": "真相被揭露或放下诡计。",
+      "detail": "隐秘行动带来后果，适合诚实并修复信任。",
+      "card_name": "宝剑七"
+    },
+    {
+      "id": 136,
+      "card_id": 58,
+      "direction": "逆位",
+      "summary": "逐步解除束缚或观念突破。",
+      "detail": "限制感减弱，鼓励寻找外援與新视角来解放自己。",
+      "card_name": "宝剑八"
+    },
+    {
+      "id": 137,
+      "card_id": 59,
+      "direction": "逆位",
+      "summary": "焦虑缓和或重新获得希望。",
+      "detail": "梦魇逐渐消散，建议寻求支持並实践放松方法。",
+      "card_name": "宝剑九"
+    },
+    {
+      "id": 138,
+      "card_id": 60,
+      "direction": "逆位",
+      "summary": "缓慢复原或新的起点。",
+      "detail": "虽然结束痛苦仍在，但恢复与重建的可能正在出现。",
+      "card_name": "宝剑十"
+    },
+    {
+      "id": 139,
+      "card_id": 61,
+      "direction": "逆位",
+      "summary": "消息延迟或误导。",
+      "detail": "学习或沟通起点受阻，建议核实来源並稳步准备。",
+      "card_name": "宝剑侍者"
+    },
+    {
+      "id": 140,
+      "card_id": 62,
+      "direction": "逆位",
+      "summary": "冲动受挫或鲁莽被控制。",
+      "detail": "行动力下降带来反思时机，适合规划后再出手。",
+      "card_name": "宝剑骑士"
+    },
+    {
+      "id": 141,
+      "card_id": 63,
+      "direction": "逆位",
+      "summary": "冷酷或苛刻的判断。",
+      "detail": "过于刺耳或防御的沟通伤害关系，需培养同理與柔软。",
+      "card_name": "宝剑王后"
+    },
+    {
+      "id": 142,
+      "card_id": 64,
+      "direction": "逆位",
+      "summary": "滥用理性或判断失误。",
+      "detail": "单纯理性可能忽略情感，建议平衡思考並倾听他人。",
+      "card_name": "宝剑国王"
+    },
+    {
+      "id": 143,
+      "card_id": 65,
+      "direction": "逆位",
+      "summary": "机会被错过或启动受阻。",
+      "detail": "物质机会未能兑现，需检视准备度並务实规划。",
+      "card_name": "钱币王牌"
+    },
+    {
+      "id": 144,
+      "card_id": 66,
+      "direction": "逆位",
+      "summary": "无法平衡多重任务。",
+      "detail": "资源分散导致效率下降，建议优先排序並简化负担。",
+      "card_name": "钱币二"
+    },
+    {
+      "id": 145,
+      "card_id": 67,
+      "direction": "逆位",
+      "summary": "合作问题或质量受损。",
+      "detail": "团队配合不佳或标准下降，需沟通并重建流程。",
+      "card_name": "钱币三"
+    },
+    {
+      "id": 146,
+      "card_id": 68,
+      "direction": "逆位",
+      "summary": "放手或过度慷慨。",
+      "detail": "过度守护转为开放或资源流动受阻，建议重新评估边界。",
+      "card_name": "钱币四"
+    },
+    {
+      "id": 147,
+      "card_id": 69,
+      "direction": "逆位",
+      "summary": "脱离匮乏或开始获援。",
+      "detail": "困境有缓解迹象，适合接受帮助並规划复原。",
+      "card_name": "钱币五"
+    },
+    {
+      "id": 148,
+      "card_id": 70,
+      "direction": "逆位",
+      "summary": "给予被滥用或不平衡。",
+      "detail": "帮助关系失衡，需设定界限並确保互惠。",
+      "card_name": "钱币六"
+    },
+    {
+      "id": 149,
+      "card_id": 71,
+      "direction": "逆位",
+      "summary": "急于收成或缺乏耐心。",
+      "detail": "忽略长期耕耘导致收获不佳，建议回归耐心與评估策略。",
+      "card_name": "钱币七"
+    },
+    {
+      "id": 150,
+      "card_id": 72,
+      "direction": "逆位",
+      "summary": "粗糙工作或停滞不前。",
+      "detail": "技能未被精进或进展缓慢，适合重拾细节与练习。",
+      "card_name": "钱币八"
+    },
+    {
+      "id": 151,
+      "card_id": 73,
+      "direction": "逆位",
+      "summary": "独立受挑战或自满。",
+      "detail": "自足感受损或孤立，建议反思资源管理並寻求平衡。",
+      "card_name": "钱币九"
+    },
+    {
+      "id": 152,
+      "card_id": 74,
+      "direction": "逆位",
+      "summary": "家庭或事业基础动摇。",
+      "detail": "长期稳定受威胁，需检视价值与共同目标並采取修复行动。",
+      "card_name": "钱币十"
+    },
+    {
+      "id": 153,
+      "card_id": 75,
+      "direction": "逆位",
+      "summary": "学习信息延后或实际消息被误导。",
+      "detail": "实务起点不稳，建议多方核实並踏实准备。",
+      "card_name": "钱币侍者"
+    },
+    {
+      "id": 154,
+      "card_id": 76,
+      "direction": "逆位",
+      "summary": "过于迟缓或固执守旧。",
+      "detail": "行动保守导致机会流失，适合在安全中寻找灵活性。",
+      "card_name": "钱币骑士"
+    },
+    {
+      "id": 155,
+      "card_id": 77,
+      "direction": "逆位",
+      "summary": "过度照顾或资源耗竭。",
+      "detail": "照顾他人导致自身资源枯竭，需自我恢复並调整投入。",
+      "card_name": "钱币王后"
+    },
+    {
+      "id": 156,
+      "card_id": 78,
+      "direction": "逆位",
+      "summary": "物质控制失衡或固执。",
+      "detail": "过度掌控或失去务实判断，建议重新评估目标並寻求合作。",
+      "card_name": "钱币国王"
+    }
+  ]
+}

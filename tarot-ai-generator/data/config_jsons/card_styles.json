@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2025-01-12T10:00:00Z",
+  "description": "塔罗牌卡牌风格数据 - Tarot card style definitions",
+  "data": [
+    {
+      "name": "1920-raider-waite",
+      "image_base_url": ""
+    }
+  ]
+}

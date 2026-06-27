@@ -1,0 +1,81 @@
+#
+# EAS Build upload ignore file
+# Uses .gitignore-style patterns. Only what is NOT ignored is compressed and uploaded.
+#
+
+# Dependencies (installed on EAS workers)
+node_modules/
+.pnp/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/install-state.gz
+
+# VCS / metadata
+.git/
+.gitignore
+.gitattributes
+.gitmodules
+
+# Expo / tooling caches
+.expo/
+.expo-shared/
+.cache/
+.npm/
+.pnpm-store/
+
+# Build outputs (web / generic)
+dist/
+build/
+web-build/
+out/
+.next/
+coverage/
+
+# Logs and env
+*.log
+.DS_Store
+.env*
+!.env.example
+
+# Temp files
+tmp/
+temp/
+.tmp/
+
+# Scripts and docs (optional for CI)
+scripts/
+docs/
+*.md
+
+# Tests
+__tests__/
+*.test.*
+*.spec.*
+
+# Android: remove all local build caches and outputs
+android/local.properties
+android/app/debug.keystore
+android/.gradle/
+android/build/
+android/app/build/
+android/**/.cxx/
+android/**/intermediates/
+android/**/generated/
+android/**/outputs/
+android/**/captures/
+**/.gradle/
+**/build/         # catch any nested build dirs
+*.apk
+*.aab
+
+# iOS (safe to exclude caches; Pods are installed on EAS during build)
+ios/build/
+ios/DerivedData/
+ios/*.xcodeproj/project.xcworkspace/xcuserdata
+ios/*.xcodeproj/xcuserdata
+
+# IDE
+.idea/
+*.iml
+.vscode/
+

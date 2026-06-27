@@ -1,0 +1,65 @@
+{
+  "history": {
+    "title": "塔罗牌历史文化",
+    "sections": {
+      "overview": "概述",
+      "origins": "历史起源",
+      "majorMinor": "大小阿卡纳",
+      "usage": "使用指导"
+    }
+  },
+  "arcana": {
+    "major": "大阿卡纳",
+    "minor": "小阿卡纳"
+  },
+  "sideToggle": {
+    "label": "解读方向",
+    "upright": "正位",
+    "reversed": "逆位",
+    "uprightTitle": "正位解读",
+    "reversedTitle": "逆位解读"
+  },
+  "interpretation": {
+    "summary": "核心牌意",
+    "detail": "详细解读"
+  },
+  "filters": {
+    "title": "筛选卡牌",
+    "arcanaLabel": "阿卡纳:",
+    "suitLabel": "花色:",
+    "arcana": {
+      "all": "全部",
+      "major": "大阿卡纳",
+      "minor": "小阿卡纳"
+    },
+    "suit": {
+      "all": "全部",
+      "wands": "权杖",
+      "cups": "圣杯",
+      "swords": "宝剑",
+      "pentacles": "钱币"
+    }
+  },
+  "list": {
+    "title": "塔罗牌库 ({{count}} 张)"
+  },
+  "status": {
+    "dbInitFailed": "数据库初始化失败",
+    "dbInitializing": "正在初始化数据库...",
+    "loadingCards": "加载卡牌数据...",
+    "loadingDetail": "加载卡牌详情..."
+  },
+  "alerts": {
+    "errorTitle": "错误",
+    "loadCardsFailed": "无法加载卡牌数据",
+    "loadDataFailed": "加载数据时发生错误",
+    "loadCardDetailFailed": "无法加载卡牌详情",
+    "loadCardDetailError": "加载卡牌详情时发生错误"
+  },
+  "detail": {
+    "header": "卡牌说明",
+    "detailHeader": "卡牌详情",
+    "number": "第{{number}}号",
+    "deck": "来自: {{deck}}"
+  }
+}

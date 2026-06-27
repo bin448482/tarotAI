@@ -1,0 +1,39 @@
+{
+  "export_summary": {
+    "tables_exported": 4,
+    "total_records": 247,
+    "source_locale": "zh-CN",
+    "target_locale": "en",
+    "export_duration_seconds": 0.01465,
+    "start_time": "2025-10-13T17:43:30.644810",
+    "end_time": "2025-10-13T17:43:30.659460",
+    "database_path": "D:\\0-development\\projects\\MySixth\\tarot-ai-generator\\data\\tarot_config.db",
+    "output_directory": "D:\\0-development\\projects\\MySixth\\tarot-ai-generator\\translation\\output\\database_raw"
+  },
+  "table_details": {
+    "card": {
+      "record_count": 78,
+      "exported_at": "2025-10-13T17:43:30Z",
+      "description": "塔罗牌基础信息，包括78张大阿卡纳和小阿卡纳牌",
+      "file_path": "D:\\0-development\\projects\\MySixth\\tarot-ai-generator\\translation\\output\\database_raw\\card_raw.json"
+    },
+    "dimension": {
+      "record_count": 12,
+      "exported_at": "2025-10-13T17:43:30Z",
+      "description": "解读维度定义，包括情感、事业、精神等占卜维度",
+      "file_path": "D:\\0-development\\projects\\MySixth\\tarot-ai-generator\\translation\\output\\database_raw\\dimension_raw.json"
+    },
+    "spread": {
+      "record_count": 1,
+      "exported_at": "2025-10-13T17:43:30Z",
+      "description": "牌阵定义，包括三牌阵等经典塔罗牌阵",
+      "file_path": "D:\\0-development\\projects\\MySixth\\tarot-ai-generator\\translation\\output\\database_raw\\spread_raw.json"
+    },
+    "card_interpretation": {
+      "record_count": 156,
+      "exported_at": "2025-10-13T17:43:30Z",
+      "description": "卡牌解读信息，包括每张牌的正位和逆位解读",
+      "file_path": "D:\\0-development\\projects\\MySixth\\tarot-ai-generator\\translation\\output\\database_raw\\card_interpretation_raw.json"
+    }
+  }
+}

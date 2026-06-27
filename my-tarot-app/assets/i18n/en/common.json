@@ -1,0 +1,22 @@
+{
+  "app": {
+    "name": "Starlight Tarot",
+    "loading": "Loading…",
+    "retry": "Retry",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "back": "Back"
+  },
+  "status": {
+    "initializing": "Preparing the app…",
+    "databaseReady": "Database ready",
+    "aiUnavailable": "AI service unavailable",
+    "authenticating": "Authenticating…"
+  },
+  "errors": {
+    "unknown": "Something went wrong",
+    "network": "Network issue, please try again later",
+    "database": "Database initialization failed",
+    "auth": "Authentication failed, please retry"
+  }
+}

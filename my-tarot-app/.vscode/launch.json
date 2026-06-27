@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug in Expo (Android)",
+      "type": "reactnative",
+      "request": "launch",
+      "platform": "android",
+      "cwd": "${workspaceFolder}",
+      "runArguments": ["--variant", "debug"],
+      "enableDebug": true
+    },
+    {
+      "name": "Attach to React Native Packager",
+      "type": "reactnative",
+      "request": "attach",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

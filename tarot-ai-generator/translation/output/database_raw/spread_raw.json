@@ -1,0 +1,15 @@
+{
+  "table_name": "spread",
+  "source_locale": "zh-CN",
+  "total_count": 1,
+  "exported_at": "2025-10-13T17:43:30Z",
+  "description": "牌阵定义，包括三牌阵等经典塔罗牌阵",
+  "data": [
+    {
+      "id": 1,
+      "name": "三牌阵",
+      "description": "经典的三张牌布阵，代表过去、现在、未来，适合探索时间线上的发展趋势和洞察。第一张牌代表过去的影响，第二张牌显示当前的状况，第三张牌预示未来的可能发展方向。",
+      "card_count": 3
+    }
+  ]
+}

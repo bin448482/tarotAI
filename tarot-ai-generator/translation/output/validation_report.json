@@ -1,0 +1,83 @@
+{
+  "validation_summary": {
+    "start_time": "2025-10-13T18:33:30.483158",
+    "tables_validated": 4,
+    "checks_performed": 0,
+    "issues_found": 10,
+    "overall_quality": "Needs Improvement"
+  },
+  "issues": [
+    {
+      "type": "inconsistent_suit_names",
+      "description": "不一致的牌组名称: None",
+      "table_name": "card",
+      "record_id": null,
+      "timestamp": "2025-10-13T18:33:30.487745"
+    },
+    {
+      "type": "missing_in_database",
+      "description": "数据库中缺失的ID: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]...",
+      "table_name": "card",
+      "record_id": null,
+      "timestamp": "2025-10-13T18:33:30.490525"
+    },
+    {
+      "type": "missing_in_file",
+      "description": "文件中缺失的ID: [199, 200, 201, 202, 203, 204, 205, 206, 207, 208]...",
+      "table_name": "card",
+      "record_id": null,
+      "timestamp": "2025-10-13T18:33:30.490532"
+    },
+    {
+      "type": "inconsistent_dimension_categories",
+      "description": "不一致的维度类别: Wealth",
+      "table_name": "dimension",
+      "record_id": null,
+      "timestamp": "2025-10-13T18:33:30.491743"
+    },
+    {
+      "type": "missing_in_database",
+      "description": "数据库中缺失的ID: [64, 65, 66, 55, 56, 57, 58, 59, 60, 61]...",
+      "table_name": "dimension",
+      "record_id": null,
+      "timestamp": "2025-10-13T18:33:30.493054"
+    },
+    {
+      "type": "missing_in_file",
+      "description": "文件中缺失的ID: [32, 33, 34, 35, 36, 25, 26, 27, 28, 29]...",
+      "table_name": "dimension",
+      "record_id": null,
+      "timestamp": "2025-10-13T18:33:30.493060"
+    },
+    {
+      "type": "missing_in_database",
+      "description": "数据库中缺失的ID: [1]...",
+      "table_name": "spread",
+      "record_id": null,
+      "timestamp": "2025-10-13T18:33:30.495300"
+    },
+    {
+      "type": "missing_in_file",
+      "description": "文件中缺失的ID: [3]...",
+      "table_name": "spread",
+      "record_id": null,
+      "timestamp": "2025-10-13T18:33:30.495306"
+    },
+    {
+      "type": "missing_in_database",
+      "description": "数据库中缺失的ID: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]...",
+      "table_name": "card_interpretation",
+      "record_id": null,
+      "timestamp": "2025-10-13T18:33:30.498283"
+    },
+    {
+      "type": "missing_in_file",
+      "description": "文件中缺失的ID: [313, 314, 315, 316, 317, 318, 319, 320, 321, 322]...",
+      "table_name": "card_interpretation",
+      "record_id": null,
+      "timestamp": "2025-10-13T18:33:30.498291"
+    }
+  ],
+  "glossary_size": 98,
+  "standard_cards_count": 29
+}

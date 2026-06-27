@@ -1,0 +1,481 @@
+{
+  "table_name": "card",
+  "source_locale": "zh-CN",
+  "target_locale": "en",
+  "original_count": 78,
+  "translated_count": 78,
+  "translation_rate": 100.0,
+  "translated_at": "2025-10-13T18:29:17Z",
+  "model_used": "gpt-3.5-turbo",
+  "description": "Translation of 塔罗牌基础信息，包括78张大阿卡纳和小阿卡纳牌",
+  "data": [
+    {
+      "name_en": "The Fool",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 1
+    },
+    {
+      "name_en": "The Magician",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 2
+    },
+    {
+      "name_en": "The High Priestess",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 3
+    },
+    {
+      "name_en": "The Empress",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 4
+    },
+    {
+      "name_en": "The Emperor",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 5
+    },
+    {
+      "name_en": "The Hierophant",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 6
+    },
+    {
+      "name_en": "The Lovers",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 7
+    },
+    {
+      "name_en": "The Chariot",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 8
+    },
+    {
+      "name_en": "Strength",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 9
+    },
+    {
+      "name_en": "The Hermit",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 10
+    },
+    {
+      "name_en": "Wheel of Fortune",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 11
+    },
+    {
+      "name_en": "Justice",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 12
+    },
+    {
+      "name_en": "The Hanged Man",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 13
+    },
+    {
+      "name_en": "Death",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 14
+    },
+    {
+      "name_en": "Temperance",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 15
+    },
+    {
+      "name_en": "The Devil",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 16
+    },
+    {
+      "name_en": "The Tower",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 17
+    },
+    {
+      "name_en": "The Star",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 18
+    },
+    {
+      "name_en": "The Moon",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 19
+    },
+    {
+      "name_en": "The Sun",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 20
+    },
+    {
+      "name_en": "Judgement",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 21
+    },
+    {
+      "name_en": "The World",
+      "deck_en": "Rider-Waite",
+      "suit_en": "None",
+      "id": 22
+    },
+    {
+      "name_en": "Ace of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 23
+    },
+    {
+      "name_en": "Two of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 24
+    },
+    {
+      "name_en": "Three of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 25
+    },
+    {
+      "name_en": "Four of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 26
+    },
+    {
+      "name_en": "Five of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 27
+    },
+    {
+      "name_en": "Six of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 28
+    },
+    {
+      "name_en": "Seven of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 29
+    },
+    {
+      "name_en": "Eight of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 30
+    },
+    {
+      "name_en": "Nine of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 31
+    },
+    {
+      "name_en": "Ten of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 32
+    },
+    {
+      "name_en": "Page of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 33
+    },
+    {
+      "name_en": "Knight of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 34
+    },
+    {
+      "name_en": "Queen of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 35
+    },
+    {
+      "name_en": "King of Wands",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Wands",
+      "id": 36
+    },
+    {
+      "name_en": "Ace of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 37
+    },
+    {
+      "name_en": "Two of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 38
+    },
+    {
+      "name_en": "Three of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 39
+    },
+    {
+      "name_en": "Four of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 40
+    },
+    {
+      "name_en": "Five of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 41
+    },
+    {
+      "name_en": "Six of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 42
+    },
+    {
+      "name_en": "Seven of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 43
+    },
+    {
+      "name_en": "Eight of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 44
+    },
+    {
+      "name_en": "Nine of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 45
+    },
+    {
+      "name_en": "Ten of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 46
+    },
+    {
+      "name_en": "Page of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 47
+    },
+    {
+      "name_en": "Knight of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 48
+    },
+    {
+      "name_en": "Queen of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 49
+    },
+    {
+      "name_en": "King of Cups",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Cups",
+      "id": 50
+    },
+    {
+      "name_en": "Ace of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 51
+    },
+    {
+      "name_en": "Two of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 52
+    },
+    {
+      "name_en": "Three of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 53
+    },
+    {
+      "name_en": "Four of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 54
+    },
+    {
+      "name_en": "Five of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 55
+    },
+    {
+      "name_en": "Six of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 56
+    },
+    {
+      "name_en": "Seven of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 57
+    },
+    {
+      "name_en": "Eight of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 58
+    },
+    {
+      "name_en": "Nine of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 59
+    },
+    {
+      "name_en": "Ten of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 60
+    },
+    {
+      "name_en": "Page of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 61
+    },
+    {
+      "name_en": "Knight of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 62
+    },
+    {
+      "name_en": "Queen of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 63
+    },
+    {
+      "name_en": "King of Swords",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Swords",
+      "id": 64
+    },
+    {
+      "name_en": "Ace of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 65
+    },
+    {
+      "name_en": "Two of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 66
+    },
+    {
+      "name_en": "Three of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 67
+    },
+    {
+      "name_en": "Four of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 68
+    },
+    {
+      "name_en": "Five of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 69
+    },
+    {
+      "name_en": "Six of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 70
+    },
+    {
+      "name_en": "Seven of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 71
+    },
+    {
+      "name_en": "Eight of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 72
+    },
+    {
+      "name_en": "Nine of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 73
+    },
+    {
+      "name_en": "Ten of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 74
+    },
+    {
+      "name_en": "Page of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 75
+    },
+    {
+      "name_en": "Knight of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 76
+    },
+    {
+      "name_en": "Queen of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 77
+    },
+    {
+      "name_en": "King of Pentacles",
+      "deck_en": "Rider-Waite",
+      "suit_en": "Pentacles",
+      "id": 78
+    }
+  ]
+}

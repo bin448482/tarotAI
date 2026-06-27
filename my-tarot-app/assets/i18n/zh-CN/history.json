@@ -1,0 +1,99 @@
+{
+  "screen": {
+    "listTitle": "占卜历史",
+    "detailTitle": "占卜详情",
+    "back": "返回"
+  },
+  "list": {
+    "loading": "加载历史记录...",
+    "loadMore": "加载更多...",
+    "empty": {
+      "title": "暂无占卜历史",
+      "description": {
+        "default": "开始你的第一次塔罗占卜吧。",
+        "filtered": "该筛选条件下暂无记录。"
+      }
+    },
+    "error": {
+      "default": "加载历史记录失败。"
+    },
+    "retry": "重试",
+    "cardCount": "{{count}}张牌",
+    "preview": {
+      "aiAnalysis": "{{description}} AI分析：{{dimension}}",
+      "fallback": "查看完整解读..."
+    },
+    "modeBadge": {
+      "ai": "✨ AI解读",
+      "default": "基础解读"
+    }
+  },
+  "filter": {
+    "mode": {
+      "all": "全部占卜",
+      "default": "基础解读",
+      "ai": "AI解读"
+    },
+    "date": {
+      "all": "全部时间",
+      "today": "今天",
+      "week": "本周",
+      "month": "本月",
+      "custom": "自定义范围"
+    },
+    "labels": {
+      "mode": "选择解读模式",
+      "date": "选择时间范围"
+    },
+    "clear": "清除",
+    "cancel": "取消",
+    "modeDisplay": "{{icon}} {{label}}",
+    "dateDisplay": "📅 {{label}}"
+  },
+  "detail": {
+    "notFound": "历史记录不存在。",
+    "loadFailed": "加载失败。",
+    "loading": "加载中...",
+    "share": {
+      "title": "塔罗占卜记录",
+      "message": "塔罗占卜记录\n时间：{{time}}\n模式：{{mode}}\n\n{{summary}}\n\n来自神秘塔罗牌应用"
+    },
+    "mode": {
+      "ai": "✨ AI解读",
+      "basic": "📖 基础解读",
+      "aiLabel": "AI解读",
+      "basicLabel": "基础解读"
+    },
+    "delete": {
+      "confirmTitle": "删除确认",
+      "confirmMessage": "确定要删除这条历史记录吗？此操作不可恢复。",
+      "confirmAction": "删除",
+      "cancel": "取消",
+      "failed": "删除失败",
+      "retryLater": "请稍后重试。"
+    },
+    "overall": {
+      "titleAI": "综合分析",
+      "titleBasic": "🔮 整体解读"
+    },
+    "insightsTitle": "关键洞察",
+    "cardsTitle": "卡牌解读",
+    "section": {
+      "basicSummary": "基础牌意：",
+      "aiDetailed": "AI详细解读：",
+      "detailed": "详细解读：",
+      "dimension": "{{name}}："
+    },
+    "dimensionFallback": "维度{{index}}",
+    "cardFallback": "第{{index}}张牌",
+    "userDescriptionFallback": "您的塔罗牌与解读",
+    "shareSummaryFallback": "查看完整解读...",
+    "back": "返回",
+    "recordMissing": "记录不存在。",
+    "direction": {
+      "upright": "正位",
+      "reversed": "逆位"
+    },
+    "insightBullet": "•"
+  }
+}

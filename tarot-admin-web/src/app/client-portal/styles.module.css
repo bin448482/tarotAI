@@ -1,0 +1,61 @@
+.portalWrapper {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1e1a3c, #0b0218 70%);
+  position: relative;
+  padding: 40px 16px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(107, 70, 193, 0.25), transparent 55%),
+    radial-gradient(circle at 80% 10%, rgba(37, 99, 235, 0.2), transparent 60%),
+    radial-gradient(circle at 50% 80%, rgba(14, 116, 144, 0.18), transparent 65%);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.heroCard {
+  background: linear-gradient(135deg, rgba(107, 70, 193, 0.95), rgba(37, 99, 235, 0.85));
+  border-radius: 18px !important;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.5);
+}
+
+.heroButton {
+  width: fit-content;
+}
+
+.releaseCard {
+  border-radius: 18px !important;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.35);
+}
+
+.downloadCard {
+  border-radius: 14px !important;
+  background: linear-gradient(145deg, rgba(236, 233, 254, 0.95), rgba(255, 255, 255, 0.9));
+  box-shadow: 0 10px 25px -10px rgba(91, 33, 182, 0.35);
+}
+
+.centered {
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .portalWrapper {
+    padding: 24px 12px;
+  }
+  .heroButton {
+    width: 100%;
+  }
+}

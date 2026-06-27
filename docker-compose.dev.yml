@@ -1,0 +1,7 @@
+﻿services:
+  backend:
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - backend_data:/data
+      - ./tarot-backend/app:/app/app
+      - ./tarot-backend/static:/app/static:ro

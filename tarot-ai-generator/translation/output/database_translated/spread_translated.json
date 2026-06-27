@@ -1,0 +1,18 @@
+{
+  "table_name": "spread",
+  "source_locale": "zh-CN",
+  "target_locale": "en",
+  "original_count": 1,
+  "translated_count": 1,
+  "translation_rate": 100.0,
+  "translated_at": "2025-10-13T18:29:31Z",
+  "model_used": "gpt-3.5-turbo",
+  "description": "Translation of 牌阵定义，包括三牌阵等经典塔罗牌阵",
+  "data": [
+    {
+      "name_en": "Three-card Spread",
+      "description_en": "A classic three-card spread representing the past, present, and future, suitable for exploring the trends of development and insights along the timeline. The first card represents the influence of the past, the second card shows the current situation, and the third card indicates possible future developments.",
+      "id": 1
+    }
+  ]
+}

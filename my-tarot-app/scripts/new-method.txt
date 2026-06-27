@@ -1,0 +1,70 @@
+  private async ensureConfigDatabaseCopied(): Promise<void> {
+    const configDbFile = this.getConfigDatabaseFile();
+
+    try {
+      console.log('[ConnectionManager] Checking bundled config database (first run or if invalid)...');
+
+      // Ensure SQLite directory exists
+      this.ensureSQLiteDirectoryExists();
+
+      // Load asset (ensure localUri is available)
+      let asset;
+      try {
+        const moduleId = require('../../assets/db/tarot_config.db');
+        await Asset.loadAsync(moduleId);
+        asset = Asset.fromModule(moduleId);
+        if (!asset.localUri) {
+          await asset.downloadAsync();
+        }
+        if (!asset.localUri) {
+          throw new Error('Failed to resolve localUri for config DB asset');
+        }
+      } catch (assetError) {
+        console.error('[ConnectionManager] Asset loading failed:', assetError);
+        throw new Error(Failed to load config database asset: );
+      }
+
+      const existingFileInfo = configDbFile.info();
+
+      const copyFromAsset = () => {
+        const assetFile = new File(asset.localUri);
+        try {
+          const info = configDbFile.info();
+          if (info.exists) {
+            configDbFile.delete();
+          }
+        } catch {}
+        assetFile.copy(configDbFile);
+        console.log('[ConnectionManager] Config database copied from asset');
+      };
+
+      if (!existingFileInfo.exists) {
+        copyFromAsset();
+        return;
+      }
+
+      // Validate existing DB; if invalid, re-copy
+      try {
+        const testDb = SQLite.openDatabaseSync(configDbFile.uri);
+        const requiredTables = ['card', 'card_style', 'dimension', 'card_interpretation', 'spread'];
+        let ok = true;
+        for (const table of requiredTables) {
+          const result = testDb.getFirstSync<{count: number}>("SELECT COUNT(*) as count FROM sqlite_master WHERE type='table' AND name=?", [table]);
+          if (!result || !result.count) { ok = false; break; }
+        }
+        testDb.closeSync?.();
+        if (!ok) {
+          console.warn('[ConnectionManager] Existing config DB invalid. Re-copying from asset...');
+          copyFromAsset();
+        } else {
+          console.log('[ConnectionManager] Existing config DB is valid. Skip copy');
+        }
+      } catch (e) {
+        console.warn('[ConnectionManager] Failed to open/verify existing config DB. Re-copying from asset...', e);
+        copyFromAsset();
+      }
+    } catch (error) {
+      console.error('[ConnectionManager] Failed to ensure config database:', error);
+      throw new Error(Failed to copy/verify config database: );
+    }
+  }

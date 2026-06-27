@@ -1,0 +1,99 @@
+{
+  "screen": {
+    "listTitle": "Reading History",
+    "detailTitle": "Reading Detail",
+    "back": "Back"
+  },
+  "list": {
+    "loading": "Loading history…",
+    "loadMore": "Loading more…",
+    "empty": {
+      "title": "No readings yet",
+      "description": {
+        "default": "Start your first tarot reading to see it here.",
+        "filtered": "No records match the current filters."
+      }
+    },
+    "error": {
+      "default": "Unable to load history."
+    },
+    "retry": "Retry",
+    "cardCount": "{{count}} cards",
+    "preview": {
+      "aiAnalysis": "{{description}} AI insight: {{dimension}}",
+      "fallback": "View full interpretation…"
+    },
+    "modeBadge": {
+      "ai": "✨ AI Reading",
+      "default": "Classic Reading"
+    }
+  },
+  "filter": {
+    "mode": {
+      "all": "All readings",
+      "default": "Classic reading",
+      "ai": "AI reading"
+    },
+    "date": {
+      "all": "All time",
+      "today": "Today",
+      "week": "This week",
+      "month": "This month",
+      "custom": "Custom range"
+    },
+    "labels": {
+      "mode": "Choose reading type",
+      "date": "Choose time range"
+    },
+    "clear": "Clear",
+    "cancel": "Cancel",
+    "modeDisplay": "{{icon}} {{label}}",
+    "dateDisplay": "📅 {{label}}"
+  },
+  "detail": {
+    "notFound": "History record not found.",
+    "loadFailed": "Failed to load history.",
+    "loading": "Loading…",
+    "share": {
+      "title": "Tarot reading record",
+      "message": "Tarot reading record\nTime: {{time}}\nMode: {{mode}}\n\n{{summary}}\n\nFrom Mystic Tarot"
+    },
+    "mode": {
+      "ai": "✨ AI Reading",
+      "basic": "📖 Classic Reading",
+      "aiLabel": "AI Reading",
+      "basicLabel": "Classic Reading"
+    },
+    "delete": {
+      "confirmTitle": "Delete record",
+      "confirmMessage": "Are you sure you want to delete this history? This action cannot be undone.",
+      "confirmAction": "Delete",
+      "cancel": "Cancel",
+      "failed": "Delete failed",
+      "retryLater": "Please try again later."
+    },
+    "overall": {
+      "titleAI": "Overall insights",
+      "titleBasic": "🔮 Overall interpretation"
+    },
+    "insightsTitle": "Key insights",
+    "cardsTitle": "Card interpretations",
+    "section": {
+      "basicSummary": "Card meaning:",
+      "aiDetailed": "AI insight:",
+      "detailed": "Detailed interpretation:",
+      "dimension": "{{name}}:"
+    },
+    "dimensionFallback": "Aspect {{index}}",
+    "cardFallback": "Card {{index}}",
+    "userDescriptionFallback": "Your tarot cards and messages",
+    "shareSummaryFallback": "View full interpretation…",
+    "back": "Back",
+    "recordMissing": "Record does not exist.",
+    "direction": {
+      "upright": "Upright",
+      "reversed": "Reversed"
+    },
+    "insightBullet": "•"
+  }
+}
