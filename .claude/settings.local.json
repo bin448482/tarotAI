@@ -41,7 +41,9 @@
       "Bash(cat:*)",
       "Bash(npm cache clean:*)",
       "Bash(npm run android:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "Bash(git add *)",
+      "Bash(git commit -m '@ *)"
     ],
     "deny": [],
     "ask": []
