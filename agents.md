@@ -265,3 +265,24 @@ MySixth/
 - Exclude `tarot-backend/backend_tarot.db` from release bundles; keep production data in the Docker volume.
 - On the target server, clean any previous extraction (for example `rm -rf /srv/my-tarot/MySixth-docker-20251010`) before running `unzip -o MySixth-docker-20251010.zip -d /srv/my-tarot` to avoid the non-interactive overwrite issue.
 
+
+## Public Sanitized Branch
+
+- 当前公开发布分支是 orphan/root 分支 `public-sanitized`，当前 root commit 为 `386d1a7 Initial sanitized public release`。
+- `git rev-list --parents -n 1 public-sanitized` 只应显示一个 commit hash，没有 parent；如出现 parent，说明不是干净 orphan 分支。
+- 主开发分支当前为 `biiinnn20251126`，主工作树位置为 `D:\0-development\projects\tarotAI`。不要为了维护公开发布分支而把主开发分支混入历史或误推包含原历史的分支。
+- `public-sanitized` 采用保守排除策略：
+  - 包含：应用代码、后端代码、管理后台代码、AI 生成工具代码、公开 README/agents 文档、示例配置、Docker dev/default 配置、静态资源和公开样例数据。
+  - 不包含：`docker-compose.prod.yml`、`.env`/`.env.*`、数据库文件、构建产物、debug/release 包、本地工具配置、cookies、真实服务账号文件、Android/iOS keystore 和证书私钥。
+- 推送公开分支时从本仓库确认当前分支或显式指定 ref：
+  ```powershell
+  cd D:\0-development\projects\tarotAI
+  git push origin public-sanitized
+  ```
+- 公开 GitHub repository 时只展示或发布 `public-sanitized` 分支；不要把包含原历史的 `biiinnn20251126` 或 `main` 一起公开。
+- 每次更新 `public-sanitized` 前必须重新扫描真实域名、内网 IP、个人邮箱、EAS projectId、默认密码、JWT/webhook/admin secret、Google service account 私钥、OpenAI/智谱/代理 API key、keystore/证书、生产路径和本地配置文件。example API key 占位符可以保留，但真实 key 一律不能进入分支。
+- 建议公开前至少运行：
+  ```powershell
+  git grep -n -E 'miidea\.top|192\.168\.|admin123|76626123@qq\.com|biiinnn001@gmail\.com|support@mysixth\.app|0d19ed54-5efd-4fe1-ae51-23a1b6602215|your-secret-key-change-in-production|your-secure-admin-password|your-webhook-secret|BEGIN PRIVATE KEY|PRIVATE KEY-----|sk-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{20,}|AKIA[0-9A-Z]{16}' HEAD -- .
+  git ls-tree -r --name-only HEAD | rg '(^|/)(docker-compose\.prod\.yml|settings\.local\.json|cookies\.txt|mcp\.json|.*\.env|.*\.jks|.*\.keystore)$'
+  ```
