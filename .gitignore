@@ -92,3 +92,4 @@ tarot-admin-web/out/**
 **/.expo/**
 **/.expo-shared/**
 **/.DS_Store
+.claude/
