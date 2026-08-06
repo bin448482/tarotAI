@@ -43,7 +43,12 @@
       "Bash(npm run android:*)",
       "Bash(git log:*)",
       "Bash(git add *)",
-      "Bash(git commit -m '@ *)"
+      "Bash(git commit -m '@ *)",
+      "Bash(git push *)",
+      "Bash(git rev-list *)",
+      "Bash(git ls-tree *)",
+      "Bash(rg '\\(^|/\\)\\(docker-compose\\\\.prod\\\\.yml|settings\\\\.local\\\\.json|cookies\\\\.txt|mcp\\\\.json|.*\\\\.env|.*\\\\.jks|.*\\\\.keystore\\)$')",
+      "Bash(git checkout *)"
     ],
     "deny": [],
     "ask": []

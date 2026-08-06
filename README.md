@@ -171,7 +171,8 @@ docker compose up -d --build
 
 Default local endpoints:
 
-- Admin console: `http://localhost/`
+- Personal portal: `http://localhost/`
+- Admin console: `http://localhost/admin/`
 - Backend health: `http://localhost:8001/health`
 - Backend Swagger: `http://localhost:8001/docs`
 

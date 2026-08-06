@@ -171,7 +171,8 @@ docker compose up -d --build
 
 默认本地端点：
 
-- 管理后台：`http://localhost/`
+- 个人 Portal：`http://localhost/`
+- 管理后台：`http://localhost/admin/`
 - 后端健康检查：`http://localhost:8001/health`
 - 后端 Swagger 文档：`http://localhost:8001/docs`
 

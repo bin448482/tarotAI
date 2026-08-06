@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="占彬的个人 Profile：AI 架构、数据架构与产品工程。" />
+    <title>占彬 · AI 与数据架构</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #eef2ff;
+        --muted: #b7c2d9;
+        --line: rgba(197, 203, 255, 0.18);
+        --surface: rgba(22, 29, 53, 0.72);
+        --accent: #a5b4fc;
+        --accent-2: #67e8f9;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+        background:
+          radial-gradient(circle at 80% -10%, rgba(129, 140, 248, 0.4), transparent 32rem),
+          radial-gradient(circle at -10% 70%, rgba(34, 211, 238, 0.18), transparent 26rem),
+          #0a1020;
+      }
+      main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 80px 0 48px; }
+      .hero { min-height: 53vh; display: grid; align-content: center; max-width: 820px; }
+      .eyebrow { margin: 0 0 20px; color: var(--accent-2); font-size: .8rem; font-weight: 700; letter-spacing: .16em; }
+      h1 { margin: 0; font-size: clamp(3rem, 9vw, 7.2rem); line-height: .88; letter-spacing: -.075em; }
+      .role { margin: 24px 0 0; color: var(--accent); font-size: clamp(1rem, 2vw, 1.24rem); font-weight: 650; letter-spacing: .02em; }
+      .intro { max-width: 690px; margin: 34px 0 0; color: var(--muted); font-size: 1.1rem; line-height: 1.9; }
+      .rule { height: 1px; margin: 56px 0; background: linear-gradient(90deg, var(--accent), transparent); }
+      section { margin: 0 0 72px; }
+      h2 { margin: 0 0 24px; font-size: 1rem; color: var(--accent-2); letter-spacing: .12em; }
+      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .card, .principle {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--surface);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
+      }
+      .card { min-height: 220px; padding: 28px; }
+      .number { color: var(--accent-2); font-size: .78rem; font-weight: 700; letter-spacing: .1em; }
+      h3 { margin: 34px 0 14px; font-size: 1.25rem; letter-spacing: -.025em; }
+      .card p, .principle p { margin: 0; color: var(--muted); font-size: .96rem; line-height: 1.75; }
+      .principles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .principle { padding: 24px 26px; }
+      .principle h3 { margin: 0 0 10px; font-size: 1.05rem; }
+      .credential {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 26px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .credential strong { font-size: 1.05rem; }
+      .credential span { color: var(--muted); font-size: .92rem; text-align: right; }
+      footer { padding-top: 8px; color: #8190af; font-size: .82rem; }
+      @media (max-width: 760px) {
+        main { width: min(100% - 32px, 1120px); padding-top: 48px; }
+        .hero { min-height: auto; }
+        .grid, .principles { grid-template-columns: 1fr; }
+        .card { min-height: 0; }
+        .credential { align-items: flex-start; flex-direction: column; }
+        .credential span { text-align: left; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <p class="eyebrow">PERSONAL PROFILE</p>
+        <h1>占彬</h1>
+        <p class="role">AI 架构师 · 数据架构师 · 产品工程实践者</p>
+        <p class="intro">
+          聚焦企业 AI 系统、数据架构与可交付的工程方法。将复杂问题拆解为清晰边界、结构化契约与可复核的执行路径，让智能能力能够在真实业务和治理约束中持续演进。
+        </p>
+      </header>
+
+      <div class="rule"></div>
+
+      <section aria-labelledby="focus-title">
+        <h2 id="focus-title">FOCUS</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="number">01</div>
+            <h3>AI 系统架构</h3>
+            <p>设计 Agent、Skill 与工具协议的分层边界；围绕多模型协作、状态恢复、可观测性和回归验证，构建可复用的 AI 能力底座。</p>
+          </article>
+          <article class="card">
+            <div class="number">02</div>
+            <h3>数据架构与治理</h3>
+            <p>面向元数据、血缘、逻辑业务对象和影响分析建立治理方法，让数据迁移、质量评估与人工确认拥有清晰的证据链。</p>
+          </article>
+          <article class="card">
+            <div class="number">03</div>
+            <h3>端到端产品工程</h3>
+            <p>从需求定义、架构决策到全栈实现和上线运维，持续把抽象设计转化为可验证、可迭代的实际产品与工具。</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="principles-title">
+        <h2 id="principles-title">WORKING PRINCIPLES</h2>
+        <div class="principles">
+          <article class="principle">
+            <h3>先定义边界</h3>
+            <p>先识别业务、数据、安全与责任边界，再决定模型、框架或自动化方式。</p>
+          </article>
+          <article class="principle">
+            <h3>以契约组织协作</h3>
+            <p>使用清晰的输入、输出、状态与审批约定，降低异构系统和多人协作中的不确定性。</p>
+          </article>
+          <article class="principle">
+            <h3>让结果可复核</h3>
+            <p>把证据、待确认项、验证步骤与回归机制视为交付物的一部分，而非收尾工作。</p>
+          </article>
+          <article class="principle">
+            <h3>对交付负责</h3>
+            <p>关注从设计到运行的完整闭环，在用户体验、工程质量与治理要求之间做出明确取舍。</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="credential-title">
+        <h2 id="credential-title">CREDENTIAL</h2>
+        <div class="credential">
+          <strong>Microsoft Certified: Azure Solutions Architect Expert</strong>
+          <span>云架构与企业级解决方案能力认证</span>
+        </div>
+      </section>
+
+      <footer>AI · Data · Systems · Product Engineering</footer>
+    </main>
+  </body>
+</html>

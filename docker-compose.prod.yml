@@ -43,6 +43,7 @@ services:
     restart: unless-stopped
     volumes:
       - ${NGINX_CONF:-./deploy/nginx/nginx.conf}:/etc/nginx/nginx.conf:ro
+      - ./deploy/portal:/usr/share/nginx/html:ro
       - ./deploy/certbot/www:/var/www/certbot:ro
       - ./deploy/certbot/conf:/etc/letsencrypt:ro
 

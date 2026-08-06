@@ -31,7 +31,7 @@
 tarot-admin-web/
 ├── src/
 │   ├── app/                    # Next.js App Router 页面
-│   │   ├── page.tsx           # 根路由：按 token 重定向登录/仪表板
+│   │   ├── page.tsx           # `/admin` 根路由：按 token 重定向登录/仪表板
 │   │   ├── login/             # 登录页（渐变背景 + 毛玻璃卡片）
 │   │   ├── dashboard/         # 仪表板
 │   │   ├── users/             # 用户管理

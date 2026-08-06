@@ -237,7 +237,7 @@ MySixth/
 - Services
   - backend: FastAPI + Uvicorn on 8000; mounts `./tarot-backend/static` read-only to `/app/static`; persistent volume `backend_data:/data` for SQLite `backend_tarot.db`.
   - admin: Next.js (production) on 3000; `NEXT_PUBLIC_BACKEND_URL=/` baked into build.
-  - nginx: listens on 80; routes `/api/*` to backend, all other paths `/` to admin.
+  - nginx: listens on 80/443; serves the static personal Portal at `/`, routes `/admin/*` to the Next.js admin app, and routes `/api/*` to backend.
 - Ports
   - host 80 -> nginx 80; host 8000 -> backend 8000 (for direct API/health debug).
 - Env & Secrets
@@ -261,7 +261,7 @@ MySixth/
 
 - When creating deployment archives on Windows, use a Python `zipfile` script (or another tool that normalizes paths) so entries always contain POSIX `/` separators; otherwise Linux `unzip` may stop, waiting for overwrite confirmation because of `\` paths.
 - Before compressing, remove transient folders such as `.next`, `node_modules`, `venv`, logs, and `__pycache__` to keep the bundle minimal.
-- Exclude `docker-compose.prod.yml` from release bundles; keep it for internal deployment only.
+- Include `docker-compose.prod.yml` in internal ECS release bundles; do not include it in the public sanitized branch.
 - Exclude `tarot-backend/backend_tarot.db` from release bundles; keep production data in the Docker volume.
 - On the target server, clean any previous extraction (for example `rm -rf /srv/my-tarot/MySixth-docker-20251010`) before running `unzip -o MySixth-docker-20251010.zip -d /srv/my-tarot` to avoid the non-interactive overwrite issue.
 
