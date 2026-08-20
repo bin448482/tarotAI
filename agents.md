@@ -260,7 +260,7 @@ MySixth/
 ## Portfolio Publication Boundary
 
 - `miidea.top` serves only the reviewed static allowlist generated from the separate `public-portfolio` checkout. The source checkout is never mounted as a web root.
-- `release/publish_portfolio.py` validates the allowlist, approved contact data, secrets and local-path markers before atomically replacing `deploy/portal`; run its `--check` mode before each publication. The server procedure and route ownership are in `release/PUBLISH_PORTFOLIO.md`.
+- `release/publish_portfolio.py` validates the allowlist, approved contact data, secrets and local-path markers before replacing the contents of `deploy/portal` while preserving its Docker bind-mounted directory; run its `--check` mode before each publication. The server procedure and route ownership are in `release/PUBLISH_PORTFOLIO.md`.
 - Nginx serves only the explicit portfolio static allowlist (`/`, `/articles/`, `/projects/`, public resume HTML, CSS and JS); all other requests fall back to the admin app. Keep `/admin/*`, `/api/*`, `/static/*`, `/health`, ACME and compatibility locations explicit when changing routes.
 
 ## Release Packaging Notes

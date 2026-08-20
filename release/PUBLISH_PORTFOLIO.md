@@ -1,8 +1,8 @@
 # Publish `public-portfolio` at `miidea.top`
 
 `miidea.top` keeps the TarotAI backend and admin application. Nginx serves the
-approved portfolio assets first, then sends routes without a matching static
-asset to the existing Next.js admin service.
+explicit approved portfolio allowlist first; all other routes retain their
+existing TarotAI behavior.
 
 | Route | Owner |
 | --- | --- |
@@ -11,41 +11,59 @@ asset to the existing Next.js admin service.
 | `/api/*`, `/static/*`, `/health` | TarotAI FastAPI |
 | `/verify-email`, `/privacy`, `/client-portal` | TarotAI compatibility routes |
 
-## First server setup
+## Verified ECS layout
 
-The server must already be authorized to read the private portfolio repository.
-Clone it outside the Nginx document root:
+The current production host is a ZIP/file deployment, not a Git checkout:
 
 ```bash
-git clone git@github.com:bin448482/public-portfolio.git /srv/public-portfolio-src
-cd /srv/my-tarot
-python3 release/publish_portfolio.py \
-  --source /srv/public-portfolio-src \
-  --destination /srv/my-tarot/deploy/portal \
-  --check
-python3 release/publish_portfolio.py \
-  --source /srv/public-portfolio-src \
-  --destination /srv/my-tarot/deploy/portal
-docker compose -f docker-compose.prod.yml up -d nginx
+/srv/my-tarot                         # existing TarotAI Compose deployment
+~/public-portfolio-src                # private portfolio Git checkout
+/srv/my-tarot/deploy/portal           # Nginx bind-mounted public directory
 ```
 
-Before the first reload, the updated `deploy/nginx/nginx.conf` and
-`deploy/nginx/nginx.http.conf` must be present on the server. Do not publish
-the source checkout directly: the script permits only the listed HTML, CSS and
-JS assets, then replaces the contents of `deploy/portal` while preserving that
-directory for the running Nginx bind mount.
+Do not clone or overwrite TarotAI into `/srv/my-tarot`: it contains the running
+configuration, production environment file, persistent data, certificates and
+application assets. Do not mount the portfolio source checkout as a web root.
+
+## One-time preparation
+
+The ECS SSH key must have read access to both private GitHub repositories.
+Install the reviewed deployment script from the TarotAI deployment branch:
+
+```bash
+UPDATE_TMP=$(mktemp -d)
+git clone --branch biiinnn20251126 --single-branch \
+  git@github.com:bin448482/tarotAI.git \
+  "$UPDATE_TMP/tarotAI"
+sudo install -m 755 \
+  "$UPDATE_TMP/tarotAI/release/publish_portfolio.py" \
+  /srv/my-tarot/release/publish_portfolio.py
+```
+
+Create the portfolio source checkout once, in the deploy user's home directory:
+
+```bash
+git clone --branch master --single-branch \
+  git@github.com:bin448482/public-portfolio.git \
+  ~/public-portfolio-src
+```
+
+The script publishes exactly the approved HTML, CSS and JS allowlist. It
+preserves the `deploy/portal` directory itself, because Docker bind mounts that
+directory inode; it never publishes `docs/`, Git metadata or governance files.
 
 ## Subsequent updates
 
 ```bash
-git -C /srv/public-portfolio-src pull --ff-only
-cd /srv/my-tarot
-python3 release/publish_portfolio.py \
-  --source /srv/public-portfolio-src \
+git -C ~/public-portfolio-src pull --ff-only
+
+sudo python3 /srv/my-tarot/release/publish_portfolio.py \
+  --source ~/public-portfolio-src \
   --destination /srv/my-tarot/deploy/portal \
   --check
-python3 release/publish_portfolio.py \
-  --source /srv/public-portfolio-src \
+
+sudo python3 /srv/my-tarot/release/publish_portfolio.py \
+  --source ~/public-portfolio-src \
   --destination /srv/my-tarot/deploy/portal
 ```
 
@@ -56,17 +74,46 @@ existing Nginx container.
 ## Required verification
 
 ```bash
-curl -fsSI https://www.miidea.top/
-curl -fsSI https://www.miidea.top/articles/
-curl -fsSI https://www.miidea.top/projects/
-curl -fsSI https://www.miidea.top/resume.html
-curl -fsSI https://www.miidea.top/admin/
-curl -fsSI https://www.miidea.top/health
+curl -kfsSI https://www.miidea.top/
+curl -kfsSI https://www.miidea.top/articles/index.html
+curl -kfsSI https://www.miidea.top/projects/index.html
+curl -kfsSI https://www.miidea.top/resume.html
+curl -kfsSI https://www.miidea.top/admin/
+curl -kfsS https://www.miidea.top/health
 ```
 
 Also inspect the portfolio home, article index, project index and both resume
-entry points in a browser. A failed `--check` is a publication stop: remediate
-the source content instead of bypassing the allowlist or scanner.
+entry points in a browser. The public pages must return `200`; `/admin/` may
+return a normal `308` redirect to `/admin`; `/health` must be called with GET,
+not `curl -I`, because the backend does not allow HEAD. A failed `--check` is a
+publication stop: remediate the source content instead of bypassing the
+allowlist or scanner.
+
+## Nginx route changes
+
+For a portfolio content-only update, do not reload or recreate Nginx. If
+`deploy/nginx/nginx.conf` changes, first copy the reviewed configuration into
+`/srv/my-tarot/deploy/nginx/`, then validate and reload only Nginx:
+
+```bash
+sudo docker exec my-tarot-nginx-1 nginx -t
+sudo docker exec my-tarot-nginx-1 nginx -s reload
+```
+
+Never run `docker compose up -d --build` for a portfolio-only release. The
+TarotAI `admin` and `backend` services are not part of this update.
+
+## Certificate renewal
+
+The existing certificate files are persisted under
+`/srv/my-tarot/deploy/certbot/conf`. Test renewal without issuing a new
+certificate:
+
+```bash
+cd /srv/my-tarot
+sudo docker compose -f docker-compose.prod.yml run --rm certbot \
+  renew --webroot -w /var/www/certbot --dry-run
+```
 
 The portfolio source review is the authority for content approval. The script
 still rejects secrets, unapproved email addresses, mainland-China phone
