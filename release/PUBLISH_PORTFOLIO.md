@@ -32,7 +32,8 @@ docker compose -f docker-compose.prod.yml up -d nginx
 Before the first reload, the updated `deploy/nginx/nginx.conf` and
 `deploy/nginx/nginx.http.conf` must be present on the server. Do not publish
 the source checkout directly: the script permits only the listed HTML, CSS and
-JS assets, then atomically replaces `deploy/portal`.
+JS assets, then replaces the contents of `deploy/portal` while preserving that
+directory for the running Nginx bind mount.
 
 ## Subsequent updates
 
@@ -46,8 +47,11 @@ python3 release/publish_portfolio.py \
 python3 release/publish_portfolio.py \
   --source /srv/public-portfolio-src \
   --destination /srv/my-tarot/deploy/portal
-docker compose -f docker-compose.prod.yml up -d nginx
 ```
+
+No Nginx reload or container recreation is needed for a content-only update.
+If an Nginx configuration file changed, first run `nginx -t`, then reload the
+existing Nginx container.
 
 ## Required verification
 

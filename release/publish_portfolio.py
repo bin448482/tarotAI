@@ -9,7 +9,6 @@ become public assets.
 from __future__ import annotations
 
 import argparse
-import os
 from pathlib import Path
 import re
 import shutil
@@ -89,22 +88,22 @@ def copy_to_stage(source: Path, stage: Path, files: tuple[Path, ...]) -> None:
         shutil.copy2(source / relative, target)
 
 
-def replace_published_directory(stage: Path, destination: Path) -> None:
+def replace_published_contents(stage: Path, destination: Path) -> None:
+    """Replace portal contents without replacing its directory inode.
+
+    Docker bind mounts hold the inode of the directory selected at container
+    creation. Replacing the directory itself leaves nginx bound to the old
+    inode, so publish the staged allowlist into the existing directory.
+    """
     destination.parent.mkdir(parents=True, exist_ok=True)
-    backup = destination.parent / f".{destination.name}.previous-{uuid.uuid4().hex}"
-    moved_previous = False
-    try:
-        if destination.exists():
-            os.replace(destination, backup)
-            moved_previous = True
-        os.replace(stage, destination)
-    except Exception:
-        if moved_previous and not destination.exists() and backup.exists():
-            os.replace(backup, destination)
-        raise
-    else:
-        if backup.exists():
-            shutil.rmtree(backup)
+    destination.mkdir(exist_ok=True)
+    for child in destination.iterdir():
+        if child.is_dir():
+            shutil.rmtree(child)
+        else:
+            child.unlink()
+    for child in stage.iterdir():
+        shutil.move(str(child), destination / child.name)
 
 
 def main() -> int:
@@ -132,7 +131,7 @@ def main() -> int:
     stage = destination.parent / f".{destination.name}.staging-{uuid.uuid4().hex}"
     try:
         copy_to_stage(source, stage, files)
-        replace_published_directory(stage, destination)
+        replace_published_contents(stage, destination)
     finally:
         if stage.exists():
             shutil.rmtree(stage)
