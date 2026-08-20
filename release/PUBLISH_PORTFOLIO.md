@@ -6,7 +6,7 @@ existing TarotAI behavior.
 
 | Route | Owner |
 | --- | --- |
-| `/`, `/articles/*`, `/projects/*`, `/resume*.html`, CSS and JS | approved `public-portfolio` assets |
+| `/`, `/index.html`, `/articles/*`, `/projects/*`, `/resume*.html`, CSS and JS | approved `public-portfolio` assets |
 | `/admin/*` | TarotAI Next.js admin |
 | `/api/*`, `/static/*`, `/health` | TarotAI FastAPI |
 | `/verify-email`, `/privacy`, `/client-portal` | TarotAI compatibility routes |
@@ -92,10 +92,12 @@ allowlist or scanner.
 ## Nginx route changes
 
 For a portfolio content-only update, do not reload or recreate Nginx. If
-`deploy/nginx/nginx.conf` changes, first copy the reviewed configuration into
-`/srv/my-tarot/deploy/nginx/`, then validate and reload only Nginx:
+`deploy/nginx/nginx.conf` changes, overwrite the reviewed configuration with
+`cp` (do not use `install`, which replaces a file inode held by Docker's bind
+mount), then validate and reload only Nginx:
 
 ```bash
+sudo cp /path/to/reviewed/nginx.conf /srv/my-tarot/deploy/nginx/nginx.conf
 sudo docker exec my-tarot-nginx-1 nginx -t
 sudo docker exec my-tarot-nginx-1 nginx -s reload
 ```
