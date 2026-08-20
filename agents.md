@@ -237,7 +237,7 @@ MySixth/
 - Services
   - backend: FastAPI + Uvicorn on 8000; mounts `./tarot-backend/static` read-only to `/app/static`; persistent volume `backend_data:/data` for SQLite `backend_tarot.db`.
   - admin: Next.js (production) on 3000; `NEXT_PUBLIC_BACKEND_URL=/` baked into build.
-  - nginx: listens on 80/443; serves the static personal Portal at `/`, routes `/admin/*` to the Next.js admin app, and routes `/api/*` to backend.
+- nginx: listens on 80/443; serves the static personal Portal at `/`, routes `/admin/*` to the Next.js admin app, and routes `/api/*` to backend.
 - Ports
   - host 80 -> nginx 80; host 8000 -> backend 8000 (for direct API/health debug).
 - Env & Secrets
@@ -256,6 +256,12 @@ MySixth/
     - `docker exec backend sh -lc "sqlite3 /data/backend_tarot.new 'PRAGMA integrity_check;' && mv /data/backend_tarot.db /data/backend_tarot.bak && mv /data/backend_tarot.new /data/backend_tarot.db'"`
 - Optional TLS
   - Add 443 server block and certs to `deploy/nginx/nginx.conf` for production.
+
+## Portfolio Publication Boundary
+
+- `miidea.top` serves only the reviewed static allowlist generated from the separate `public-portfolio` checkout. The source checkout is never mounted as a web root.
+- `release/publish_portfolio.py` validates the allowlist, approved contact data, secrets and local-path markers before atomically replacing `deploy/portal`; run its `--check` mode before each publication. The server procedure and route ownership are in `release/PUBLISH_PORTFOLIO.md`.
+- Nginx serves an existing static asset first and falls back to the admin app only when the asset is absent. Keep `/admin/*`, `/api/*`, `/static/*`, `/health`, ACME and compatibility locations explicit when changing routes.
 
 ## Release Packaging Notes
 

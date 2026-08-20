@@ -34,6 +34,8 @@ release/*
 !release/env/
 release/env/*
 !release/env/backend.env.example
+!release/publish_portfolio.py
+!release/PUBLISH_PORTFOLIO.md
 deploy/secrets/*
 !deploy/secrets/README.md
 !deploy/secrets/*.example.json
