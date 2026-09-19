@@ -27,9 +27,10 @@ class OpenAICompatibleAdapter:
         kwargs: Dict[str, Any] = {
             "model": profile.model,
             "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": profile.max_tokens,
             "timeout": self.timeout_seconds,
         }
+        if profile.max_tokens is not None:
+            kwargs["max_tokens"] = profile.max_tokens
         if profile.supports_temperature:
             kwargs["temperature"] = profile.temperature
         if profile.supports_top_p and profile.top_p is not None:

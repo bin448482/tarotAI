@@ -41,7 +41,8 @@ class Settings(BaseSettings):
     ZHIPU_MAX_TOKENS: int = 8192
     OPENAI_MODEL_NAME: str = "gpt-4o-mini"
     TEMPERATURE: float = 0.7
-    MAX_TOKENS: int = 1000
+    # Optional legacy fallback; provider profiles define their own token limits.
+    MAX_TOKENS: Optional[int] = None
 
     # Multi-model profiles. Provider keys are optional; unavailable profiles are
     # simply omitted from the allowlist at startup.
