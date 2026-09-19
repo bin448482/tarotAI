@@ -131,7 +131,8 @@ async def analyze_user_description(
             description=request.description,
             spread_type=request.spread_type,
             locale=locale,
-            db=db
+            db=db,
+            model_alias=request.model_alias,
         )
         logger.debug(
             "LLM analysis completed with %d dimensions",
@@ -291,7 +292,8 @@ async def generate_reading(
             dimensions=dimensions_data,
             user_description=request.description,
             spread_type=request.spread_type,
-            locale=locale
+            locale=locale,
+            model_alias=request.model_alias,
         )
 
         # LLM调用成功后扣除积分

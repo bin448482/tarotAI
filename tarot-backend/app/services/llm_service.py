@@ -9,45 +9,23 @@ from typing import Any, Dict, List, Optional
 
 from ..utils.locale import is_english_locale
 from ..utils.logger import api_logger  # 添加日志导入
-try:
-    from zhipuai import ZhipuAI
-except ImportError:
-    ZhipuAI = None
-
-try:
-    from openai import OpenAI
-except ImportError:
-    OpenAI = None
-
 from ..config import settings
+from .llm import LLMResponse, ModelRegistry
+from .llm.adapter import OpenAICompatibleAdapter
 
 
 class LLMService:
-    """LLM服务，支持智谱AI和OpenAI"""
+    """LLM business facade for GLM, DeepSeek, Qwen, and OpenAI-compatible models."""
 
     def __init__(self):
         self.config = settings
-        self.clients: Dict[str, Any] = {}
-        self.default_provider = self.config.API_PROVIDER or "zhipu"
-        self._initialize_clients()
-
-    def _initialize_clients(self):
-        """初始化可用的 LLM 客户端"""
-        if ZhipuAI and self.config.ZHIPUAI_API_KEY:
-            self.clients['zhipu'] = ZhipuAI(api_key=self.config.ZHIPUAI_API_KEY)
-
-        if OpenAI and self.config.OPENAI_API_KEY:
-            self.clients['openai'] = OpenAI(
-                api_key=self.config.OPENAI_API_KEY,
-                base_url=self.config.OPENAI_BASE_URL
-            )
-
-        if not self.clients:
+        self.registry = ModelRegistry(self.config)
+        self.adapter = OpenAICompatibleAdapter(
+            timeout_seconds=self.config.LLM_REQUEST_TIMEOUT_SECONDS,
+            max_retries=self.config.LLM_MAX_RETRIES,
+        )
+        if not self.registry.aliases():
             raise ValueError("No LLM providers are configured. Please set API keys for at least one provider.")
-
-        if self.default_provider not in self.clients:
-            # 回退到第一个可用的提供方
-            self.default_provider = next(iter(self.clients.keys()))
 
     async def call_ai_api(
         self,
@@ -58,9 +36,34 @@ class LLMService:
         force_json: bool = False
     ) -> Optional[str]:
         """调用AI API生成内容（异步版本）"""
+        try:
+            response = await self.call_ai_api_detailed(
+                prompt=prompt,
+                locale=locale,
+                provider=provider,
+                model=model,
+                force_json=force_json,
+            )
+            return response.content
+        except Exception as e:
+            api_logger.log_error(
+                "llm_api_call",
+                e,
+                {"prompt_length": len(prompt), "provider": provider, "model": model}
+            )
+            return None
+
+    async def call_ai_api_detailed(
+        self,
+        prompt: str,
+        locale: Optional[str] = None,
+        provider: Optional[str] = None,
+        model: Optional[str] = None,
+        force_json: bool = False,
+    ) -> LLMResponse:
+        """Call a configured model and retain provider-neutral response metadata."""
         resolved_provider, resolved_model = self._resolve_provider_and_model(locale, provider, model)
         try:
-            # 在线程池中执行同步API调用
             return await asyncio.to_thread(
                 self._call_ai_api_sync,
                 prompt,
@@ -74,45 +77,12 @@ class LLMService:
                 e,
                 {"prompt_length": len(prompt), "provider": resolved_provider, "model": resolved_model}
             )
-            return None
+            raise
 
-    def _call_ai_api_sync(self, prompt: str, provider: str, model: str, force_json: bool) -> Optional[str]:
+    def _call_ai_api_sync(self, prompt: str, provider: str, model: str, force_json: bool) -> LLMResponse:
         """同步版本的AI API调用"""
-        client = self.clients.get(provider)
-        if not client:
-            raise ValueError(f"LLM provider '{provider}' is not initialized")
-
-        try:
-            if provider == 'zhipu':
-                response = client.chat.completions.create(
-                    model=model,
-                    messages=[{"role": "user", "content": prompt}],
-                    temperature=self.config.TEMPERATURE,
-                    max_tokens=self.config.MAX_TOKENS
-                )
-            elif provider == 'openai':
-                create_kwargs = {
-                    "model": model,
-                    "messages": [{"role": "user", "content": prompt}],
-                    "temperature": self.config.TEMPERATURE,
-                    "max_tokens": self.config.MAX_TOKENS
-                }
-                if force_json:
-                    create_kwargs["response_format"] = {"type": "json_object"}
-                response = client.chat.completions.create(
-                    **create_kwargs
-                )
-            else:
-                raise ValueError(f"Unsupported provider: {provider}")
-
-            return response.choices[0].message.content.strip()
-        except Exception as e:
-            api_logger.log_error(
-                f"{provider}_api_call",
-                e,
-                {"prompt_length": len(prompt), "model": model}
-            )
-            return None
+        profile = self.registry.resolve(model)
+        return self.adapter.complete(profile, prompt, force_json=force_json)
 
     def _resolve_provider_and_model(
         self,
@@ -121,21 +91,19 @@ class LLMService:
         model: Optional[str]
     ) -> tuple[str, str]:
         """根据 locale 和配置决定使用的模型和服务商"""
-        resolved_provider = provider
-        if not resolved_provider:
-            if is_english_locale(locale) and 'openai' in self.clients:
-                resolved_provider = 'openai'
-            else:
-                resolved_provider = self.default_provider if self.default_provider in self.clients else next(iter(self.clients))
-
-        if resolved_provider == 'openai':
-            resolved_model = model or self.config.OPENAI_MODEL_NAME or self.config.MODEL_NAME
-        elif resolved_provider == 'zhipu':
-            resolved_model = model or self.config.ZHIPU_MODEL_NAME or self.config.MODEL_NAME
+        if model:
+            profile = self.registry.resolve(model)
+        elif provider:
+            candidates = [p for p in self.registry.profiles.values() if p.provider == provider]
+            if not candidates:
+                raise ValueError(f"LLM provider '{provider}' is not configured")
+            profile = candidates[0]
+        elif is_english_locale(locale):
+            profile = self.registry.resolve_for_locale(locale)
         else:
-            resolved_model = model or self.config.MODEL_NAME
+            profile = self.registry.resolve()
 
-        return resolved_provider, resolved_model
+        return profile.provider, profile.alias
 
     @staticmethod
     def _clean_dimension_name(line: str) -> str:
@@ -159,7 +127,8 @@ class LLMService:
         self,
         description: str,
         spread_type: str = "three-card",
-        locale: str = "zh-CN"
+        locale: str = "zh-CN",
+        model: Optional[str] = None,
     ) -> tuple[List[str], str]:
         """
         分析用户描述，返回推荐的维度名称列表和统一的描述。
@@ -168,12 +137,17 @@ class LLMService:
             raise ValueError(f"Unsupported spread type: {spread_type}")
 
         try:
-            return await self._analyze_for_three_card(description, locale)
+            return await self._analyze_for_three_card(description, locale, model=model)
         except Exception as e:
             api_logger.log_error("analyze_user_description", e, {"description_length": len(description)})
             raise
 
-    async def _analyze_for_three_card(self, description: str, locale: str) -> tuple[List[str], str]:
+    async def _analyze_for_three_card(
+        self,
+        description: str,
+        locale: str,
+        model: Optional[str] = None,
+    ) -> tuple[List[str], str]:
         """
         三牌阵专用分析：基于因果率和发展趋势动态确定三个维度
         """
@@ -251,7 +225,7 @@ DESCRIPTION:
 请使用简体中文输出，确保三个维度类别名称完全一致。"""
 
         try:
-            result = await self.call_ai_api(analysis_prompt, locale=locale)
+            result = await self.call_ai_api(analysis_prompt, locale=locale, model=model)
             if result:
                 dimensions, summary = self._parse_combined_result(result)
                 if dimensions:
@@ -307,7 +281,8 @@ DESCRIPTION:
         dimensions: List[Dict[str, Any]],
         user_description: str,
         spread_type: str,
-        locale: str
+        locale: str,
+        model: Optional[str] = None,
     ) -> Dict[str, Any]:
         """构建三牌阵完整解读并解析结果。"""
         if spread_type != "three-card":
@@ -323,11 +298,17 @@ DESCRIPTION:
             locale=locale
         )
 
-        raw_result = await self.call_ai_api(
+        llm_response = await self.call_ai_api_detailed(
             prompt=prompt,
             locale=locale,
+            model=model,
             force_json=True
         )
+        if llm_response.finish_reason == "length":
+            raise ValueError("LLM输出达到长度上限，未生成完整解读")
+        if llm_response.finish_reason in {"content_filter", "insufficient_system_resource", "aborted"}:
+            raise ValueError(f"LLM生成被中断: {llm_response.finish_reason}")
+        raw_result = llm_response.content
         if not raw_result:
             raise ValueError("LLM调用失败，未返回解读内容")
 

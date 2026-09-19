@@ -26,15 +26,48 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "sqlite:///./backend_tarot.db"
 
     # LLM configuration (参考 ../tarot-ai-generator/.env)
-    API_PROVIDER: str = "zhipu"  # zhipu 或 openai
+    API_PROVIDER: str = "zhipu"  # legacy fallback; new code uses model profiles
+    # ZHIPU_API_KEY is canonical; ZHIPUAI_API_KEY is retained for migration.
+    ZHIPU_API_KEY: Optional[str] = None
     ZHIPUAI_API_KEY: Optional[str] = None
+    ZHIPU_BASE_URL: Optional[str] = None
     OPENAI_API_KEY: Optional[str] = None
     OPENAI_BASE_URL: Optional[str] = None
     MODEL_NAME: str = "glm-4-flash"
     ZHIPU_MODEL_NAME: str = "glm-4-flash"
+    ZHIPU_THINKING: str = "disabled"
+    ZHIPU_REASONING_EFFORT: Optional[str] = None
+    ZHIPU_TEMPERATURE: float = 0.7
+    ZHIPU_MAX_TOKENS: int = 8192
     OPENAI_MODEL_NAME: str = "gpt-4o-mini"
     TEMPERATURE: float = 0.7
-    MAX_TOKENS: int = 1000
+    # Optional legacy fallback; provider profiles define their own token limits.
+    MAX_TOKENS: Optional[int] = None
+
+    # Multi-model profiles. Provider keys are optional; unavailable profiles are
+    # simply omitted from the allowlist at startup.
+    LLM_ACTIVE_MODEL: Optional[str] = None
+    LLM_DEFAULT_MODEL: Optional[str] = None  # legacy alias for LLM_ACTIVE_MODEL
+    LLM_CONFIG_PATH: str = "config/llm.yaml"
+    LLM_REQUEST_TIMEOUT_SECONDS: float = 120.0
+    LLM_MAX_RETRIES: int = 1
+    LLM_BENCHMARK_ENABLED: bool = False
+
+    DEEPSEEK_API_KEY: Optional[str] = None
+    DEEPSEEK_BASE_URL: str = "https://api.deepseek.com"
+    DEEPSEEK_MODEL_NAME: str = "deepseek-chat"
+    DEEPSEEK_THINKING: str = "disabled"
+    DEEPSEEK_REASONING_EFFORT: Optional[str] = None
+    DEEPSEEK_TEMPERATURE: float = 0.7
+    DEEPSEEK_MAX_TOKENS: int = 8192
+
+    DASHSCOPE_API_KEY: Optional[str] = None
+    QWEN_BASE_URL: str = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    QWEN_MODEL_NAME: str = "qwen-plus"
+    QWEN_THINKING: str = "disabled"
+    QWEN_REASONING_EFFORT: Optional[str] = None
+    QWEN_TEMPERATURE: float = 0.7
+    QWEN_MAX_TOKENS: int = 8192
 
     # API 调用限制
     RATE_LIMIT_PER_MINUTE: int = 60

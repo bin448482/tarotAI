@@ -11,6 +11,7 @@ class AnalyzeRequest(BaseModel):
     description: str = Field(..., max_length=200, description="用户描述，最多200字")
     spread_type: str = Field(default="three-card", description="牌阵类型：当前仅支持 three-card（三牌阵）")
     locale: Optional[str] = Field(default=None, description="首选语言区域标识，例如 zh-CN、en-US")
+    model_alias: Optional[str] = Field(default=None, description="服务端已登记的模型别名，可选")
 
 
 class DimensionInfo(BaseModel):
@@ -65,6 +66,7 @@ class GenerateRequest(BaseModel):
     description: str = Field(..., max_length=200, description="用户原始描述")
     spread_type: str = Field(default="three-card", description="牌阵类型（当前仅支持 three-card）")
     locale: Optional[str] = Field(default=None, description="首选语言区域标识，例如 zh-CN、en-US")
+    model_alias: Optional[str] = Field(default=None, description="服务端已登记的模型别名，可选")
 
 
 class DimensionAspectInfo(BaseModel):

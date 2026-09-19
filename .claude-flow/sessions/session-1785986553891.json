@@ -1,0 +1,14 @@
+{
+  "id": "session-1785986553891",
+  "startedAt": "2026-08-06T03:22:33.891Z",
+  "cwd": "D:\\0-development\\projects\\tarotAI",
+  "context": {},
+  "metrics": {
+    "edits": 0,
+    "commands": 0,
+    "tasks": 0,
+    "errors": 0
+  },
+  "endedAt": "2026-08-06T05:44:51.523Z",
+  "duration": 8537633
+}

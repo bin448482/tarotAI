@@ -72,7 +72,7 @@ class ApiClient {
           if (typeof window !== 'undefined') {
             localStorage.removeItem('admin_token');
             // 重定向到登录页面
-            window.location.href = '/login';
+            window.location.href = '/admin/login';
           }
         }
 

@@ -35,5 +35,6 @@ ls deploy/certbot/conf/live
 ```
 
 - 确保 Nginx 将 `/.well-known/acme-challenge/` 指向 `deploy/certbot/www` 对应的容器路径 `/var/www/certbot`。
+- 脚本以仓库根目录的 `docker-compose.prod.yml` 运行；首次申请前，先以 `deploy/nginx/nginx.http.conf` 启动 Nginx，避免 HTTPS 配置在证书尚不存在时加载失败。
 - Staging 模式使用 Let's Encrypt 测试 CA，不可用于正式 HTTPS，但能验证流程。
 - 证书续期可通过 crontab / systemd timer 触发同一脚本。

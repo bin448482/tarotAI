@@ -14,16 +14,18 @@ Next.js App Router dashboard for operating TarotAI: manage users, vouchers, orde
 - 🧱 Tailwind + Ant Design theme：黑金塔罗风格，可扩展多主题。
 
 ## 3. 前端路由 | Frontend Routes
-- `/` - 根路由（重定向）
-- `/login` - 管理员登录
-- `/dashboard` - 仪表板
-- `/users` - 用户管理
-- `/redeem-codes` - 兑换码管理
-- `/orders` - 订单管理
-- `/verify-email` - 邮箱验证入口
-- `/app-release` - 应用发布管理
-- `/client-portal` - 客户端下载门户
-- `/privacy` - 隐私政策
+- `/admin/` - 根路由（重定向）
+- `/admin/login` - 管理员登录
+- `/admin/dashboard` - 仪表板
+- `/admin/users` - 用户管理
+- `/admin/redeem-codes` - 兑换码管理
+- `/admin/orders` - 订单管理
+- `/admin/verify-email` - 邮箱验证入口
+- `/admin/app-release` - 应用发布管理
+- `/admin/client-portal` - 客户端下载门户
+- `/admin/privacy` - 隐私政策
+
+为保持移动端与邮件中的既有链接可用，Nginx 还会将公开的 `/verify-email`、`/privacy` 与 `/client-portal` 转发到对应的 `/admin/...` 页面。
 
 ## 4. 技术栈 | Tech Stack
 - **Language**: TypeScript 5.x
@@ -57,7 +59,7 @@ npm run build
 npm run start
 ```
 
-- Client portal 访问：`http://localhost:3000/client-portal`；线上环境请替换域名。
+- Client portal 访问：`http://localhost:3000/admin/client-portal`；线上环境请替换域名。
 - When running via Docker Compose, admin listens on port 3000 and is proxied by Nginx (`/` → admin, `/api/*` → backend).
 - Deploy to Vercel or any Node hosting; ensure environment variables mirror production backend routes.
 
