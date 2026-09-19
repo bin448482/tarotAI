@@ -272,16 +272,11 @@ MySixth/
 - Exclude `tarot-backend/backend_tarot.db` from release bundles; keep production data in the Docker volume.
 - On the target server, clean any previous extraction (for example `rm -rf /srv/my-tarot/MySixth-docker-20251010`) before running `unzip -o MySixth-docker-20251010.zip -d /srv/my-tarot` to avoid the non-interactive overwrite issue.
 
-## ECS SSH Access
+## Private Deployment Access
 
-- Current deployment target: Ubuntu 22.04 ECS at `47.100.96.180`, SSH user `root`, port `22`.
-- Login from the configured Windows machine:
-  ```powershell
-  ssh -i "$env:USERPROFILE\.ssh\tarotAI_ecs_ed25519" root@47.100.96.180
-  ```
-- The ECS security group must allow TCP `22` only from the current household public IP in `/32` CIDR form. Do not retain an inbound `0.0.0.0/0` plus all-ports allow rule.
+- Keep ECS hostnames, public IPs, SSH users, ports, private-key paths, and login commands in private deployment documentation only.
 - Never commit SSH private keys, passwords, or `tarot-backend/.env` files.
-- Full setup, verification, troubleshooting, and shortcut-login instructions: [deploy/ECS_SSH.md](deploy/ECS_SSH.md).
+- Public or sanitized branches must not contain real deployment endpoints or connection instructions.
 
 
 ## Public Sanitized Branch
