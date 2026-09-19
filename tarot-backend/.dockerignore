@@ -1,0 +1,9 @@
+.env
+.env.*
+cookies.txt
+.claude
+.vscode
+__pycache__
+*.py[cod]
+.pytest_cache
+backend_tarot.db

@@ -1,6 +1,5 @@
 # Docker相关文件
 docker-compose.yml
-.dockerignore
 
 # Python相关
 __pycache__/
