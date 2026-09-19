@@ -18,6 +18,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt gunicorn
 # Copy app code and static assets
 COPY app ./app
+COPY config ./config
 COPY static ./static
 # Expose service
 EXPOSE 8000
