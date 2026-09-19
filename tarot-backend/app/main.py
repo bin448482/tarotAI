@@ -141,7 +141,7 @@ async def health_check():
 
 
 # TODO: 注册API路由
-from app.api import auth, readings, dimensions, spreads, users, payments, admin, app_release
+from app.api import auth, readings, dimensions, spreads, users, payments, admin, app_release, llm_benchmark
 
 app.include_router(auth.router, prefix="/api/v1")
 app.include_router(readings.router, prefix="/api/v1")
@@ -155,6 +155,7 @@ app.include_router(admin.purchase_router)  # Admin purchase management API (/api
 app.include_router(admin.redeem_router)  # Admin redeem codes management API (/api/v1/admin/redeem-codes/*)
 app.include_router(app_release.public_router, prefix="/api/v1")
 app.include_router(app_release.admin_router, prefix="/api/v1")
+app.include_router(llm_benchmark.router)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,50 @@
+# Provider-neutral LLM configuration.
+# API keys stay in .env; api_key_env only names the environment variable.
+
+version: 1
+
+# This is the model used when a request does not specify model_alias.
+active_model: glm-5.3-flash
+
+# Locale routing is independent from provider definitions.
+locale_providers:
+  zh: zhipu
+  en: deepseek
+
+providers:
+  zhipu:
+    api_key_env: ZHIPU_API_KEY
+    base_url: https://open.bigmodel.cn/api/paas/v4
+    model: glm-5.3-flash
+    json_mode: true
+    thinking: required
+    reasoning_effort: low
+    temperature: 0.7
+    max_tokens: 8192
+
+  # openai:
+  #   api_key_env: OPENAI_API_KEY
+  #   base_url: https://api.openai.com/v1
+  #   model: gpt-4o-mini
+  #   json_mode: true
+  #   thinking: disabled
+  #   temperature: 0.7
+  #   max_tokens: 8192
+
+  deepseek:
+    api_key_env: DEEPSEEK_API_KEY
+    base_url: https://api.deepseek.com
+    model: deepseek-chat
+    json_mode: true
+    thinking: disabled
+    temperature: 0.7
+    max_tokens: 8192
+
+  qwen:
+    api_key_env: DASHSCOPE_API_KEY
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    model: qwen-plus
+    json_mode: true
+    thinking: disabled
+    temperature: 0.7
+    max_tokens: 8192

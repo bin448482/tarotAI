@@ -142,7 +142,8 @@ class ReadingService:
         description: str,
         spread_type: str,
         locale: str,
-        db: Session
+        db: Session,
+        model_alias: Optional[str] = None,
     ) -> List[Dict[str, Any]]:
         """
         第一步：分析用户描述，返回推荐的维度信息。
@@ -166,7 +167,8 @@ class ReadingService:
             recommended_names, unified_description = await self.llm_service.analyze_user_description(
                 description=description,
                 spread_type=spread_type,
-                locale=locale
+                locale=locale,
+                model=model_alias,
             )
 
             dimensions_result = await self._process_three_card_dimensions(
@@ -247,7 +249,8 @@ class ReadingService:
         dimensions: List[Dict[str, Any]],
         user_description: str,
         spread_type: str,
-        locale: str
+        locale: str,
+        model_alias: Optional[str] = None,
     ) -> Dict[str, Any]:
         """
         生成多维度解读（重构版本）。
@@ -268,7 +271,8 @@ class ReadingService:
                 dimensions=dimensions,
                 user_description=user_description,
                 spread_type=spread_type,
-                locale=locale
+                locale=locale,
+                model_alias=model_alias,
             )
 
             return all_interpretation_result
@@ -291,7 +295,8 @@ class ReadingService:
         dimensions: List[Dict[str, Any]],
         user_description: str,
         spread_type: str,
-        locale: str
+        locale: str,
+        model_alias: Optional[str] = None,
     ) -> Dict[str, Any]:
         """一次性生成所有维度和卡牌的完整解读"""
         try:
@@ -301,7 +306,8 @@ class ReadingService:
                 dimensions=normalized_dimensions,
                 user_description=user_description,
                 spread_type=spread_type,
-                locale=locale
+                locale=locale,
+                model=model_alias,
             )
 
             return self._build_interpretation_response(
